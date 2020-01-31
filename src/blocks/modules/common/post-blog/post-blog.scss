@@ -1,0 +1,134 @@
+.post-blog {
+  padding-bottom: 50px;
+
+  @media (min-width: $md) {
+    padding-bottom: 75px;
+  }
+  
+  @media (min-width: $lg) {
+    padding-bottom: 90px;
+  }
+  
+  @media (min-width: $xl) {
+    padding-bottom: 150px;
+  }
+
+  &__title {
+    width: 80%;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 40px;
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    @media (min-width: $lg) {
+      width: 40%;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 65px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__content {
+
+    & h1, 
+      h2, 
+      h3, 
+      h4, 
+      h5, 
+      h6 {
+      width: 80%;
+      margin-bottom: 30px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000;
+
+      @media (min-width: $md) {
+        margin-bottom: 40px;
+        font-size: 26px;
+        line-height: 32px;
+      }
+
+      @media (min-width: $lg) {
+        width: 40%;
+      }
+      
+      @media (min-width: $xl) {
+        margin-bottom: 65px;
+        font-size: 30px;
+        line-height: 36px;
+      }
+    }
+
+    & p {
+      margin-bottom: 20px;
+      font-size: 14px;
+      line-height: 20px;
+      color: #000;
+
+      @media (min-width: $lg) {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      
+      @media (min-width: $xl) {
+        margin-bottom: 25px;
+        font-size: 18px;
+        line-height: 28px;
+      }
+    }
+  }
+
+  &__content--columnar {
+    margin-bottom: 50px;
+
+    @media (min-width: $lg) {
+      column-count: 2;
+      column-gap: 70px;
+      margin-bottom: 75px;
+    }
+
+    @media (min-width: $xl) {
+      column-gap: 90px;
+      margin-bottom: 100px;
+    }
+  }
+
+  &__content-picture {
+    max-height: 280px;
+    margin: 0 -20px;
+    margin-top: 45px;
+
+    @media (min-width: $md) {
+      max-height: 350px;
+      margin: 0 -40px;
+      margin-top: 50px;
+    }
+    
+    @media (min-width: $lg) {
+      max-height: 400px;
+      margin: 0;
+    }
+    
+    @media (min-width: $xl) {
+      max-height: 550px;
+      margin-top: 75px;
+    }
+  }
+
+  &__content-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

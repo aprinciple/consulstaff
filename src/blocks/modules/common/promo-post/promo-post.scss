@@ -1,0 +1,146 @@
+.promo-post {
+  padding-top: 45px;
+  font-family: Manrope;
+
+  @media (min-width: $md) {
+    padding-top: 120px;
+  }
+  
+  @media (min-width: $lg) {
+    
+  }
+  
+  @media (min-width: $xl) {
+    
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__item {
+  }
+
+  &__item-text {
+    margin-bottom: 50px;
+
+    @media (min-width: $md) {
+      margin-bottom: 75px;
+    }
+    
+    @media (min-width: $lg) {
+      width: 40%;
+      max-height: 510px;
+      overflow-y: auto;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $xl) {
+      max-height: 538px;
+      margin-bottom: 0;
+    }
+
+    & p {
+      margin-bottom: 15px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+      color: #000;
+
+      @media (min-width: $md) {
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+      
+      @media (min-width: $lg) {
+        line-height: 24px;
+      }
+      
+      @media (min-width: $xl) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000;
+  }
+
+  &__subtitle {
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    color: $darkgold;
+
+    @media (min-width: $md) {
+      margin-bottom: 40px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 30px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 15px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 20px;
+      font-size: 18px;
+    }
+    
+    @media (min-width: $lg) {
+      line-height: 24px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 20px;
+    }
+  }
+
+  &__item-slider {
+    height: 250px;
+    margin: 0 -20px;
+
+    @media (min-width: $md) {
+      height: 600px;
+      margin: 0 -40px;
+    }
+    
+    @media (min-width: $lg) {
+      width: calc(60% + 55px);
+      height: 600px;
+      margin: 0;
+      margin-right: -110px;
+    }
+    
+    @media (min-width: $xl) {
+      width: calc(60% + 110px);
+      height: 750px;
+      margin-right: -220px;
+    }
+  }
+
+  &__slider {
+  }
+}

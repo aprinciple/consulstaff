@@ -1,0 +1,374 @@
+.business-sales {
+  margin: 0 -20px;
+  background-color: #fff;
+  font-family: Manrope;
+
+  @media (min-width: $md) {
+    margin: 0 -40px;
+  }
+  
+  @media (min-width: $lg) {
+    box-sizing: border-box;
+    margin: 0;
+    padding-top: 90px;
+  }
+
+  @media (min-width: $xl) {
+    padding-top: 120px;
+  }
+
+  &__wrapper {
+
+    @media (min-width: $lg) {
+      position: relative;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    @media (min-width: $lg) {
+      height: 650px;
+    }
+
+    @media (min-width: $xl) {
+      height: 945px;
+    }
+  }
+
+  &__item {
+
+    @media (min-width: $lg) {
+      flex-basis: 50%;
+    }
+  }
+
+  &__item-description {
+    padding: 50px 20px;
+    background-color: #fff;
+
+    @media (min-width: $md) {
+      padding: 90px 40px;
+    }
+
+    @media (min-width: $lg) {
+      position: absolute;
+      bottom: 60px;
+      left: -60px;
+      z-index: 2;
+      box-sizing: border-box;
+      width: 590px;
+      padding-top: 40px;
+      padding-right: 75px;
+      padding-bottom: 40px;
+      padding-left: 60px;
+      overflow: hidden;
+    }
+
+    @media (min-width: $xl) {
+      left: -80px;
+      width: 840px;
+      height: 640px;
+      padding-top: 120px;
+      padding-right: 150px;
+      padding-bottom: 60px;
+      padding-left: 80px;
+    }
+  }
+
+  &__item-description-content {
+
+    & p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000;
+
+      @media (min-width: $md) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      @media (min-width: $lg) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      
+      @media (min-width: $xl) {
+        margin-bottom: 25px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    font-size: 35px;
+    line-height: 42px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 55px;
+      font-size: 40px;
+      line-height: 45px;
+    }
+    
+    @media (min-width: $lg) {
+      font-size: 45px;
+      line-height: 50px;
+    }
+    
+    @media (min-width: $xl) {
+      line-height: 55px;
+    }
+  }
+
+  &__item-picture {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background-color: #fff;
+
+    @media (min-width: $md) {
+      height: 600px;
+    }
+
+    @media (min-width: $lg) {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      width: 750px;
+      height: 650px;
+      background-color: #F7F7F7;
+    }
+    
+    @media (min-width: $xl) {
+      top: 0px;
+      width: 1115px;
+      height: 945px;
+    }
+    
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 280px;
+      background-image: url('../img/bg-business-sales@360.jpg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      @media (min-width: $md) {
+        height: 600px;
+        background-image: url('../img/bg-business-sales@768.jpg');
+      }
+
+      @media (min-width: $lg) {
+        left: auto;
+        top: 60px;
+        right: -55px;
+        width: 700px;
+        height: 500px;
+        background-image: url('../img/bg-business-sales@768.jpg');
+      }
+
+      @media (min-width: $xl) {
+        right: -110px;
+        width: 1065px;
+        height: 725px;
+        background-image: url('../img/bg-business-sales@1920.jpg');
+      }
+    }
+  }
+
+  &__lists {
+    padding: 65px 20px;
+
+    @media (min-width: $md) {
+      padding: 90px 40px;
+      padding-bottom: 50px;
+    }
+    
+    @media (min-width: $lg) {
+      display: flex;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__lists-item {
+    position: relative;
+    margin-bottom: 65px;
+    padding-left: 20px;
+    padding-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $md) {
+      margin-bottom: 75px;
+      padding-left: 25px;
+    }
+
+    @media (min-width: $lg) {
+      box-sizing: border-box;
+      width: 50%;
+      padding-right: 50px;
+      margin-bottom: 0;
+    }
+    
+    @media (min-width: $xl) {
+      padding-left: 35px;
+      padding-right: 100px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background-color: $darkgold;
+    }
+
+    & > ul {
+
+    }
+
+    & > ul > li {
+      position: relative;
+      padding-left: 25px;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000;
+
+      @media (min-width: $md) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      @media (min-width: $lg) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      
+      @media (min-width: $xl) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #000;
+
+        @media (min-width: $md) {
+          top: 9px;
+        }
+
+        @media (min-width: $lg) {
+          top: 8px;
+        }
+
+        @media (min-width: $xl) {
+          top: 11px;
+        }
+      }
+    }
+  }
+
+  &__lists-item-title {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #004F6F;
+
+    @media (min-width: $md) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+    
+    @media (min-width: $lg) {
+      
+    }
+    
+    @media (min-width: $xl) {
+      
+    }
+  }
+
+  &__lists-list {}
+
+  &__lists-list-item {
+    position: relative;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #000;
+
+      @media (min-width: $md) {
+        top: 9px;
+      }
+
+      @media (min-width: $lg) {
+        top: 8px;
+      }
+
+      @media (min-width: $xl) {
+        top: 11px;
+      }
+    }
+  }
+
+  &__lists-item-details {
+    display: block;
+    margin-top: 55px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-top: 70px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

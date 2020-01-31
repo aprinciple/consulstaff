@@ -1,0 +1,48 @@
+.page-projects {
+
+  &__promo-post {
+    margin-bottom: 100px;
+
+    @media (min-width: $md) {
+      margin-bottom: 120px;
+    }
+
+    @media (min-width: $lg) {
+      margin-bottom: 90px;
+      padding-top: 120px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 150px;
+      padding-top: 150px;
+    }
+  }
+
+  &__promo-post-item-text {
+    
+    @media (min-width: $lg) {
+      width: 50%;
+    }
+
+  }
+
+  &__promo-post-title {
+    font-size: 40px;
+    line-height: 48px;
+
+    @media (min-width: $md) {
+      font-size: 60px;
+      line-height: 72px;
+    }
+    
+    @media (min-width: $lg) {
+      font-size: 70px;
+      line-height: 95px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 100px;
+      line-height: 120px;
+    }
+  }
+}

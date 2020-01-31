@@ -1,0 +1,281 @@
+.footer {
+  padding-top: 45px;
+  padding-bottom: 20px;
+  background-color: #EFEFEF;
+
+  @media (min-width: $lg) {
+    padding-top: 65px;
+    padding-bottom: 50px;
+  }
+  
+  @media (min-width: $xl) {
+    padding-top: 85px;
+    padding-bottom: 100px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    @media (min-width: $lg) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+
+    &--bottom {
+
+      @media (min-width: $lg) {
+        margin-top: 65px;
+      }
+
+      @media (min-width: $xl) {
+        margin-top: 90px;
+      }
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 40px;
+  }
+
+  &__logo-image {
+    width: 230px;
+    height: 100px;
+  }
+
+  &__email {
+    order: 1;
+    margin-bottom: 50px;
+    font-weight: 500;
+    font-size: 21px;
+    line-height: 25px;
+    color: #000;
+    transition: color 0.3s;
+    text-decoration: none;
+
+    @media (min-width: $lg) {
+      order: 0;
+      margin-bottom: 0;
+    }
+
+    &:hover {
+      color: $darkgold;
+    }
+
+    &:active {
+      color: $darkgold;
+    }
+  }
+
+  &__slogan, & > p {
+    margin-bottom: 25px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #2C2C2C;
+
+    @media (min-width: $lg) {
+      width: 65%;
+      margin: 0;
+    }
+
+    @media (min-width: $xl) {
+      width: 70%;
+    }
+  }
+
+  &__nav {
+
+    @media (min-width: $lg) {
+      padding-top: 12px;
+      width: 65%;
+    }
+
+    @media (min-width: $xl) {
+      width: 70%;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  &__nav-item {
+    width: 30%;
+    margin-bottom: 55px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333;
+
+    @media (min-width: $lg) {
+      width: auto;
+      margin-bottom: 30px;
+      margin-right: 50px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    
+    @media (min-width: $xl) {
+      margin-right: 90px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__nav-link {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $darkgold;
+    }
+
+    &:active {
+      color: $darkgold;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $md) {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $lg) {
+      flex-wrap: nowrap;
+      width: 65%;
+    }
+
+    @media (min-width: $xl) {
+      width: 70%;
+    }
+  }
+
+  &__contacts-item {
+    margin-bottom: 40px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+    }
+
+    & > p {
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 16px;
+      line-height: 19px;
+      color: #3E3E3E;
+    }
+  }
+
+  &__contacts-item-title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: #000;
+  }
+
+  &__contacts-item-text {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #3E3E3E;
+  }
+
+  &__contacts-item-link {
+    color: #3E3E3E;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $darkgold;
+    }
+
+    &:active {
+      color: $darkgold;
+    }
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+
+    @media (min-width: $md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      flex-basis: 100%;
+      margin-bottom: 20px;
+    }
+
+    @media (min-width: $lg) {
+      flex-direction: column;
+      flex-basis: auto;
+      flex-wrap: nowrap;
+      margin-bottom: 0;
+    }
+
+    &-title {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000;
+
+      @media (min-width: $md) {
+        flex-basis: 100%;
+      }
+
+      @media (min-width: $lg) {
+        flex-basis: auto;
+      }
+    }
+
+    &-item {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000;
+
+      @media (min-width: $md) {
+        margin-bottom: 0;
+        margin-right: 30px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      @media (min-width: $lg) {
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+  }
+
+  &__copyright {
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin: 0 auto;
+    }
+
+    @media (min-width: $lg) {
+      margin: 0;
+      order: -1;
+    }
+  }
+}

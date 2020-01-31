@@ -1,0 +1,17 @@
+.reviews {
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 50px;
+    }
+  }
+}

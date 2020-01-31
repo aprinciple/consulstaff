@@ -1,0 +1,10 @@
+.page-services {
+
+  &__promo-post {
+    margin-bottom: 50px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+    }
+  }
+}

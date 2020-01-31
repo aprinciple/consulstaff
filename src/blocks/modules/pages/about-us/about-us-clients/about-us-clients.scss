@@ -1,0 +1,11 @@
+.about-us-clients {
+  padding-top: 70px;
+  
+  @media (min-width: $lg) {
+    padding-top: 100px;
+  }
+  
+  @media (min-width: $xl) {
+    padding-top: 130px;
+  }
+}

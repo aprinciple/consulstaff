@@ -1,0 +1,262 @@
+.landmarks {
+
+  &__container {
+    @media (min-width: $lg) {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 50px;
+    }
+    
+    @media (min-width: $lg) {
+      flex-basis: 100%;
+      margin-bottom: 65px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 60px;
+      line-height: 72px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    @media (min-width: $lg) {
+      width: 730px;
+    }
+    
+    @media (min-width: $xl) {
+      width: 860px;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 80px;
+    padding-left: 115px;
+
+    @media (min-width: $md) {
+      width: 40%;
+      margin-bottom: 100px;
+
+      &:nth-child(2n)::after {
+        content: none;
+      }
+    }
+
+    @media (min-width: $lg) {
+      display: flex;
+      flex-direction: column;
+      padding-left: 0;
+      padding-top: 115px;
+      margin-bottom: 50px;
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        margin-bottom: 0;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 115px;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+
+      @media (min-width: $lg) {
+        width: 100%;
+        height: 115px;
+      }
+    }
+
+    &::after {
+      content: '+';
+      position: absolute;
+      bottom: -50px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      font-size: 20px;
+      color: #000;
+
+      @media (min-width: $md) {
+        top: 50%;
+        bottom: auto;
+        left: auto;
+        right: calc(-20% - 20px);
+        transform: translate(0, -50%);
+      }
+    }
+
+    &:last-child {
+
+      &::after {
+        content: none;
+      }
+    }
+  }
+
+  &__item--check {
+    min-height: 62px;
+
+    &::before {
+      background-image: url('../img/check.svg');
+    }
+  }
+  &__item--empire {
+    min-height: 107px;
+
+    &::before {
+      background-image: url('../img/empire.svg');
+    }
+  }
+  &__item--sprout {
+    min-height: 114px;
+
+    &::before {
+      background-image: url('../img/sprout.svg');
+    }
+  }
+  &__item--dialogue {
+    min-height: 79px;
+
+    &::before {
+      background-image: url('../img/dialogue.svg');
+    }
+  }
+  &__item--torch {
+    min-height: 98px;
+
+    &::before {
+      background-image: url('../img/torch.svg');
+    }
+  }
+  &__item--bird-feather {
+    min-height: 96px;
+
+    &::before {
+      background-image: url('../img/bird-feather.svg');
+    }
+  }
+
+  &__item-wrapper {
+
+    @media (min-width: $md) {
+      text-align: center;
+    }
+
+    @media (min-width: $lg) {
+      margin-top: 30px;
+    }
+  }
+
+  &__item-figcaption-title {
+    font-weight: 500;
+    font-size: 25px;
+    color: #48443D;
+
+    @media (min-width: $md) {
+      margin-bottom: 25px;
+    }
+
+    @media (min-width: $lg) {
+      text-align: center;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 30px;
+      font-size: 27px;
+    }
+  }
+
+  &__item-figcaption-text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $xl) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__logo {
+    position: relative;
+    width: 270px;
+    height: 115px;
+    margin: 0 auto;
+
+    @media (min-width: $lg) {
+      top: -15px;
+      margin: 0;
+      margin-left: auto;
+    }
+
+    @media (min-width: $xl) {
+      top: -6px;
+      margin: 0 auto;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url('../img/logo-landmarks.svg');
+      background-repeat: no-repeat;
+    }
+
+    &::before {
+      content: '=';
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      font-size: 20px;
+      color: #000;
+
+      @media (min-width: $md) {
+        top: -60px;
+      }
+
+      @media (min-width: $lg) {
+        top: 50%;
+        left: -60px;
+        transform: translate(0, -50%);
+      }
+
+      @media (min-width: $xl) {
+        top: 50%;
+        left: calc(-25% - 25px);
+        transform: translate(0, -50%);
+      }
+    }
+  }
+}

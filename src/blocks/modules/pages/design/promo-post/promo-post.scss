@@ -1,0 +1,166 @@
+.page-design {
+
+	&__promo-post {
+		margin-bottom: 150px;
+		padding-top: 150px;
+		background-color: #011633;
+
+		@media (min-width: $md) {
+			margin-bottom: 320px;
+			padding-top: 220px;
+		}
+		
+		@media (min-width: $lg) {
+			height: 550px;
+			padding-top: 0;
+		}
+		
+		@media (min-width: $xl) {
+			height: 950px;
+		}
+	}
+
+	&__promo-post-item-text {
+		color: #fff;
+		
+		@media (min-width: $lg) {
+			padding-top: 50px;
+		}
+
+		& p {
+			color: #fff;
+		}
+	}
+
+	&__promo-post-title {
+		font-size: 60px;
+		line-height: 70px;
+		color: #fff;
+
+		@media (min-width: $md) {
+			font-size: 100px;
+			line-height: 120px;
+		}
+		
+		@media (min-width: $lg) {
+			font-size: 60px;
+			line-height: 70px;
+		}
+		
+		@media (min-width: $xl) {
+			font-size: 100px;
+			line-height: 120px;
+		}
+	}
+
+	&__promo-post-item-picture {
+		position: relative;
+		height: 315px;
+		margin: 0 -20px;
+		margin-top: 100px;
+		background: transparent;
+
+		@media (min-width: $md) {
+			height: 545px;
+			margin: 0;
+			margin-top: 150px;
+		}
+		
+		@media (min-width: $lg) {
+			top: 100px;
+			width: 50%;
+			height: 450px;
+			margin-top: 0;
+		}
+
+		@media (min-width: $xl) {
+			top: 300px;
+			height: 645px;
+		}
+		
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: -10px;
+			z-index: 1;
+			width: 220px;
+			height: 325px;
+			transform: translate(-50%, 0);
+			background-color: #034543;
+
+			@media (min-width: $md) {
+				bottom: -75px;
+				width: 420px;
+				height: 620px;
+			}
+			
+			@media (min-width: $lg) {
+				bottom: -20px;
+				height: 470px;
+			}
+			
+			@media (min-width: $xl) {
+				bottom: -30px;
+				width: 455px;
+				height: 675px;
+			}
+		}
+	}
+
+	&__promo-post-item-image {
+		position: absolute;
+		object-fit: cover;
+	}
+
+	&__promo-post-item-image--left {
+		top: -75px;
+		left: 0;
+		z-index: 2;
+		width: 270px;
+		height: 195px;
+
+		@media (min-width: $md) {
+			top: -145px;
+			width: 510px;
+			height: 370px;
+		}
+		
+		@media (min-width: $lg) {
+			top: -50px;
+			width: 370px;
+			height: 280px;
+		}
+		
+		@media (min-width: $xl) {
+			width: 550px;
+			height: 400px;
+		}
+	}
+
+	&__promo-post-item-image--right {
+		right: 0;
+		bottom: -60px;
+		z-index: 3;
+		width: 245px;
+		height: 310px;
+
+		@media (min-width: $md) {
+			bottom: -175px;
+			width: 465px;
+			height: 595px;
+		}
+		
+		@media (min-width: $lg) {
+			bottom: -40px;
+			width: 330px;
+			height: 380px;
+		}
+		
+		@media (min-width: $xl) {
+			bottom: -115px;
+			width: 505px;
+			height: 650px;
+		}
+	}
+}

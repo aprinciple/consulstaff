@@ -1,0 +1,57 @@
+.design-mission {
+  display: none;
+
+  @media (min-width: $md) {
+    display: block;
+    margin-top: 90px;
+  }
+
+  @media (min-width: $lg) {
+    margin-top: 120px;
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: $xl) {
+    margin-top: 150px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: $md) {
+    &__title {
+      margin-bottom: 40px;
+      font-weight: bold;
+      font-size: 48px;
+      line-height: 58px;
+      color: #000;
+    }
+  
+    &__blockquote {
+      margin: 0;
+      padding: 0;
+
+      & p {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 30px;
+        color: #000;
+      }
+    }
+  
+    &__blockquote-text {
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 30px;
+      color: #000;
+    }
+  
+    &__blockquote-footer {
+      margin-top: 15px;
+    }
+  
+    &__blockquote-author {
+      font-size: 14px;
+      line-height: 16px;
+      color: #707070;
+    }
+  }
+}

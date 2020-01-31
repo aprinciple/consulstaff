@@ -1,0 +1,18 @@
+.page-investing {
+
+  &__team-referral {
+    padding-top: 65px;
+    padding-bottom: 65px;
+
+    @media (min-width: $md) {
+      padding-top: 90px;
+      padding-bottom: 115px;
+    }
+    
+    @media (min-width: $xl) {
+      padding-top: 140px;
+      padding-bottom: 140px;
+      
+    }
+  }
+}

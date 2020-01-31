@@ -1,0 +1,522 @@
+.page-corporate {
+
+  &__corporate-structure {
+
+  }
+}
+
+.corporate-structure {
+  font-family: Manrope;
+
+  &__container {}
+
+  &__header {
+
+    @media (min-width: $lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {}
+
+  &__content {
+
+    @media (min-width: $lg) {
+      width: 40%;
+    }
+
+    & > ul {
+      position: relative;
+      margin-bottom: 55px;
+      padding-left: 15px;
+  
+      @media (min-width: $md) {
+        margin-bottom: 75px;
+      }
+  
+      @media (min-width: $lg) {
+        padding-left: 20px;
+      }
+  
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-color: $darkgold;
+      }
+    }
+
+    & > ul > li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 30px;
+      color: #000;
+  
+      @media (min-width: $md) {
+        font-size: 18px;
+        line-height: 36px;
+      }
+  
+      @media (min-width: $xl) {
+        font-size: 20px;
+        line-height: 40px;
+      }    
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 12px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #000;
+  
+        @media (min-width: $md) {
+          top: 15px;
+        }
+  
+        @media (min-width: $xl) {
+          top: 18px;
+        }
+      }
+    }
+  }
+
+  &__content-title {
+    margin-bottom: 50px;
+    font-family: Manrope;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    
+    @media (min-width: $lg) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__content-list {
+    position: relative;
+    margin-bottom: 55px;
+    padding-left: 15px;
+
+    @media (min-width: $md) {
+      margin-bottom: 75px;
+    }
+
+    @media (min-width: $lg) {
+      padding-left: 20px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background-color: $darkgold;
+    }
+  }
+
+  &__content-list-item {
+    position: relative;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 36px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 40px;
+    }    
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #000;
+
+      @media (min-width: $md) {
+        top: 15px;
+      }
+
+      @media (min-width: $xl) {
+        top: 18px;
+      }
+    }
+  }
+
+  &__item-picture {
+    height: 280px;
+    margin: 0 -20px;
+
+    @media (min-width: $md) {
+      height: 605px;
+      margin: 0 -40px;
+    }
+
+    @media (min-width: $lg) {
+      width: 615px;
+      height: 450px;
+      margin: 0;
+      margin-right: -55px;
+    }
+
+    @media (min-width: $xl) {
+      width: 872px;
+      height: 531px;
+      margin-right: -110px;
+    }
+  }
+
+  &__item-picture-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__footer {
+    background-color: #fff;
+
+    @media (min-width: $lg) {
+      position: relative;
+      padding-top: 350px; 
+    }
+
+    @media (min-width: $lg) {
+      padding-top: 500px;
+    }
+  }
+
+  &__footer-picture {
+    height: 280px;
+    margin: 0 -20px;
+
+    @media (min-width: $md) {
+      height: 600px;
+      margin: 0 -40px;
+    }
+
+    @media (min-width: $lg) {
+      width: 500px;
+      height: 590px;
+      margin: 0;
+      position: absolute;
+      top: -140px;
+      right: 140px;
+      z-index: 1;
+    }
+    
+    @media (min-width: $xl) {
+      width: 698px;
+      height: 791px;
+      top: -150px;
+      right: 200px;
+    }
+  }
+
+  &__footer-picture-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__services {
+    margin: 0 -20px;
+    padding-top: 65px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-left: 20px;
+    background-color: #013142;
+
+    @media (min-width: $md) {
+      margin: 0 -40px;
+      padding-top: 80px;
+      padding-right: 40px;
+      padding-bottom: 90px;
+      padding-left: 40px;
+    }
+
+    @media (min-width: $lg) {
+      box-sizing: border-box;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      z-index: 2;
+      width: 600px;
+      height: auto;
+      margin: 0;
+      padding-top: 60px;
+      padding-bottom: 50px;
+      padding-left: 50px;
+      padding-right: 130px;
+    }
+
+    @media (min-width: $xl) {
+      top: 70px;
+      width: 810px;
+      padding-top: 110px;
+      padding-right: 200px;
+      padding-bottom: 75px;
+      padding-left: 65px;
+    }
+
+    & > ul {
+      position: relative;
+      padding-top: 20px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 130px;
+        height: 5px;
+        background-color: $darkgold;
+      }
+    }
+
+    & > ul > li {
+      margin-bottom: 10px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+      color: #fff;
+
+      @media (min-width: $md) {
+        font-size: 18px;
+        line-height: 34px;
+      }
+
+      @media (min-width: $xl) {
+        font-size: 20px;
+        line-height: 36px;
+      }
+    }
+  }
+
+  &__services-title {
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+
+    @media (min-width: $md) {
+      margin-bottom: 60px;
+      font-size: 40px;
+      line-height: 48px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 30px;
+      font-size: 26px;
+      line-height: 32px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 35px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__services-list {
+    position: relative;
+    padding-top: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 130px;
+      height: 5px;
+      background-color: $darkgold;
+    }
+  }
+
+  &__services-list-item {
+    margin-bottom: 10px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #fff;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 34px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 36px;
+    }
+  }
+
+  &__footer-items {
+    margin: 0 -20px;
+    padding-top: 85px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    padding-left: 20px;
+    background-color: #F7F7F7;
+
+    @media (min-width: $md) {
+      margin: 0 -40px;
+      padding-top: 135px;
+      padding-left: 40px;
+      padding-bottom: 90px;
+    }
+
+    @media (min-width: $lg) {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+      padding-top: 230px;
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+    
+    @media (min-width: $xl) {
+      padding-top: 375px;
+      padding-right: 65px;
+      padding-left: 65px;
+    }
+  }
+
+  &__footer-item {
+    margin-bottom: 50px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $md) {
+      padding-right: 165px;
+    }
+
+    @media (min-width: $lg) {
+      box-sizing: border-box;
+      width: 47%;
+      margin-bottom: 0;
+      padding: 0;
+      padding-right: 50px;
+    }
+
+    @media (min-width: $xl) {
+      width: 45%;
+      padding-right: 80px;
+    }
+
+    & > ul {}
+
+    & > ul > li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 35px;
+      color: #333;
+
+      @media (min-width: $md) {
+        font-size: 18px;
+        line-height: 34px;
+      }
+      
+      @media (min-width: $xl) {
+        font-size: 20px;
+        line-height: 36px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #000;
+      }
+    }
+  }
+
+  &__footer-item-title {
+    margin-bottom: 45px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333;
+
+    @media (min-width: $md) {
+      margin-bottom: 65px;
+      font-size: 26px;
+      line-height: 34px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 40px;
+      padding-right: 75px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 50px;
+      padding-right: 100px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__footer-item-list {}
+
+  &__footer-item-list-item {
+    position: relative;
+    padding-left: 20px;
+    font-size: 16px;
+    line-height: 35px;
+    color: #333;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 34px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 36px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #000;
+    }
+  }
+}

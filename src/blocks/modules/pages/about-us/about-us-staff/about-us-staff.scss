@@ -1,0 +1,11 @@
+.about-us-staff {
+  padding-top: 100px;
+  
+  @media (min-width: $lg) {
+    padding-top: 130px;
+  }
+  
+  @media (min-width: $xl) {
+    padding-top: 150px;
+  }
+}

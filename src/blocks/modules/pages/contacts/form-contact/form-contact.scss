@@ -1,0 +1,54 @@
+.page-contacts {
+
+  &__form {
+    margin-top: 100px;
+    padding: 0;
+    background-color: #fff;
+    
+    @media (min-width: $lg) {
+      width: 590px;
+      margin-top: 0;
+    }
+
+    @media (min-width: $xl) {
+      width: 670px;
+    }
+  }
+  
+  &__form-title {
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 30px;
+      font-size: 50px;
+      line-height: 55px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 40px;
+      font-size: 55px;
+      line-height: 65px;
+    }
+  }
+
+  &__form-slogan {
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $lg) {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__form-input {
+    border-color: #EFEFEF;
+  }
+
+  &__form-textarea {
+    border-color: #EFEFEF;
+  }
+}

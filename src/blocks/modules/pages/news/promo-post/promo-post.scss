@@ -1,0 +1,39 @@
+.page-news {
+
+  &__promo-post {
+    margin-bottom: 70px;
+    padding-top: 75px;
+
+    @media (min-width: $md) {
+      margin-bottom: 90px;
+      padding-top: 120px;
+    }
+
+    @media (min-width: $lg) {
+      margin-bottom: 90px;
+    }
+
+    @media (min-width: $xl) {
+      padding-top: 150px;
+    }
+  }
+
+  &__promo-post-item-text {
+    width: 270px;
+    margin-bottom: 0;
+
+    @media (min-width: $md) {
+      width: 300px;
+    }
+  }
+
+  &__promo-post-title {
+    font-size: 40px;
+    line-height: 48px;
+
+    @media (min-width: $md) {
+      font-size: 55px;
+      line-height: 65px;
+    }
+  }
+}

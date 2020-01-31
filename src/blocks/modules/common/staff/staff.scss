@@ -1,0 +1,225 @@
+.staff {
+  font-family: Manrope;
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 50px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 65px;
+      font-size: 50px;
+      line-height: 60px;
+      text-align: center;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 60px;
+      line-height: 72px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $lg) {
+      justify-content: flex-start;
+    }
+
+    @media (min-width: $xl) {
+      justify-content: space-around;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 50px;
+    user-select: none;
+
+    @media (min-width: $md) {
+      width: 48%;
+      margin-bottom: 4%;
+    }
+    
+    @media (min-width: $lg) {
+      width: 30%;
+      margin-right: 3.3%;
+      margin-bottom: 4.5%;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    
+    @media (min-width: $xl) {
+      width: 375px;
+      margin-right: 0;
+    }
+  }
+
+  &__item-header {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 375px;
+    cursor: pointer;
+
+    &::after {
+      content: '';
+      transition: background-color 0.3s;
+    }
+
+    &:hover::after {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+  }
+
+  &__item-header:hover > &__item-header-info {
+    display: block;
+  }
+
+  &__item-image {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    object-fit: cover;
+  }
+
+  &__item-header-info {
+    box-sizing: border-box;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    z-index: 2;
+    width: 100%;
+    max-height: 90%;
+    padding: 0 25px;
+    transform: translate(-50%, 0);
+    animation: fade-in-left 0.6s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    overflow-y: auto;
+    display: none;
+
+    & > ul {
+      display: flex;
+      flex-direction: column;
+      padding-left: 15px;
+      list-style-type: disc;
+      color: #fff;
+    }
+
+    & > ul > li {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 19px;
+      color: #fff;
+
+      @media (min-width: $xl) {
+        margin-bottom: 20px;
+        font-size: 18px;
+        line-height: 22px;
+      }
+    }
+  }
+
+  &__item-header-info-list {
+    padding-left: 15px;
+    list-style-type: disc;
+    color: #fff;
+  }
+
+  &__item-header-info-item {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+
+    @media (min-width: $xl) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__item-footer {
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  &__item-name {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000;
+  }
+
+  &__item-status {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+  }
+
+  &__item-social {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-image: url('../img/icon-linkedin.svg');
+    background-repeat: no-repeat;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: 0.9;
+    }
+
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in-left
+ * ----------------------------------------
+ */
+ @keyframes fade-in-left {
+  0% {
+    transform: translateX(-55%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(-50%);
+    opacity: 1;
+  }
+}

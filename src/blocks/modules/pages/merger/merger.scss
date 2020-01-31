@@ -1,0 +1,73 @@
+@import 'promo-post/promo-post';
+@import 'projects/projects';
+@import 'team-referral/team-referral';
+@import 'merger-slider/merger-slider';
+
+.page-merger {
+
+  &__main {
+  }
+
+  &__slogan {
+    margin-bottom: 50px;
+
+    @media (min-width: $md) {
+      width: 450px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    @media (min-width: $lg) {
+      width: 500px;
+    }
+    
+    @media (min-width: $xl) {
+      width: 650px;
+    }
+  }
+
+  &__slogan-title {
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 22px;
+      line-height: 26px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 25px;
+      line-height: 29px;
+    }
+
+
+    @media (min-width: $xl) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+  }
+
+  &__slogan-text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

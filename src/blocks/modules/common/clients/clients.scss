@@ -1,0 +1,115 @@
+.clients {
+
+  &__container {
+
+    @media (min-width: $lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+
+  }
+
+  &__info {
+    font-family: Manrope;
+    @media (min-width: $lg) {
+      flex: 0 0 40%;
+      margin-right: 75px;
+    }
+
+    @media (min-width: $xl) {
+      margin-right: 100px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 27px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 50px;
+      line-height: 60px;
+      margin-bottom: 35px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 60px;
+      line-height: 72px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__description {
+    margin-bottom: 50px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+    }
+    
+  }
+
+  &__description-text, & > p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 17px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (min-width: $lg) {
+      align-content: space-between;
+    }
+  }
+
+  &__logos-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+    height: 70px;
+    margin-bottom: 12px;
+
+    @media (min-width: $md) {
+      width: 32%;
+      margin: 0;
+    }
+
+    @media (min-width: $md) {
+      height: 90px;
+      margin-bottom: 14px;
+    }
+
+    @media (min-width: $lg) {
+      justify-content: flex-start;
+      height: 100px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__logos-item-image {
+
+  }
+}

@@ -1,0 +1,147 @@
+.team-referral {
+  background-color: #fff;
+
+  &__container {
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 55px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 50px;
+      line-height: 70px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 60px;
+      line-height: 72px;
+      margin-bottom: 90px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $md) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    font-family: Manrope;
+
+    @media (min-width: $md) {
+      width: 40%;
+      min-height: 150px;
+      margin-bottom: 50px;
+      margin-right: 10%;
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: $lg) {
+      width: 22%;
+      margin-bottom: 25px;
+      min-height: 180px;
+      margin-right: 4%;
+      margin-bottom: 50px;
+
+      &:nth-child(2n) {
+        margin-right: 4%;
+      }
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+
+    @media (min-width: $xl) {
+      width: 20%;
+      height: 200px;
+      margin-right: 6.666%;
+      margin-bottom: 70px;
+
+      &:nth-child(2n) {
+        margin-right: 6.666%;
+      }
+  
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+    
+    @media (min-width: $lg) {
+      font-size: 22px;
+      line-height: 27px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 26px;
+      line-height: 31px;
+    }
+  }
+
+  &__item-text {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+
+  &__item-agency {
+    margin-top: auto;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
+    color: #f1af40;
+
+    @media (min-width: $lg) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

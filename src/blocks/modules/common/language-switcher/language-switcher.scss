@@ -1,0 +1,46 @@
+.language-switcher {
+  display: flex;
+  justify-content: space-between;
+  width: 120px;
+  
+  @media (min-width: $xl) {
+    width: 150px;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border: 1px solid #F7F7F7;
+    font-size: 16px;
+    color: #000;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+
+    @media (min-width: $lg) {
+      width: 35px;
+      height: 35px;
+      font-size: 18px;
+    }
+    
+    @media (min-width: $xl) {
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+    }
+
+    &:hover {
+      background-color: $darkgold;
+      color: #fff;
+    }
+
+    &:active {
+      background-color: $darkgold;
+      color: #333;
+    }
+  }
+}

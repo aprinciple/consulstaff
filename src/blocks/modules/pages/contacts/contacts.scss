@@ -1,0 +1,25 @@
+@import 'form-contact/form-contact';
+
+.page-contacts {
+
+  &__main {
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    @media (min-width: $md) {
+      padding-top: 140px;
+    }
+    
+    @media (min-width: $lg) {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 150px;
+      padding-bottom: 135px;
+    }
+    
+    @media (min-width: $xl) {
+      padding-top: 200px;
+      padding-bottom: 200px;
+    }
+  }
+}

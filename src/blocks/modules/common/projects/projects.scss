@@ -1,0 +1,68 @@
+.projects {
+
+  &__container {
+    
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000;
+
+    @media (min-width: $lg) {
+      font-size: 50px;
+      line-height: 60px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 40px;
+      font-size: 54px;
+      line-height: 65px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $lg) {
+      margin-bottom: 60px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 110px;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  &__slider {}
+
+  &__button {
+    position: relative;
+    left: 20px;
+    margin-top: 40px;
+
+    @media (min-width: $md) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @media (min-width: $md) {
+      margin-top: 75px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-top: 100px;
+    }
+  }
+}
+
+@import 'slider-projects/slider-projects';

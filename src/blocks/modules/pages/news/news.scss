@@ -1,0 +1,76 @@
+@import 'promo-post/promo-post';
+@import 'card/card';
+
+.page-news {
+
+  &__main {
+    padding-bottom: 70px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 90px;
+      padding-bottom: 0;
+    }
+  }
+
+  &__cards {
+
+    @media (min-width: $md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $lg) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__button {
+    position: relative;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    margin-top: 70px;
+    padding-left: 30px;
+    font-size: 24px;
+    line-height: 24px;
+    height: 24px;
+    color: #000;
+    transition: color 0.3s;
+    cursor: pointer;
+
+    @media (min-width: $lg) {
+      margin-bottom: 80px;
+    }
+
+    @media (min-width: $xl) {
+      margin-top: 95px;
+    }
+
+    &:hover {
+      color: $darkgold;
+
+      &::after {
+        color: $darkgold;
+      }
+    }
+    &:active {
+      color: $darkgold;
+
+      &::after {
+        color: $darkgold;
+      }
+    }
+
+    &::after {
+      content: '+';
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 24px;
+      line-height: 24px;
+      color: #000;
+      transition: color 0.3s;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="272.052" height="117.41" viewBox="0 0 272.052 117.41">
+  <g id="Group_2246" data-name="Group 2246" transform="translate(-140.159 -620.521)">
+    <text id="STAFF" transform="translate(205.194 712.882)" font-size="41" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" letter-spacing="0.025em"><tspan x="0" y="0">STAFF</tspan></text>
+    <text id="СONSUL" transform="translate(205.194 669.981)" font-size="41" font-family="Montserrat-SemiBold, Montserrat" font-weight="600" letter-spacing="0.025em"><tspan x="0" y="0">С</tspan><tspan y="0">ONSUL</tspan></text>
+    <path id="Path_20" data-name="Path 20" d="M172.3,715.287,140.659,686.83V643.779L172.3,672.236Z" transform="translate(0 -7.36)" fill="#ff0038" stroke="#fff" stroke-width="1"/>
+    <path id="Path_21" data-name="Path 21" d="M196.207,621.644,164.565,650.1v43.051l31.642-28.457Z" transform="translate(-7.948)" fill="#f1af40" stroke="#fff" stroke-width="1"/>
+    <path id="Path_22" data-name="Path 22" d="M172.3,758.555,140.659,730.1V687.047L172.3,715.5Z" transform="translate(0 -21.746)" fill="#003242" stroke="#fff" stroke-width="1"/>
+    <path id="Path_23" data-name="Path 23" d="M196.207,664.912l-31.642,28.457v43.051l31.642-28.457Z" transform="translate(-7.948 -14.386)" fill="#004f6f" stroke="#fff" stroke-width="1"/>
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="46.943" height="2.769" transform="translate(365.267 714.836)" fill="#ff0038"/>
+  </g>
+</svg>

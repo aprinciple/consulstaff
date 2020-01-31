@@ -1,0 +1,261 @@
+.slider-projects {
+  position: relative;
+  padding-bottom: 45px;
+
+  @media (min-width: $md) {
+    padding-bottom: 0;
+  }
+
+  &__items {
+
+    @media (min-width: $md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+
+    @media (min-width: $lg) {
+      justify-content: flex-start;
+      flex-wrap: nowrap;
+      padding: 0;
+      border-top: 1px solid #707070;
+      border-bottom: 1px solid #707070;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    padding-top: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 60px;
+    background-color: #fff;
+    text-decoration: none;
+    animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+    @media (min-width: $md) {
+      width: 49%;
+      height: 400px;
+      margin-bottom: 2%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      border: 1px solid #707070;
+    }
+
+    @media (min-width: $lg) {
+      width: 25%;
+      height: 550px;
+      margin: 0;
+      padding-top: 100px;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-bottom: 60px;
+      border: none;
+      border-right: 1px solid #707070;
+
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+    @media (min-width: $xl) {
+      height: 900px;
+      padding: 0 120px;
+    }
+
+    &-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      @media (min-width: $lg) {
+        width: 0;
+        transition: width 0.3s;
+      }
+    }
+
+    @media (min-width: $lg) {
+      &:hover > &-image {
+        width: 100%;
+      }
+    }
+
+
+    &:active > &-image {
+      top: 10%;
+      left: 50%;
+      width: 90%;
+      transform: translateX(-50%);
+      transition: top 0.3s, width 0.3s;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 2;
+    font-family: Manrope;
+    height: 100%;
+    
+    @media (min-width: $lg) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+
+  &__inner-wrapper {
+
+  }
+
+  &__inner-number {
+    display: block;
+    margin-bottom: 100px;
+    font-weight: bold;
+    font-size: 90px;
+    line-height: 90px;
+    color: $grey;
+
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__inner-title {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 29px;
+    line-height: 31px;
+    color: #000;
+  }
+
+  &__inner-data {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 26px;
+    color: $grey;
+  }
+
+  &__inner-button {
+    justify-content: left;
+    height: auto;
+    padding-left: 0;
+    background: none;
+    box-shadow: none;
+    font-size: 22px;
+    line-height: 26px;
+    color: $grey;
+
+    &:hover {
+      background: none;
+    }
+
+    &:active {
+      background: none;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    z-index: 15;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 170px;
+    height: 45px;
+    padding: 0;
+
+    @media (min-width: $md) {
+      display: none;
+    }
+  }
+
+  &__button {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    line-height: 0;
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+
+    &-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: #000;
+      transition: fill 0.3s;
+    }
+
+    &:hover > &-icon {
+      fill: #F1AF40;
+    }
+
+    &:active > &-icon {
+      fill: #F1AF40;
+    }
+  }
+
+  &__pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &-item {
+      font-family: Manrope;
+
+      &--amount {
+        vertical-align: top;
+        color: #9D9D9D;
+      }
+    }
+
+    &-num {
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 34px;
+      color: #000;
+      font-style: normal;
+    }
+
+    &-amount {
+      font-weight: 500;
+      font-size: 19px;
+      line-height: 19px;
+      color: #9D9D9D;
+      font-style: normal;
+    }
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation fade-in
+ * ----------------------------------------
+ */
+ @keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

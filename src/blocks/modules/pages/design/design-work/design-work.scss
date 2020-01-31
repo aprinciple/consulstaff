@@ -1,0 +1,229 @@
+.design-work {
+
+  @media (min-width: $lg) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 150px;
+  }
+
+  @media (min-width: $xl) {
+    padding-top: 10px;
+    padding-bottom: 280px;
+  }
+
+  &::after {
+
+    @media (min-width: $lg) {
+      content: '';
+      position: absolute;
+      top: -50px;
+      left: -110px;
+      width: 850px;
+      height: 100%;
+      background-image: url('../img/line-red.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+
+    @media (min-width: $xl) {
+      top: -240px;
+      left: -220px;
+      width: 1290px;
+      height: 940px;
+    }
+  }
+
+  &__title {
+    font-size: 65px;
+    font-weight: 700;
+    color: $lightgrey;
+    text-align: center;
+
+    @media (min-width: $md) {
+      font-weight: 600;
+      font-size: 140px;
+    }
+    
+    @media (min-width: $lg) {
+      position: absolute;
+      top: -270px;
+      right: -110px;
+      font-size: 210px;
+      line-height: 250px;
+    }
+    
+    @media (min-width: $xl) {
+      top: -250px;
+      right: -220px;
+      font-weight: bold;
+      font-size: 320px;
+      line-height: 390px;
+    }
+  }
+
+  &__list, ul {
+    margin-top: 60px;
+    margin-bottom: 100px;
+
+    @media (min-width: $md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-top: 110px;
+    }
+    
+    @media (min-width: $lg) {
+      margin: 0;
+    }
+    
+    @media (min-width: $xl) {
+      
+    }
+  }
+
+  &__list-item, li {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 25px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 25px;
+    color: #111;
+
+    @media (min-width: $md) {
+      box-sizing: border-box;
+      width: 50%;
+      font-size: 24px;
+      line-height: 30px;
+    }
+    
+    @media (min-width: $lg) {
+      font-size: 20px;
+      line-height: 25px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+
+    &::after {
+      content: '+';
+      position: absolute;
+      top: 12px;
+      left: 0;
+      font-size: 24px;
+      line-height: 0;
+      color: #31804C;
+
+      @media (min-width: $md) {
+        top: 15px;
+      }
+      
+      @media (min-width: $lg) {
+        top: 13px;
+      }
+      
+      @media (min-width: $xl) {
+        top: 15px;
+      }
+    }
+  }
+
+  &__info {
+    margin-bottom: 40px;
+
+    @media (min-width: $md) {
+      margin-bottom: 65px;
+    }
+
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+    }
+
+    & p {
+      margin-bottom: 10px;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000;
+
+      @media (min-width: $md) {
+        margin-bottom: 15px;
+        font-size: 25px;
+        line-height: 30px;
+      }
+
+      @media (min-width: $lg) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+      
+      @media (min-width: $xl) {
+        font-size: 25px;
+        line-height: 30px;
+      }
+    }
+  }
+
+  &__info-title {
+    position: relative;
+    margin-bottom: 40px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 72px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 75px;
+      font-size: 100px;
+      line-height: 125px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 50px;
+      font-size: 60px;
+      line-height: 72px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 90px;
+      font-size: 100px;
+      line-height: 125px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 70px;
+      height: 5px;
+      background-color: $darkgold;
+    }
+  }
+
+  &__info-text {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 15px;
+      font-size: 25px;
+      line-height: 30px;
+    }
+    
+    @media (min-width: $lg) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 25px;
+      line-height: 30px;
+    }
+  }
+}

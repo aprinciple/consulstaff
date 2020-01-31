@@ -1,0 +1,145 @@
+.page-corporate {
+  position: relative;
+
+  @media (min-width: $lg) {
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 690px;
+      height: 505px;
+      z-index: 1;
+      background-image: url('../img/bg-corporate-promo.svg');
+      background-repeat: no-repeat;
+      box-sizing: 100% 100%;
+    }
+  }
+
+  @media (min-width: $xl) {
+
+    &::after {
+      width: 975px;
+      height: 505px;
+    }
+  }
+
+  &__promo-post {
+    margin-bottom: 60px;
+
+    @media (min-width: $md) {
+      margin-bottom: 80px;
+    }
+
+    @media (min-width: $lg) {
+      margin-bottom: 90px;
+      padding-top: 70px;
+    }
+
+    @media (min-width: $xl) {
+      padding-top: 40px;
+    }
+  }
+
+  &__promo-post-item-text {
+
+    & ul {
+      font-family: Manrope;
+
+      @media (min-width: $lg) {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 5px;
+          height: 100%;
+          background-color: $darkgold;
+        }
+      }
+    }
+
+    & li {
+      margin-bottom: 25px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+      color: #000;
+
+      @media (min-width: $md) {
+        font-size: 18px;
+      }
+
+      @media (min-width: $xl) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__promo-post-list {
+    font-family: Manrope;
+
+    @media (min-width: $lg) {
+      position: relative;
+      padding-left: 20px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 5px;
+        height: 100%;
+        background-color: $darkgold;
+      }
+    }
+  }
+
+  &__promo-post-list-item {
+    margin-bottom: 25px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__promo-post-item-image {
+    width: 100%;
+    height: 290px;
+    background-color: transparent;
+    background-image: url('../img/corporate-promo-image.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-width: $md) {
+      height: 620px;
+    }
+    
+    @media (min-width: $lg) {
+      position: relative;
+      z-index: 2;
+      width: 50%;
+      height: 500px;
+      margin-right: -110px;
+    }
+    
+    @media (min-width: $xl) {
+      height: 700px;
+      margin-right: -220px;
+    }
+  }
+}

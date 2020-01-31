@@ -1,0 +1,11 @@
+.header-post {
+  height: 55px;
+
+  @media (min-width: $lg) {
+    height: 85px;
+  }
+  
+  @media (min-width: $xl) {
+    height: 120px;
+  }
+}

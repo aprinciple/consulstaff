@@ -1,0 +1,175 @@
+.business-schedule {
+  padding-top: 25px;
+  padding-bottom: 50px;
+  font-family: Manrope;
+
+  &__items {
+
+    @media (min-width: $md) {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    @media (min-width: $lg) {
+      justify-content: space-around;
+    }
+
+    @media (min-width: $xl) {
+      justify-content: space-between;
+      padding-left: 90px;
+      overflow: hidden;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 100px;
+    padding-top: 195px;
+
+    @media (min-width: $md) {
+      width: 42%;
+      padding-top: 250px;
+    }
+
+    @media (min-width: $lg) {
+      width: 34%;
+    }
+
+    @media (min-width: $xl) {
+      width: 21%;
+      padding-top: 450px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 150px;
+      height: 170px;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+      @media (min-width: $md) {
+        width: 195px;
+        height: 225px;
+      }
+    }
+
+    &::after {
+      content: none;
+
+      @media (min-width: $xl) {
+        content: '';
+        position: absolute;
+        top: 120px;
+        left: -283px;
+        z-index: -1;
+        width: 400px;
+        height: 269px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+    }
+
+    &:nth-child(1)::before {
+      background-image: url('../img/business-schedule-item-1.svg');
+    }
+    &:nth-child(2)::before {
+      background-image: url('../img/business-schedule-item-2.svg');
+    }
+    &:nth-child(3)::before {
+      background-image: url('../img/business-schedule-item-3.svg');
+    }
+    &:nth-child(4)::before {
+      background-image: url('../img/business-schedule-item-4.svg');
+    }
+
+    &:nth-child(1)::after {
+      background-image: url('../img/business-schedule-item-line-1.svg');
+    }
+    &:nth-child(2)::after {
+      background-image: url('../img/business-schedule-item-line-2.svg');
+    }
+    &:nth-child(3)::after {
+      background-image: url('../img/business-schedule-item-line-3.svg');
+    }
+    &:nth-child(4)::after {
+      background-image: url('../img/business-schedule-item-line-4.svg');
+    }
+
+    & > ul {
+      padding-top: 20px;
+    }
+
+    & > ul > li {
+      margin-bottom: 15px;
+      font-size: 16px;
+      line-height: 19px;
+
+      @media (min-width: $md) {
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  &__item-title {
+    position: relative;
+    margin-bottom: 19px;
+    padding-right: 70px;
+    padding-bottom: 20px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #333;
+
+    @media (min-width: $lg) {
+      padding-right: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 230px;
+      height: 2px;
+    }
+
+    &--green::after {
+      background: linear-gradient(#7cfbbf 0%, #0083e4 99.68%);
+    }
+    &--red::after {
+      background: linear-gradient(#ff3c7a 0%, #ff9d6f 99.72%);
+    }
+    &--orange::after {
+      background: linear-gradient(#ff773a 0.06%, #fde560 99.15%);
+    }
+    &--blue::after {
+      background: linear-gradient(#0a427b 0%, #67e7ff 99.23%, #67e7ff 100%);
+    }
+  }
+
+  &__item-list {
+    padding-top: 20px;
+  }
+
+  &__item-list-item {
+    margin-bottom: 15px;
+    font-size: 16px;
+    line-height: 19px;
+
+    @media (min-width: $md) {
+      margin-bottom: 20px;
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+}

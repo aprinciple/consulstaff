@@ -1,0 +1,16 @@
+.logo {
+  display: block;
+  width: 175px;
+  height: 40px;
+  background-image: url('../img/logo@360w.svg');
+  background-repeat: no-repeat;
+  text-decoration: none;
+
+  @media (min-width: $lg) {
+    position: relative;
+    top: 15px;
+    background-image: url('../img/logo.svg');
+    width: 45px;
+    height: 109px;
+  }
+}

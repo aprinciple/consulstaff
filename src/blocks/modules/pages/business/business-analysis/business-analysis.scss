@@ -1,0 +1,287 @@
+.business-analysis {
+  margin: 0 -20px;
+  background-color: $lightgrey;
+  font-family: Manrope;
+
+  @media (min-width: $md) {
+    margin: 0 -40px;
+  }
+
+  @media (min-width: $lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 -110px;
+    margin-top: 100px;
+    padding: 50px 110px;
+  }
+
+  @media (min-width: $xl) {
+    margin: 0 -220px;
+    margin-top: 100px;
+    padding: 135px 220px;
+  }
+
+  &__item {
+    @media (min-width: $lg) {
+      width: 50%;
+    }
+  }
+
+  &__item-list {
+    padding: 75px 20px;
+
+    @media (min-width: $md) {
+      padding: 80px 40px;
+    }
+
+    @media (min-width: $lg) {
+      width: 47%;
+      padding: 0;
+    }
+
+    @media (min-width: $xl) {
+      width: 50%;
+    }
+  }
+
+  &__item-list-wrapper {
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 50px;
+
+    @media (min-width: $lg) {
+      padding-left: 25px;
+    }
+
+    @media (min-width: $xl) {
+      padding-left: 30px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background-color: $darkgold;
+    }
+
+    & > ul {
+      margin-bottom: 20px;
+    }
+
+    & > ul > li:first-child {
+      font-size: 16px;
+      line-height: 19px;
+      color: #000;
+
+      @media (min-width: $md) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      @media (min-width: $lg) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @media (min-width: $xl) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    & > ul > li:not(:first-child) {
+      position: relative;
+      margin-bottom: 10px;
+      padding-left: 25px;
+      font-size: 16px;
+      line-height: 19px;
+      color: #000;
+
+      @media (min-width: $md) {
+        font-size: 18px;
+        line-height: 22px;
+      }
+
+      @media (min-width: $lg) {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      @media (min-width: $xl) {
+        font-size: 20px;
+        line-height: 24px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: #000;
+
+        @media (min-width: $md) {
+          top: 8px;
+        }
+
+        @media (min-width: $lg) {
+          top: 7px;
+        }
+
+        @media (min-width: $xl) {
+          top: 10px;
+        }
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 45px;
+    font-size: 35px;
+    line-height: 42px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 40px;
+      line-height: 45px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 45px;
+      line-height: 50px;
+    }
+
+    @media (min-width: $xl) {
+      line-height: 55px;
+    }
+  }
+
+  &__item-list-subtitle {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 20px;
+  }
+
+  &__list-title {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background-color: #000;
+
+      @media (min-width: $md) {
+        top: 8px;
+      }
+
+      @media (min-width: $lg) {
+        top: 7px;
+      }
+
+      @media (min-width: $xl) {
+        top: 10px;
+      }
+    }
+  }
+
+  &__item-picture {
+    width: 100%;
+    height: 300px;
+    background-color: #fff;
+    background-image: url('../img/bg-business-analysis-picture.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    @media (min-width: $md) {
+      height: 650px;
+    }
+
+    @media (min-width: $lg) {
+      width: 600px;
+      height: 500px;
+      margin-right: -70px;
+      background-color: transparent;
+      background-position: 50% 35px;
+    }
+
+    @media (min-width: $xl) {
+      width: 880px;
+      height: 750px;
+      margin-right: -140px;
+      background-position: 50% 50px;
+    }
+  }
+}

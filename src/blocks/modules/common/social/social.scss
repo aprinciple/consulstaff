@@ -1,0 +1,56 @@
+.social {
+  display: flex;
+  flex-direction: column;
+
+  &__link {
+    position: relative;
+    text-decoration: none;
+    color: #023042;
+    width: 30px;
+    height: 30px;
+    margin-bottom: 25px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.8;
+      transition: opacity 0.3s;
+      background-repeat: no-repeat;
+    }
+
+    &:hover::after {
+      opacity: 1;
+    }
+
+    &:active::after {
+      opacity: 1;
+    }
+  }
+
+  &__link--instagram {
+    &::after {
+      width: 20px;
+      height: 20px;
+      background-image: url('../img/instagram.svg');
+    }
+  }
+
+  &__link--facebook {
+    &::after {
+      width: 10px;
+      height: 20px;
+      background-image: url('../img/facebook.svg');
+    }
+  }
+
+  &__link--vkontakte {
+    &::after {
+      width: 20px;
+      height: 12px;
+      background-image: url('../img/vk.svg');
+    }
+  }
+}

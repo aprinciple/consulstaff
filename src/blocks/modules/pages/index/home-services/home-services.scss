@@ -1,0 +1,325 @@
+.home-services {
+  position: relative;
+  margin-bottom: 60px;
+
+  @media (min-width: $lg) {
+    margin-bottom: 100px;
+  }
+  
+  @media (min-width: $xl) {
+    margin-bottom: 150px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $lg) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__item {
+
+    &--text {
+      margin-bottom: 55px;
+
+      @media (min-width: $lg) {
+        width: 450px;
+        margin-bottom: 0;
+      }
+      
+      @media (min-width: $xl) {
+        width: 585px;
+      }
+    }
+
+    &--list {
+
+      @media (min-width: $lg) {
+        width: 700px;
+        margin-left: -110px;
+      }
+      
+      @media (min-width: $xl) {
+        width: 1050px;
+        margin-left: -220px;
+      }
+    }
+
+    & > p {
+      margin-bottom: 20px;
+      font-size: 16px;
+      line-height: 30px;
+  
+      @media (min-width: $lg) {
+        margin-bottom: 25px;
+        font-size: 18px;
+      }
+      
+      @media (min-width: $xl) {
+        margin-bottom: 30px;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 48px;
+    color: #000;
+
+    @media (min-width: $lg) {
+      margin-bottom: 30px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 40px;
+      font-size: 54px;
+      line-height: 65px;
+    }
+  }
+
+  &__text {/* Delete for WP */
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 30px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 25px;
+      font-size: 18px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 30px;
+      font-size: 20px;
+    }
+  }
+
+  &__button {
+    margin-top: 10px;
+
+    @media (min-width: $lg) {
+      margin-top: 20px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-top: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 -20px;
+    padding: 50px 20px;
+    background-color: #2C2C2C;
+
+    @media (min-width: $md) {
+      margin: 0;
+    }
+
+    @media (min-width: $lg) {
+      position: relative;
+      right: -110px;
+      padding: 120px 50px;
+      background-color: transparent;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+      }
+    }
+    
+    @media (min-width: $xl) {
+      padding: 200px 100px;
+      right: -220px;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 50px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 27px;
+    color: #fff;
+    transition: color 0.3s;
+
+    @media (min-width: $lg) {
+      margin-bottom: 60px;
+      font-size: 19px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 75px;
+      font-size: 26px;
+      line-height: 35px;
+    }
+
+    &:hover {
+      color: $lightgold;
+    }
+
+    &:active {
+      color: $lightgold;
+    }
+
+    &:nth-last-child(2) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__list-photo {
+    display: none;
+    overflow: hidden;
+
+    &-image {
+      display: none;
+    }
+
+    @media (min-width: $lg) {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+
+      &-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__list-link {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+
+    @media (min-width: $lg) {
+      padding-left: 15px;
+    }
+
+    @media (min-width: $xl) {
+      padding-left: 20px;
+    }
+
+    &::after {
+      content: '>';
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background-color: #fff;
+      font-size: 14px;
+      line-height: 14px;
+      color: #000;
+      text-align: center;
+
+      @media (min-width: $lg) {
+        content: none;
+      }
+    }
+
+    &:hover {
+      color: $lightgold;
+    }
+
+    &:active {
+      color: $lightgold;
+    }
+
+    &:hover::after {
+
+      @media (min-width: $lg) {
+        content: '';
+        top: 50%;
+        width: 7px;
+        height: 7px;
+        transform: translate(0, -50%);
+        background-color: $lightgold;
+        transition: background-color 0.3s;
+      }
+
+      @media (min-width: $xl) {
+        width: 10px;
+        height: 10px;
+      }
+    }
+
+    &:active::after {
+      background-color: $lightgold;
+
+      @media (min-width: $lg) {
+	
+      }
+    }
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation kenburns-top
+ * ----------------------------------------
+ */
+
+.kenburns-top {
+  animation: kenburns-top 3s ease-out both;
+}
+
+ @keyframes kenburns-top {
+  0% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%;
+  }
+  100% {
+    transform: scale(1.25) translateY(-15px);
+    transform-origin: top;
+  }
+}
+
+/**
+ * ----------------------------------------
+ * animation kenburns-top-out
+ * ----------------------------------------
+ */
+
+.kenburns-top-out {
+  animation: kenburns-top-out 1.5s ease-out both;
+}
+
+ @keyframes kenburns-top-out {
+  0% {
+    transform: scale(1.25) translateY(-15px);
+    transform-origin: top;
+  }
+  
+  100% {
+    transform: scale(1) translateY(0);
+    transform-origin: 50% 16%;
+  }
+}
