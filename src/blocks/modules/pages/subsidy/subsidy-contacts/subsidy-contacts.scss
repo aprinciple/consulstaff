@@ -1,0 +1,69 @@
+@import 'contacts/contacts';
+@import 'form-contact/form-contact';
+
+.subsidy-contacts {
+
+  @media (min-width: $lg) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  @media (min-width: $xl) {
+    
+  }
+
+  &__item {
+    margin-bottom: 55px;
+
+    @media (min-width: $lg) {
+      margin: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__info {
+
+    @media (min-width: $lg) {
+      width: 350px;
+      margin-right: 50px;
+    }
+
+    @media (min-width: $xl) {
+      box-sizing: border-box;
+      width: 500px;
+      margin-right: 120px;
+    }
+  }
+
+  &__form {
+    margin: 0 -20px;
+
+    @media (min-width: $md) {
+      margin: 0 -40px;
+    }
+    
+    @media (min-width: $lg) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 950px;
+      height: 800px;
+      margin: 0;
+      margin-right: -110px;
+      background-image: url('../img/bg-home-contacts@1280w.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    
+    @media (min-width: $xl) {
+      width: 1200px;
+      height: 980px;
+      margin-right: -220px;
+      background-image: url('../img/bg-home-contacts.jpg');
+    }
+  }
+}

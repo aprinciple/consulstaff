@@ -1,0 +1,51 @@
+.subsidy-more-info {
+  margin-bottom: 50px;
+
+  @media (min-width: $md) {
+    margin-bottom: 75px;
+  }
+
+  @media (min-width: $lg) {
+    padding-right: 100px;
+  }
+  
+  @media (min-width: $xl) {
+    margin-bottom: 90px;
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 50px;
+      font-size: 20px;
+      line-height: 40px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 28px;
+    }
+  }
+
+  &__author {
+    font-size: 16px;
+    line-height: 20px;
+
+    @media (min-width: $md) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 28px;
+      line-height: 32px;
+    }
+  }
+
+  & a {
+    color: $orange;
+  }
+}

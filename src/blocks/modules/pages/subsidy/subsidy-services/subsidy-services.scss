@@ -1,0 +1,134 @@
+.subsidy-services {
+  margin-bottom: 60px;
+
+  @media (min-width: $md) {
+    margin-bottom: 80px;
+  }
+  
+  @media (min-width: $lg) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 85px;
+  }
+  
+  @media (min-width: $xl) {
+    margin-bottom: 100px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 80px;
+      font-size: 30px;
+      line-height: 50px;
+    }
+    
+    @media (min-width: $lg) {
+      width: 265px;
+      margin-bottom: 0;
+      margin-right: 65px;
+      font-size: 20px;
+      line-height: 35px;
+    }
+    
+    @media (min-width: $xl) {
+      width: 365px;
+      margin-right: 0;
+      font-size: 40px;
+      line-height: 52px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $md) {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    
+    @media (min-width: $lg) {
+      width: 675px;
+    }
+    
+    @media (min-width: $xl) {
+      width: 950px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 45px;
+    padding-left: 80px;
+
+    @media (min-width: $md) {
+      box-sizing: border-box;
+      width: 45%;
+      margin-bottom: 60px;
+    }
+    
+    @media (min-width: $xl) {
+      width: 40%;
+      margin-bottom: 80px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &:nth-child(1)::before {
+      width: 52px;
+      height: 65px;
+      background-image: url('../img/subsidy-services-item-1.svg');
+    }
+    &:nth-child(2)::before {
+      width: 60px;
+      height: 60px;
+      background-image: url('../img/subsidy-services-item-2.svg');
+    }
+    &:nth-child(3)::before {
+      width: 54px;
+      height: 54px;
+      background-image: url('../img/subsidy-services-item-3.svg');
+    }
+    &:nth-child(4)::before {
+      width: 59px;
+      height: 59px;
+      background-image: url('../img/subsidy-services-item-4.svg');
+    }
+  }
+
+  &__item-text {
+    padding-bottom: 25px;
+    border-bottom: 2px solid $orange;
+    font-size: 18px;
+    line-height: 22px;
+    color: #333;
+    
+    @media (min-width: $lg) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+}

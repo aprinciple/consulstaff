@@ -1,0 +1,441 @@
+.subsidy-apply {
+  margin-bottom: 70px;
+
+  @media (min-width: $md) {
+    margin-bottom: 115px;
+  }
+  
+  @media (min-width: $lg) {
+    margin-bottom: 140px;
+  }
+  
+  @media (min-width: $xl) {
+    margin-bottom: 250px;
+  }
+
+  &__title {
+    margin-bottom: 35px;
+    margin-left: -20px;
+    padding: 20px;
+    background-color: $orange;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+
+    @media (min-width: $md) {
+      width: 75%;
+      margin-bottom: 70px;
+      margin-left: -40px;
+      padding: 25px;
+      padding-left: 40px;
+      font-size: 40px;
+      line-height: 48px;
+    }
+    
+    @media (min-width: $lg) {
+      width: 50%;
+      margin-bottom: 75px;
+      margin-left: -110px;
+      padding: 30px;
+      padding-left: 110px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 100px;
+      margin-left: -220px;
+      padding: 40px;
+      padding-left: 220px;
+      font-size: 60px;
+      line-height: 72px;
+    }
+  }
+
+  &__promo {
+    margin-bottom: 55px;
+
+    @media (min-width: $md) {
+      margin-bottom: 60px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__promo-title {
+    margin-bottom: 40px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333;
+
+    @media (min-width: $md) {
+      font-size: 30px;
+      line-height: 36px;
+    }
+    
+    @media (min-width: $lg) {
+      width: 50%;
+    }
+    
+    @media (min-width: $xl) {
+      width: 100%;
+      font-size: 45px;
+      line-height: 54px;
+    }
+  }
+
+  &__promo-text {
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 20px;
+      line-height: 40px;
+    }
+    
+    @media (min-width: $lg) {
+      padding-right: 170px;
+    }
+    
+    @media (min-width: $xl) {
+      padding-right: 200;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    overflow-x: scroll;
+
+    @media (min-width: $md) {
+      padding-bottom: 35px;
+    }
+    
+    @media (min-width: $lg) {
+      justify-content: center;
+      margin-bottom: 75px;
+      padding-bottom: 0;
+      overflow-x: visible;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 115px;
+    }
+
+    &::-webkit-scrollbar {
+      height: 7px;
+      border-radius: 5px;
+      background-color: #EFEFEF;
+
+      @media (min-width: $lg) {
+        display: none;
+      }
+    }
+    
+    &::-webkit-scrollbar-track {
+      border-radius: 5px;
+
+      @media (min-width: $lg) {
+        display: none;
+      }
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background-color: #FBB03B;
+
+      @media (min-width: $lg) {
+        display: none;
+      }
+    } 
+
+    &::scrollbar-color {
+      background-color: $darkgold;
+    }
+  }
+
+  &__item {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    margin-right: 25px;
+    padding: 30px 55px;
+    box-shadow: 0 3px 6px #ccc;
+    text-align: center;
+
+    @media (min-width: $md) {
+      min-width: 305px;
+    }
+
+    @media (min-width: $lg) {
+      min-width: auto;
+      width: 305px;
+    }
+    
+    @media (min-width: $xl) {
+      width: 335px;
+      margin-right: 40px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item-description {
+    display: none;
+
+    @media (min-width: $xl) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      padding-top: 125px;
+      box-shadow: none;
+
+      & span {
+        border-bottom: none;
+      }
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 30px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #EFEFEF;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+
+    @media (min-width: $xl) {
+      padding-bottom: 40px;
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__item-clause {
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #EFEFEF;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+
+    @media (min-width: $xl) {
+      margin-bottom: 25px;
+      padding-bottom: 25px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+  }
+
+  &__item-clause-title {
+    display: block;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #999;
+
+    @media (min-width: $xl) {
+      display: none;
+    }
+  }
+
+  &__item-clause-title--black {
+    color: #000;
+  }
+
+  &__item-price {
+    font-size: 20px;
+    line-height: 24px;
+    color: $orange;
+  }
+
+  &__footer {
+
+    @media (min-width: $lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__footer-list {
+    margin-bottom: 50px;
+    counter-reset: item;
+
+    @media (min-width: $md) {
+      padding-right: 150px;
+    }
+    
+    @media (min-width: $lg) {
+      width: 50%;
+      margin-bottom: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__footer-list-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 40px;
+    font-size: 16px;
+    line-height: 25px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 40px;
+      padding-left: 50px;
+      font-size: 20px;
+      line-height: 40px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 30px;
+      font-size: 18px;
+      line-height: 26px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 40px;
+      padding-left: 60px;
+      font-size: 28px;
+      line-height: 40px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      counter-increment: item;
+      content: ' 'counter(item)' ';
+      position: absolute;
+      top: 4px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background-color: $orange;
+      font-weight: 500;
+      font-size: 15px;
+      color: #fff;
+      text-align: center;
+
+      @media (min-width: $md) {
+        top: 10px;
+      }
+      
+      @media (min-width: $lg) {
+        top: 4px;
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+      }
+      
+      @media (min-width: $xl) {
+        top: 6px;
+        width: 35px;
+        height: 35px;
+        font-size: 17px;
+      }
+    }
+  }
+
+  &__footer-aside {
+    position: relative;
+    margin-bottom: 30px;
+    padding-bottom: 60px;
+
+    @media (min-width: $md) {
+      padding-bottom: 75px;
+    }
+    
+    @media (min-width: $lg) {
+      width: 50%;
+      margin-bottom: 0;
+      margin-right: -110px;
+      padding-bottom: 70px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-right: -220px;
+      padding-bottom: 80px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 200px;
+      height: 25px;
+      background-image: url('../img/subsidy-promo-logo.png');
+      background-repeat: no-repeat;
+      background-size: 100%;
+
+      @media (min-width: $md) {
+        width: 260px;
+        height: 33px;
+        background-image: url('../img/subsidy-promo-logo@768.png');
+      }
+      
+      @media (min-width: $xl) {
+        width: 421px;
+        height: 53px;
+        background-image: url('../img/subsidy-promo-logo@1920.png');
+      }
+    }
+  }
+
+  &__footer-aside-slogan {
+    box-sizing: border-box;
+    margin-right: -20px;
+    padding: 20px 30px;
+    background-color: #FBB03B;
+
+    @media (min-width: $md) {
+      width: 515px;
+      margin-left: auto;
+      margin-right: -40px;
+      padding: 25px 30px;
+    }
+    
+    @media (min-width: $lg) {
+      width: auto;
+      margin-right: 0;
+      padding: 40px 45px;
+    }
+  }
+
+  &__footer-aside-slogan-text {
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+
+    @media (min-width: $md) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+}

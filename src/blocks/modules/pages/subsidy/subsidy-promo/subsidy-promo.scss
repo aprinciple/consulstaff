@@ -1,0 +1,255 @@
+.subsidy-promo {
+  position: relative;
+  margin: 0 -20px;
+  margin-bottom: 70px;
+  padding-top: 65px;
+  padding-bottom: 80px;
+  background-image: url('../img/bg-subsidy-promo.jpg');
+  background-repeat: no-repeat;
+  background-position: right top;
+
+  @media (min-width: $md) {
+    margin: 0 -40px;
+    margin-bottom: 90px;
+    padding-top: 120px;
+    background-image: url('../img/bg-subsidy-promo@768.jpg');
+  }
+  
+  @media (min-width: $lg) {
+    margin: 0 -110px;
+    margin-bottom: 80px;
+    padding-top: 105px;
+    padding-bottom: 60px;
+    background-image: url('../img/bg-subsidy-promo@1280.jpg');
+  }
+  
+  @media (min-width: $xl) {
+    margin: 0 -220px;
+    margin-bottom: 150px;
+    padding-top: 170px;
+    padding-bottom: 90px;
+    background-image: url('../img/bg-subsidy-promo@1920.jpg');
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 200px;
+    height: 25px;
+    background-image: url('../img/subsidy-promo-logo.png');
+    background-repeat: no-repeat;
+
+    @media (min-width: $md) {
+      width: 260px;
+      height: 33px;
+      background-image: url('../img/subsidy-promo-logo@768.png');
+    }
+    
+    @media (min-width: $lg) {
+      bottom: 35px;
+      left: auto;
+      right: 50px;
+      padding: 20px;
+      transform: none;
+      background-color: #fff;
+      background-position: 50% 50%;
+    }
+
+    @media (min-width: $xl) {
+      bottom: 65px;
+      right: 90px;
+      width: 421px;
+      height: 53px;
+      background-image: url('../img/subsidy-promo-logo@1920.png');
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    padding: 20px;
+    padding-right: 40px;
+    background-color: $darkgold;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #fff;
+    clip-path: polygon(0 0, 85% 0, 100% 100%, 0% 100%);
+
+    @media (min-width: $md) {
+      margin-bottom: 130px;
+      padding: 40px 50px;
+      padding-right: 95px;
+      font-size: 30px;
+      line-height: 36px;
+    }
+    
+    @media (min-width: $lg) {
+      box-sizing: border-box;
+      width: 1000px;
+      margin-bottom: 40px;
+      padding: 20px 0px;
+      padding-left: 110px;
+      padding-right: 100px;
+      font-size: 38px;
+      line-height: 46px;
+      clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+    }
+    
+    @media (min-width: $xl) {
+      width: 1600px;
+      margin-bottom: 70px;
+      padding: 30px 0;
+      padding-left: 220px;
+      padding-right: 130px;
+      font-weight: 500;
+      font-size: 60px;
+      line-height: 72px;
+    }
+  }
+
+  &__wrapper {
+    padding: 0 20px;
+
+    @media (min-width: $md) {
+      padding: 0 40px;
+    }
+
+    @media (min-width: $lg) {
+      padding: 0 110px;
+    }
+
+    @media (min-width: $xl) {
+      padding: 0 220px;
+    }
+  }
+
+  &__slogan {
+    margin-bottom: 30px;
+
+    @media (min-width: $md) {
+      margin-bottom: 50px;
+    }
+
+    @media (min-width: $lg) {
+      width: 635px;
+      margin-bottom: 60px;
+    }
+
+    @media (min-width: $xl) {
+      width: 950px;
+      margin-bottom: 90px;
+    }
+  }
+
+  &__slogan-title {
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+
+    @media (min-width: $md) {
+      padding-right: 250px;
+      font-size: 25px;
+      line-height: 45px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 15px;
+      padding-right: 180px;
+      font-size: 25px;
+      line-height: 30px;
+    }
+    
+    @media (min-width: $xl) {
+      padding-right: 0;
+      font-size: 45px;
+      line-height: 50px;
+    }
+  }
+
+  &__slogan-text {
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+
+    @media (min-width: $md) {
+      padding-right: 210px;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    
+    @media (min-width: $lg) {
+      padding-right: 0;
+      font-size: 20px;
+      line-height: 35px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 28px;
+    }
+  }
+
+  &__description {
+
+    @media (min-width: $lg) {
+      width: 750px;
+    }
+
+    @media (min-width: $xl) {
+      width: 1120px;
+    }
+  }
+
+  &__description-text {
+    margin-bottom: 25px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+
+    @media (min-width: $md) {
+      padding-right: 150px;
+      font-size: 20px;
+      line-height: 35px;
+    }
+    
+    @media (min-width: $lg) {
+      margin-bottom: 10px;
+      padding-right: 0;
+      font-size: 18px;
+      line-height: 20px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 30px;
+      padding-right: 50px;
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+
+  &__description-price {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 42px;
+    color: $orange;
+
+    @media (min-width: $md) {
+      font-size: 40px;
+      line-height: 48px;
+    }
+    
+    @media (min-width: $lg) {
+      font-size: 36px;
+      line-height: 42px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 60px;
+      line-height: 72px;
+    }
+  }
+}

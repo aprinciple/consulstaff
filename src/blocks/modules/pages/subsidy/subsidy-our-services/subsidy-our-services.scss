@@ -1,0 +1,43 @@
+.subsidy-our-services {
+  margin-bottom: 55px;
+
+  @media (min-width: $md) {
+    margin-bottom: 75px;
+  }
+  
+  @media (min-width: $lg) {
+    margin-bottom: 90px;
+  }
+  
+  @media (min-width: $xl) {
+    margin-bottom: 200px;
+  }
+
+  &__title {
+    margin-bottom: 55px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000;
+    text-align: center;
+
+    @media (min-width: $md) {
+      margin-bottom: 75px;
+      font-size: 30px;
+      line-height: 52px;
+    }
+    
+    @media (min-width: $lg) {
+      padding: 0 105px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 90px;
+      padding: 0 50px;
+      font-size: 44px;
+    }
+  }
+
+  &__items {
+  }
+}

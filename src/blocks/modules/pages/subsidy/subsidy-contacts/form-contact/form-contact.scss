@@ -1,0 +1,27 @@
+.subsidy-contacts {
+
+  &__form-contact {
+    background-color: #004F6F;
+
+    @media (min-width: $md) {
+
+    }
+    
+    @media (min-width: $lg) {
+      width: 650px;
+    }
+    
+    @media (min-width: $xl) {
+      width: 835px;
+    }
+  }
+
+  &__form-contact-label-text {
+    color: $orange;
+  }
+
+  &__form-contact-button {
+    background-color: $orange;
+    color: #fff;
+  }
+}

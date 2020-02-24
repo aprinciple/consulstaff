@@ -1,0 +1,20 @@
+@import 'subsidy-promo/subsidy-promo';
+@import 'subsidy-services/subsidy-services';
+@import 'subsidy-projects/subsidy-projects';
+@import 'subsidy-criteria/subsidy-criteria';
+@import 'subsidy-about-us/subsidy-about-us';
+@import 'subsidy-apply/subsidy-apply';
+@import 'subsidy-our-services/subsidy-our-services';
+@import 'subsidy-more-info/subsidy-more-info';
+@import 'subsidy-contacts/subsidy-contacts';
+@import 'footer/footer';
+
+.page-subsidy {
+
+  &__main {
+  }
+
+  & .nav-bar__language-switcher {
+    // display: none;
+  }
+}

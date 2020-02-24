@@ -1,0 +1,40 @@
+.subsidy-footer {
+
+  &__wrapper {
+
+    @media (min-width: $md) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  &__item {
+
+    @media (min-width: $md) {
+      display: block;
+    }
+  }
+
+  &__social {
+
+    @media (min-width: $md) {
+      margin-bottom: 40px;
+    }
+
+    & .social {
+
+      @media (min-width: $lg) {
+        flex-direction: row;
+      }
+    }
+
+    & .social__item {
+
+      @media (min-width: $lg) {
+        margin-right: 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
