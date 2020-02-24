@@ -10,8 +10,12 @@
 <body class="page-contacts">
   @@include('../../common/header-post/header-post.html')
   <main class="page-contacts__main container">
-    @@include('../../common/contacts/contacts.html')
-    @@include('form-contact/form-contact.html')
+    <div class="page-contacts__contacts">
+      @@include('../../common/contacts/contacts.html')
+    </div>
+    <div class="page-contacts__form">
+      @@include('form-contact/form-contact.html')
+    </div>
   </main>
   @@include('../../common/footer/footer.html')
   <script src="js/script.min.js"></script>
