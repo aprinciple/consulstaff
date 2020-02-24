@@ -1,0 +1,147 @@
+.post-project-article {
+  margin-bottom: 70px;
+
+  @media (min-width: $md) {
+    margin-bottom: 90px;
+  }
+  
+  @media (min-width: $lg) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 125px;
+  }
+  
+  @media (min-width: $xl) {
+    margin-bottom: 155px;
+  }
+
+  &__nav {
+    display: none;
+
+    @media (min-width: $lg) {
+      display: block;
+      width: 25%;
+    }
+
+    @media (min-width: $xl) {
+      width: 23%;
+    }
+  }
+
+  &__nav-item {
+
+    @media (min-width: $lg) {
+      margin-bottom: 35px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 22px;
+      color: #000;
+    }
+  }
+
+  &__nav-num {
+    position: relative;
+    display: inline-block;
+    margin-right: 30px;
+    color: $darkgold;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      right: -30px;
+      width: 25px;
+      height: 2px;
+      background-color: $darkgold;
+    }
+  }
+
+  &__nav-link {
+    color: #000;
+    transition: color 0.3s;
+
+    &:hover,
+    &:active {
+      color: $orange;
+    }
+  }
+
+  &__sections {
+    
+    @media (min-width: $lg) {
+      width: 65%;
+    }
+  }
+
+  &__section {
+    position: relative;
+    margin-bottom: 75px;
+    padding-bottom: 5px;
+    padding-left: 25px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: $darkgold;
+    }
+  }
+
+  &__section-title {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__section-num {
+    position: relative;
+    display: inline-block;
+    margin-right: 48px;
+    color: $darkgold;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 3px;
+      right: -47px;
+      width: 40px;
+      height: 2px;
+      background-color: $darkgold;
+    }
+  }
+
+  &__section-text {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    
+    @media (min-width: $xl) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    & p {
+      margin-bottom: 10px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

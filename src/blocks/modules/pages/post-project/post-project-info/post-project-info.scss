@@ -1,0 +1,67 @@
+.post-project-info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 65px;
+
+  @media (min-width: $md) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 100px;
+  }
+  
+  @media (min-width: $lg) {
+    width: 65%;
+    margin-bottom: 110px;
+  }
+  
+  @media (min-width: $xl) {
+    width: 45%;
+    margin-bottom: 150px;
+  }
+
+  &__item {
+    margin-bottom: 45px;
+
+    @media (min-width: $md) {
+      width: 45%;
+    }
+
+    @media (min-width: $xl) {
+      width: 40%;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @media (min-width: $md) {
+        margin-left: auto;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 5px;
+      right: -35px;
+      width: 25px;
+      height: 2px;
+      background-color: $darkgold;
+    }
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
