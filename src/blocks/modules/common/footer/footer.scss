@@ -139,6 +139,12 @@
     &:active {
       color: $darkgold;
     }
+
+    &--active {
+      padding-bottom: 4px;
+      border-bottom: 2px solid $darkgold;
+      color: $darkgold;
+    }
   }
 
   &__contacts {
@@ -211,13 +217,12 @@
   &__social {
     display: flex;
     flex-direction: column;
-    margin-bottom: 0;
+    margin-bottom: 40px;
 
     @media (min-width: $md) {
       flex-direction: row;
       flex-wrap: wrap;
       flex-basis: 100%;
-      margin-bottom: 20px;
     }
 
     @media (min-width: $lg) {
@@ -239,27 +244,6 @@
 
       @media (min-width: $lg) {
         flex-basis: auto;
-      }
-    }
-
-    &-item {
-      margin-bottom: 15px;
-      font-size: 16px;
-      line-height: 19px;
-      color: #000;
-
-      @media (min-width: $md) {
-        margin-bottom: 0;
-        margin-right: 30px;
-
-        &:last-child {
-          margin-right: 0;
-        }
-      }
-
-      @media (min-width: $lg) {
-        margin-right: 0;
-        margin-bottom: 15px;
       }
     }
   }
