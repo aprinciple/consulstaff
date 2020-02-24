@@ -1,0 +1,138 @@
+.clauses-services {
+
+  @media (min-width: $md) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  @media (min-width: $lg) {
+    justify-content: flex-start;
+  }
+  
+  @media (min-width: $xl) {
+    justify-content: space-between;
+  }
+
+  &__item {
+    position: relative;
+    width: 210px;
+    margin-bottom: 55px;
+    padding-top: 75px;
+
+    @media (min-width: $md) {
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 45%;
+      height: 220px;
+      margin-bottom: 65px;
+    }
+    
+    @media (min-width: $lg) {
+      width: 28%;
+      margin-right: 8%;
+      margin-bottom: 70px;
+
+      &:nth-child(3n) {
+        margin-right: 0;
+      }
+    }
+    
+    @media (min-width: $xl) {
+      width: 17%;
+      height: 240px;
+      margin-right: 3.75%;
+      margin-bottom: 0;
+
+      &:nth-child(3n) {
+        margin-right: 3.75%;
+      }
+
+      &:nth-child(5n) {
+        margin-right: 0;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    &:nth-child(1)::after {
+      width: 55px;
+      height: 55px;
+      background-image: url('../img/clauses-services-1.svg');
+    }
+    &:nth-child(2)::after {
+      width: 54px;
+      height: 54px;
+      background-image: url('../img/clauses-services-2.svg');
+    }
+    &:nth-child(3)::after {
+      width: 54px;
+      height: 54px;
+      background-image: url('../img/clauses-services-3.svg');
+    }
+    &:nth-child(4)::after {
+      width: 58px;
+      height: 56px;
+      background-image: url('../img/clauses-services-4.svg');
+    }
+    &:nth-child(5)::after {
+      width: 58px;
+      height: 56px;
+      background-image: url('../img/clauses-services-5.svg');
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 25px;
+    padding-top: 10px;
+    border-top: 2px solid $orange;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #333;
+
+    @media (min-width: $md) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__item-more {
+    position: relative;
+    display: block;
+    padding-bottom: 25px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #333;
+    transition: color 0.3s;
+
+    &:hover,
+    &:active {
+      color: $orange;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 148px;
+      height: 27px;
+      background-image: url('../img/icon-long-arrow.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}
