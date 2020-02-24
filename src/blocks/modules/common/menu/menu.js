@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const menu = document.querySelector('.menu');
 
   if (menu) {
-    const toggle = menu.querySelector('.menu__toggle');
-    const subList = menu.querySelector('.menu__sub-list');
+    let toggle = menu.querySelector('.menu__toggle');
+    let subList = menu.querySelector('.menu__sub-list');
 
     menu.addEventListener('click', (e) => {
       let target = e.target;
