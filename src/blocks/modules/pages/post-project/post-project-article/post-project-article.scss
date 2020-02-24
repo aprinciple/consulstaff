@@ -90,6 +90,24 @@
     }
   }
 
+  &__id {
+    position: relative;
+    top: -55px;
+    width: 0;
+    height: 0;
+    clip: rect(0 0 0 0);
+    opacity: 0;
+    font-size: 0;
+    
+    @media (min-width: $lg) {
+      top: -85px;
+    }
+    
+    @media (min-width: $xl) {
+      top: -125px;
+    }
+  }
+
   &__section-title {
     margin-bottom: 15px;
     font-weight: bold;
