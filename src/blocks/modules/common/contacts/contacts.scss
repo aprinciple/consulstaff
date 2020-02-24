@@ -48,6 +48,7 @@
   }
 
   &__email {
+    display: block;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
@@ -60,5 +61,61 @@
     font-size: 16px;
     line-height: 19px;
     color: $grey;
+  }
+
+  &__item-messenger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+  }
+
+  &__item-messenger-text {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #000;
+
+    @media (min-width: $xl) {
+      font-size: 24px;
+      line-height: 29px;
+    }
+  }
+
+  &__item-messenger-items {
+    display: flex;
+  }
+
+  &__item-messenger-item {
+    margin-right: 15px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__item-messenger-item-telegram {
+
+    &:hover .contacts__item-messenger-item-icon,
+    &:active .contacts__item-messenger-item-icon {
+      fill: #1c9ae6;
+    }
+  }
+  &__item-messenger-item-whatsapp {
+    &:hover .contacts__item-messenger-item-icon,
+    &:active .contacts__item-messenger-item-icon {
+      fill: #4baf4f;
+    }
+  }
+
+  &__item-messenger-item-icon {
+    width: 30px;
+    height: 30px;
+    transition: fill 0.3s;
+
+    @media (min-width: $xl) {
+      width: 40px;
+      height: 40px;
+    }
   }
 }
