@@ -9,6 +9,10 @@
     height: 19px;
     cursor: pointer;
 
+    @media (min-width: $lg) {
+      display: none;
+    }
+
     &::after {
       content: '';
       position: absolute;
@@ -19,12 +23,20 @@
       height: 19px;
       background-image: url('../img/icon-menu.svg');
       background-repeat: no-repeat;
+
+      @media (min-width: $lg) {
+        content: none;
+      }
     }
 
     &.open::after {
       width: 20px;
       height: 20px;
       background-image: url('../img/icon-close-white.svg');
+
+      @media (min-width: $lg) {
+        content: none;
+      }
     }
   }
 
@@ -34,7 +46,7 @@
     left: 0;
     z-index: 101;
     box-sizing: border-box;
-    display: flex;
+    display: none;
     flex-direction: column;
     width: 100vw;
     height: 100vh;
@@ -42,49 +54,16 @@
     padding-top: 85px;
     background-color: #082E44;
     animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    display: none;
 
     @media (min-width: $lg) {
-      padding-top: 175px;
-      padding-left: 125px;
-      animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
-
-    @media (min-width: $xl) {
-      padding-top: 200px;
-      padding-left: 150px;
-    }
-
-    &-aside {
-      display: none;
-
-      @media (min-width: $lg) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 102;
-        width: 50%;
-        height: 100vh;
-        background-color: #fff;
-      }
-      
-      &-image {
-        display: none;
-
-        @media (min-width: $lg) {
-          display: block;
-          width: 450px;
-          height: 415px;
-        }
-
-        @media (min-width: $xl) {
-          width: 650px;
-          height: 615px;
-        }
-      }
+      position: relative;
+      z-index: 0;
+      display: flex;
+      width: auto;
+      height: 100%;
+      padding: 0;
+      animation: none;
+      background-color: transparent;
     }
   }
 
@@ -99,24 +78,12 @@
     display: block;
     width: 175px;
     height: 40px;
-    background-image: url('../img/logo-menu@360w.svg');
+    background-image: url('../img/logo-menu.svg');
     background-repeat: no-repeat;
     text-decoration: none;
 
     @media (min-width: $lg) {
-      top: 15px;
-      width: 227px;
-      height: 97px;
-      background-image: url('../img/logo-menu.svg');
-
-    }
-
-    @media (min-width: $lg) {
-      left: 125px;
-    }
-
-    @media (min-width: $xl) {
-      left: 150px;
+      display: none;
     }
   }
 
@@ -124,6 +91,11 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 50px;
+
+    @media (min-width: $lg) {
+      flex-direction: row;
+      margin-bottom: 0;
+    }
   }
 
   &__item {
@@ -132,49 +104,34 @@
     font-size: 18px;
     line-height: 22px;
     color: #fff;
-    transition: padding-left 0.3s, color 0.3s;
-    opacity: 0;
-
-    &:nth-of-type(1) {
-      animation: menu-item-entrance 0.5s forwards 0.3s ease-in-out;
-    }
-    &:nth-of-type(2) {
-      animation: menu-item-entrance 0.5s forwards 0.6s ease-in-out;
-    }
-    &:nth-of-type(3) {
-      animation: menu-item-entrance 0.5s forwards 0.9s ease-in-out;
-    }
-    &:nth-of-type(4) {
-      animation: menu-item-entrance 0.5s forwards 1.2s ease-in-out;
-    }
-    &:nth-of-type(5) {
-      animation: menu-item-entrance 0.5s forwards 1.5s ease-in-out;
-    }
-    &:nth-of-type(6) {
-      animation: menu-item-entrance 0.5s forwards 1.8s ease-in-out;
-    }
-
-    &:hover {
-      padding-left: 15px;
-      color: #F1AF40;
-    }
-
-    &:active {
-      color: #F1AF40;
-    }
 
     @media (min-width: $lg) {
-      margin-bottom: 25px;
+      margin-bottom: 0;
+      margin-right: 50px;
+      font-weight: 500;
+      font-size: 16px;
     }
     
     @media (min-width: $xl) {
-      margin-bottom: 50px;
-      font-size: 26px;
-      line-height: 30px;
+      margin-right: 70px;
+      font-size: 20px;
+      line-height: 26px;
+    }
+
+    &:hover {
+      color: $darkgold;
+    }
+
+    &:active {
+      color: $darkgold;
     }
 
     &:last-child {
       margin-bottom: 0;
+
+      @media (min-width: $lg) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -184,34 +141,36 @@
     transition: color 0.3s;
 
     &:hover {
-      color: #F1AF40;
+      color: $darkgold;
     }
 
     &:active {
-      color: #F1AF40;
+      color: $darkgold;
     }
 
     &--active {
-      color: #F1AF40;
+      padding-bottom: 4px;
+      border-bottom: 2px solid $darkgold;
+      color: $darkgold;
     }
   }
 
   &__toggle-sub-list {
     position: relative;
-    padding-right: 25px;
 
     &::after {
       content: '>';
       position: absolute;
       top: 1px;
-      right: 0;
-      font-size: 25px;
+      right: -20px;
+      font-size: 21px;
       vertical-align: middle;
+      transform: rotate(90deg);
       transition: transform 0.3s;
     }
 
     &.open::after {
-      transform: rotate(90deg);
+      transform: rotate(270deg);
     }
   }
 
@@ -221,32 +180,47 @@
     margin-left: 20px;
 
     @media (min-width: $lg) {
-      margin-top: 25px;
-      margin-left: 25px;
+      position: absolute;
+      top: 50px;
+      left: -25px;
+      box-sizing: border-box;
+      width: 455px;
+      margin: 0;
+      padding: 0 25px;
+      padding-top: 20px;
+      padding-bottom: 10px;
+      background-color: #082e44;
     }
     
     @media (min-width: $xl) {
-      margin-top: 35px;
-      margin-left: 35px;
+      width: 580px;
+      padding: 45px 35px;
     }
+  }
 
-    &-item {
-      margin-bottom: 10px;
-      font-size: 14px;
-      line-height: 18px;
+  &__sub-list-item,
+  &__sub-list &__item {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 18px;
+    transition: padding-left 0.3s;
 
-      @media (min-width: $lg) {
-        margin-bottom: 15px;
-        font-size: 16px;
-        line-height: 20px;
-      }
-      
-      @media (min-width: $xl) {
-        margin-bottom: 35px;
-        font-size: 22px;
-        line-height: 26px;
-      }
+    @media (min-width: $lg) {
+      margin-bottom: 20px;
+      font-size: 15px;
+      line-height: 19px;
     }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 35px;
+      font-size: 22px;
+      line-height: 26px;
+    }
+  }
+
+  &__sub-list &__item:hover,
+  &__sub-list &__item:active {
+    padding-left: 20px;
   }
 
   &__toggle-sub-list.open + &__sub-list {
@@ -286,17 +260,5 @@
   }
   100% {
     transform: translateX(0);
-  }
-}
-
-@keyframes menu-item-entrance {
-  from {
-    transform: translateX(10%);
-    opacity: 0;
-  }
-
-  to {
-    transform: translateX(0);
-    opacity: 1;
   }
 }
