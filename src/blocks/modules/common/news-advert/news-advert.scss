@@ -14,12 +14,10 @@
   }
 
   &__aside {
-    margin-bottom: 40px;
     font-family: Manrope;
 
     @media (min-width: $md) {
       width: 300px;
-      margin-bottom: 0;
     }
 
     @media (min-width: $lg) {
