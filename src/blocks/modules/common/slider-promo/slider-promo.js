@@ -10,6 +10,7 @@ if (slider) {
     rightButtonOfSlider: document.querySelector('.promo-slider__button--right'),
     numOfPointer: document.querySelector('.promo-slider__pointer-num'),
     amountOfPointer: document.querySelector('.promo-slider__pointer-amount'),
+    mode: 'auto',
   }))();
 }
 });

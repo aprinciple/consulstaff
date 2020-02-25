@@ -7,6 +7,7 @@ class Slider {
     this.rightButtonOfSlider = options.rightButtonOfSlider;
     this.numOfPointer = options.numOfPointer;
     this.amountOfPointer = options.amountOfPointer;
+    this.mode = options.mode;
     this.indexOfSlide = 0;
     this.touchStartX = 0;
     this.touchEndX = 0;
@@ -20,7 +21,7 @@ class Slider {
       this.handleGesture();
     });
 
-    this.init(this.indexOfSlide);
+    this.init(this.indexOfSlide, this.mode);
   }
 
   hideSlides() {
@@ -68,11 +69,20 @@ class Slider {
     }
   }
 
-  async init(i) {
+  async init(i, mode) {
     const n = await this.checkIndex(i);
     this.hideSlides();
     this.setPointer(n, this.itemsOfSlider.length);
     this.showSlide(n);
+    this.handleMode(mode);
+  }
+
+  handleMode(mode) {
+    if (mode === 'auto') {
+      setInterval(() => {
+        this.rightButtonOfSlider.click();
+      }, 2000);
+    }
   }
 }
 
