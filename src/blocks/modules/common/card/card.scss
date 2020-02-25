@@ -39,20 +39,6 @@
     }
   }
 
-  &__link-title {
-    text-decoration: none;
-    color: #000;
-    transition: color 0.3s;
-
-    &:hover {
-      color: $darkgold;
-    }
-
-    &:active {
-      color: $darkgold;
-    }
-  }
-
   &__title {
     margin-bottom: 15px;
     font-weight: bold;
@@ -60,7 +46,7 @@
     line-height: 19px;
     color: inherit;
   }
-
+  
   &__text {
     font-size: 16px;
     line-height: 19px;
