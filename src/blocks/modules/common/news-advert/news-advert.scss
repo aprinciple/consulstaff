@@ -149,6 +149,11 @@
     margin-right: 20px;
     text-decoration: none;
     cursor: pointer;
+
+    &:hover .card__title,
+    &:active .card__title {
+      color: $darkgold;
+    }
   
     &:last-child {
       margin-right: 0;
