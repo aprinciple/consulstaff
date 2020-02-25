@@ -80,8 +80,8 @@ class Slider {
   handleMode(mode) {
     if (mode === 'auto') {
       setInterval(() => {
-        this.rightButtonOfSlider.click();
-      }, 3000);
+        this.init(++this.indexOfSlide);
+      }, 3500);
     }
   }
 }
