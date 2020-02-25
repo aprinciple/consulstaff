@@ -3,8 +3,16 @@
   &__promo-post {
     margin-bottom: 50px;
 
+    @media (min-width: $md) {
+      margin-bottom: 90px;
+    }
+
     @media (min-width: $lg) {
-      margin-bottom: 0;
+      margin-bottom: 125px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 190px;
     }
   }
 }
