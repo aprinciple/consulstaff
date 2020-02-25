@@ -81,7 +81,7 @@ class Slider {
     if (mode === 'auto') {
       setInterval(() => {
         this.rightButtonOfSlider.click();
-      }, 2000);
+      }, 3000);
     }
   }
 }
