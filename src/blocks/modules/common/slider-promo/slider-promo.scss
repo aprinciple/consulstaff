@@ -159,8 +159,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    // animation: fade-in-bck 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-    animation: slide-in-left 0.5s;
+    animation: slide-in-left 0.3s;
 
     &::after {
       content: '';
@@ -286,7 +285,7 @@
 
  @keyframes slide-in-left {
   0% {
-    transform: translateX(-50%);
+    transform: translateX(50%);
   }
   100% {
     transform: translateX(0);
