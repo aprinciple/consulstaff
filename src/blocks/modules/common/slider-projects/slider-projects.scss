@@ -46,10 +46,11 @@
     }
 
     @media (min-width: $lg) {
+      outline: 1px solid red;
       width: 25%;
-      height: 550px;
+      height: 500px;
       margin: 0;
-      padding-top: 100px;
+      padding-top: 50px;
       padding-left: 50px;
       padding-right: 50px;
       padding-bottom: 60px;
@@ -62,8 +63,11 @@
     }
 
     @media (min-width: $xl) {
-      height: 900px;
-      padding: 0 120px;
+      height: 700px;
+      padding-top: 120px;
+      padding-right: 50px;
+      padding-left: 50px;
+      padding-bottom: 100px;
     }
 
     &-image {
@@ -100,13 +104,16 @@
   &__inner {
     position: relative;
     z-index: 2;
-    font-family: Manrope;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
+    font-family: Manrope;
     
     @media (min-width: $lg) {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
+      // display: flex;
+      // flex-direction: column;
+      // justify-content: space-around;
     }
   }
 
