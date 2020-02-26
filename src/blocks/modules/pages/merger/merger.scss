@@ -1,7 +1,7 @@
 @import 'promo-post/promo-post';
 @import 'projects/projects';
 @import 'team-referral/team-referral';
-@import 'merger-slider/merger-slider';
+@import 'merger-items/merger-items';
 
 .page-merger {
 
@@ -9,20 +9,23 @@
   }
 
   &__slogan {
-    margin-bottom: 50px;
+    margin-bottom: 60px;
 
     @media (min-width: $md) {
       width: 450px;
       margin: 0 auto;
+      margin-bottom: 75px;
       text-align: center;
     }
 
     @media (min-width: $lg) {
       width: 500px;
+      margin-bottom: 100px;
     }
     
     @media (min-width: $xl) {
       width: 650px;
+      margin-bottom: 150px;
     }
   }
 
