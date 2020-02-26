@@ -28,7 +28,9 @@
     }
     
     @media (min-width: $lg) {
-      padding: 0 105px;
+      width: 65%;
+      margin: 0 auto;
+      margin-bottom: 75px;
     }
     
     @media (min-width: $xl) {
