@@ -176,7 +176,7 @@
 
   &__sub-list {
     display: none;
-    margin-top: 15px;
+    margin-top: 30px;
     margin-left: 20px;
 
     @media (min-width: $lg) {
@@ -200,8 +200,8 @@
 
   &__sub-list-item,
   &__sub-list &__item {
-    margin-bottom: 10px;
-    font-size: 14px;
+    margin-bottom: 15px;
+    font-size: 16px;
     line-height: 18px;
     transition: padding-left 0.3s;
 
