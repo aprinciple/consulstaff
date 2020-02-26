@@ -244,12 +244,12 @@
 
     &:hover,
     &:active,
-    &__list-link--active {
+    &--active {
       color: $lightgold;
     }
 
     &:hover::after,
-    &__list-link--active::after {
+    &--active::after {
 
       @media (min-width: $lg) {
         content: '';
