@@ -6,22 +6,23 @@
     &::after {
       content: '';
       position: absolute;
-      top: 0;
+      top: 79px;
       right: 0;
-      width: 690px;
-      height: 505px;
+      width: 610px;
+      height: 450px;
       z-index: 1;
       background-image: url('../img/bg-corporate-promo.svg');
+      background-size: 100% 100%;
       background-repeat: no-repeat;
-      background-size: 100%;
     }
   }
 
   @media (min-width: $xl) {
 
     &::after {
+      top: 119px;
       width: 975px;
-      height: 505px;
+      height: 715px;
     }
   }
 
