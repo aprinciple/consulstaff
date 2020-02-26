@@ -14,15 +14,11 @@
   }
 
   &__team-referral {
-    padding-top: 75px;
-    padding-bottom: 50px;
+    padding-top: 65px;
+    padding-bottom: 65px;
 
     @media (min-width: $lg) {
       padding-bottom: 75px;
-    }
-
-    @media (min-width: $xl) {
-      padding-bottom: 100px;
     }
   }
 }
