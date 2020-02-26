@@ -43,15 +43,15 @@
     }
 
     @media (min-width: $lg) {
-      width: calc(60% + 55px);
-      height: 500px;
+      width: calc(50% + 55px);
+      height: 450px;
       margin: 0;
       margin-left: 50px;
       margin-right: -110px;
     }
 
     @media (min-width: $xl) {
-      width: calc(60% + 110px);
+      width: calc(50% + 110px);
       height: 650px;
       margin: 0;
       margin-left: 100px;
