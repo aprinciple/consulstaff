@@ -1,17 +1,43 @@
 .clauses-services {
 
-  @media (min-width: $md) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  &__title {
+    margin-bottom: 40px;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 42px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 55px;
+    }
+
+    @media (min-width: $lg) {
+      width: 60%;
+      font-size: 50px;
+      line-height: 52px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 90px;
+      font-size: 60px;
+      line-height: 64px;
+    }
   }
-  
-  @media (min-width: $lg) {
-    justify-content: flex-start;
-  }
-  
-  @media (min-width: $xl) {
-    justify-content: space-between;
+
+  &__items {
+    @media (min-width: $md) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    @media (min-width: $lg) {
+      justify-content: flex-start;
+    }
+    
+    @media (min-width: $xl) {
+      justify-content: space-between;
+    }
   }
 
   &__item {
