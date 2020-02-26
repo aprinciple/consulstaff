@@ -21,4 +21,16 @@
       padding-bottom: 75px;
     }
   }
+
+  &__clauses-services {
+    margin-bottom: 55px;
+    
+    @media (min-width: $lg) {
+      margin-bottom: 40px;
+    }
+    
+    @media (min-width: $xl) {
+      margin-bottom: 100px;
+    }
+  }
 }
