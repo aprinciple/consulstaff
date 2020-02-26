@@ -1,18 +1,18 @@
 .page-merger {
 
   &__promo-post {
-    margin-bottom: 75px;
+    margin-bottom: 60px;
 
     @media (min-width: $md) {
-      margin-bottom: 100px;
+      margin-bottom: 75px;
     }
     
     @media (min-width: $lg) {
-      margin-bottom: 150px;
+      margin-bottom: 100px;
     }
     
     @media (min-width: $xl) {
-      margin-bottom: 200px;
+      margin-bottom: 150px;
     }
   }
 
