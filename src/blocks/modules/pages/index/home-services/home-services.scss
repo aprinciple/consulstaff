@@ -249,6 +249,7 @@
     }
 
     &:hover::after,
+    &:active::after,
     &--active::after {
 
       @media (min-width: $lg) {
