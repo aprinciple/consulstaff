@@ -87,12 +87,12 @@
   &__info-block-article-text {
 
     @media (min-width: $lg) {
-      height: 240px;
+      max-height: 240px;
       overflow-y: auto;
     }
 
     @media (min-width: $xl) {
-      height: 380px;
+      max-height: 380px;
     }
   }
 
