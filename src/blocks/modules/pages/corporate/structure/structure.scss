@@ -397,13 +397,12 @@
       display: flex;
       justify-content: space-between;
       margin: 0;
-      padding-top: 230px;
       padding-right: 40px;
       padding-left: 40px;
     }
     
     @media (min-width: $xl) {
-      padding-top: 375px;
+      padding-top: 300px;
       padding-right: 65px;
       padding-left: 65px;
     }
