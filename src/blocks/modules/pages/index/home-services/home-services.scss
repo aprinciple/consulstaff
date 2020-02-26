@@ -242,15 +242,14 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &:active,
+    &__list-link--active {
       color: $lightgold;
     }
 
-    &:active {
-      color: $lightgold;
-    }
-
-    &:hover::after {
+    &:hover::after,
+    &__list-link--active::after {
 
       @media (min-width: $lg) {
         content: '';
