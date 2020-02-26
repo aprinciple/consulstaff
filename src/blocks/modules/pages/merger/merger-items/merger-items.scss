@@ -17,6 +17,7 @@
       margin-bottom: 100px;
     }
 
+    // Style for even images
     &:nth-child(even) &-picture {
 
       @media (min-width: $lg) {
@@ -31,6 +32,7 @@
       }
     }
 
+    // Style for odd images
     &:nth-child(odd) &-picture {
 
       @media (min-width: $lg) {
@@ -45,6 +47,7 @@
       }
     }
 
+    // Style for even text-content
     &:nth-child(even) &-content {
 
       @media (min-width: $lg) {
@@ -58,6 +61,7 @@
       }
     }
 
+    // Style for odd text-content
     &:nth-child(odd) &-content {
 
       @media (min-width: $lg) {
@@ -70,9 +74,58 @@
         margin-left: -200px;
       }
     }
+
+    // Numbers for odd images
+    &:nth-child(odd) &-picture::after {
+
+      @media (min-width: $lg) {
+        top: 50px;
+        left: auto;
+        right: 130px;
+      }
+
+      @media (min-width: $xl) {
+        top: 80px;
+        right: 220px;
+      }
+    }
+
+    // Numbers for even images
+    &:nth-child(even) &-picture::after {
+
+      @media (min-width: $lg) {
+        top: 50px;
+        right: auto;
+        left: 130px;
+      }
+
+      @media (min-width: $xl) {
+        top: 80px;
+        left: 220px;
+        border: 1px solid greenyellow;
+        content: none;
+      }
+    }
+
+    &:nth-child(1) &-picture::after {
+      content: '1';
+    }
+    &:nth-child(2) &-picture::after {
+      content: '2';
+    }
+    &:nth-child(3) &-picture::after {
+      content: '3';
+    }
+    &:nth-child(4) &-picture::after {
+      content: '4';
+    }
+    &:nth-child(5) &-picture::after {
+      content: '5';
+    }
   }
 
   &__item-picture {
+    position: relative;
     height: 250px;
     margin: 0 -20px;
     margin-bottom: 30px;
@@ -92,6 +145,41 @@
     
     @media (min-width: $xl) {
       height: 600px;
+    }
+
+    // Number for images
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100px;
+      width: 100px;
+      font-weight: bold;
+      font-size: 85px;
+      line-height: 0;
+      color: $darkgold;
+      text-shadow: 0 0 5px $darkgold;
+
+      @media (min-width: $md) {
+        width: 150px;
+        height: 150px;
+        font-size: 120px;
+      }
+
+      @media (min-width: $lg) {
+        width: 140px;
+        height: 220px;
+        font-size: 200px;
+        text-shadow: 0 0 10px $darkgold;
+      }
+
+      @media (min-width: $xl) {
+        font-size: 280px;
+      }
     }
   }
 
