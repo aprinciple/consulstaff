@@ -60,6 +60,11 @@
         width: 195px;
         height: 225px;
       }
+
+      @media (min-width: $lg) {
+        width: 150px;
+        height: 170px;
+      }
     }
 
     &::after {
