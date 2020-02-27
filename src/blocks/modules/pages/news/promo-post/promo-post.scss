@@ -2,11 +2,10 @@
 
   &__promo-post {
     margin-bottom: 70px;
-    padding-top: 75px;
 
     @media (min-width: $md) {
       margin-bottom: 90px;
-      padding-top: 120px;
+      padding-top: 90px;
     }
 
     @media (min-width: $lg) {
@@ -14,7 +13,7 @@
     }
 
     @media (min-width: $xl) {
-      padding-top: 150px;
+      padding-top: 130px;
     }
   }
 
