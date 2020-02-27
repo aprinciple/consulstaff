@@ -104,10 +104,12 @@
     position: relative;
     top: 110px;
     height: 220px;
+    margin: 0 -20px;
 
     @media (min-width: $md) {
       top: 230px;
       height: 465px;
+      margin: 0 -40px;
     }
     
     @media (min-width: $lg) {
@@ -116,6 +118,7 @@
       right: 0;
       width: 545px;
       height: 590px;
+      margin: 0;
     }
     
     @media (min-width: $xl) {
