@@ -134,6 +134,7 @@
     font-size: 29px;
     line-height: 31px;
     color: #000;
+    overflow: hidden;
 
     @media (min-width: $md) {
       max-height: 158px;
