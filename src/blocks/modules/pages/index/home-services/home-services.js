@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const listServices = document.querySelector('.home-services__list');
-  const linksListServices = listServices.querySelectorAll('.home-services__list-link');
+
   if (listServices && window.innerWidth > 1279) {
     const imageServices = listServices.querySelector('.home-services__list-photo-image');
     imageServices.src = listServices.querySelectorAll('.home-services__list-link')[0].dataset.image;
@@ -25,17 +25,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Reset active state of first link
-  const firstLink = linksListServices[0];
-  if (firstLink.classList.contains('home-services__list-link--active')) {
-    linksListServices.forEach((item) => {
-      if (item !== firstLink) {
-        item.addEventListener('mouseover', () => {
-          firstLink.classList.remove('home-services__list-link--active');
-        });
-        item.addEventListener('click', () => {
-          firstLink.classList.remove('home-services__list-link--active');
-        });
-      }
-    });
+
+  
+  if (listServices) {
+    const linksListServices = listServices.querySelectorAll('.home-services__list-link');
+    const firstLink = linksListServices[0];
+
+    if (firstLink.classList.contains('home-services__list-link--active')) {
+      linksListServices.forEach((item) => {
+        if (item !== firstLink) {
+          item.addEventListener('mouseover', () => {
+            firstLink.classList.remove('home-services__list-link--active');
+          });
+          item.addEventListener('click', () => {
+            firstLink.classList.remove('home-services__list-link--active');
+          });
+        }
+      });
+    }
   }
 });
