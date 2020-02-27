@@ -128,11 +128,16 @@
   }
 
   &__inner-title {
+    max-height: 158px;
     margin-bottom: 25px;
     font-weight: bold;
     font-size: 29px;
     line-height: 31px;
     color: #000;
+
+    @media (min-width: $md) {
+      max-height: 158px;
+    }
   }
 
   &__inner-data {
