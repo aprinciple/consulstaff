@@ -129,6 +129,18 @@
         font-size: 20px;
         line-height: 24px;
       }
+
+      @media (min-width: $lg) {
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 21px;
+      }
+
+      @media (min-width: $xl) {
+        margin-bottom: 20px;
+        font-size: 20px;
+        line-height: 24px;
+      }
     }
   }
 
