@@ -143,18 +143,7 @@
   }
 
   &__card-image {
-
-    @media (min-width: $md) {
-      height: 240px;
-    }
-
-    @media (min-width: $lg) {
-      height: 240px;
-    }
-
-    @media (min-width: $xl) {
-      height: 275px;
-    }
+    height: 100%;
   }
 
   &__card-title {
