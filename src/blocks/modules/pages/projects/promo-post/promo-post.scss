@@ -1,19 +1,19 @@
 .page-projects {
 
   &__promo-post {
-    margin-bottom: 100px;
+    margin-bottom: 60px;
 
     @media (min-width: $md) {
-      margin-bottom: 120px;
+      margin-bottom: 75px;
     }
 
     @media (min-width: $lg) {
       margin-bottom: 90px;
-      padding-top: 120px;
+      padding-top: 90px;
     }
 
     @media (min-width: $xl) {
-      margin-bottom: 150px;
+      margin-bottom: 100px;
       padding-top: 150px;
     }
   }
