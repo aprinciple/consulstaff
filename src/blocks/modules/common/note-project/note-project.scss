@@ -1,7 +1,6 @@
 .note-project {
   margin-bottom: 65px;
   font-family: Manrope;
-  outline: 1px solid red;
 
   &:last-child {
     margin-bottom: 0;
@@ -90,7 +89,6 @@
     }
     
     @media (min-width: $lg) {
-      outline: 3px solid greenyellow;
       width: calc(50% + 110px);
       max-height: 460px;
       margin-top: 90px;
@@ -140,7 +138,6 @@
     font-size: 16px;
     line-height: 19px;
     color: #000;
-    outline: 1px solid red;
 
     @media (min-width: $md) {
       min-height: 45px;
