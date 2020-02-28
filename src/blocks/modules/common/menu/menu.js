@@ -22,14 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let target = e.target;
   
         if (target.closest('.menu__toggle-sub-list')) {
-          toggleSubList.classList.add('open');
-        }
-
-        if (toggleSubList.classList.contains('open')) {
-          toggleSubList.addEventListener('click', () => {
-            let href = toggleSubList.href;
-            window.open(href, '_self');
-          });
+          toggleSubList.classList.toggle('open');
         }
       });
     }
