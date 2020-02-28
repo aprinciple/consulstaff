@@ -1,56 +1,25 @@
 .note-project {
   margin-bottom: 65px;
   font-family: Manrope;
+  outline: 1px solid red;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 
   @media (min-width: $md) {
-    margin-bottom: -115px;
-
-    &:last-child {
-      margin-bottom: 0;
-      height: 875px;
-    }
+    margin-bottom: 75px;
   }
 
   @media (min-width: $lg) {
-    position: relative;
     display: flex;
     justify-content: space-between;
-    height: auto;
-    margin: 0;
-    margin-bottom: 175px;
-
-    &:last-child {
-      margin-bottom: 175px;
-      height: auto;
-    }
-  }
-
-  @media (min-width: $xl) {
-    margin-bottom: 220px;
-
-    &:last-child {
-      margin-bottom: 220px;
-    }
-  }
-
-  &:nth-child(2n) {
-
-    @media (min-width: $lg) {
-      height: 550px;
-    }
-
-    @media (min-width: $xl) {
-      height: 800px;
-    }
   }
 
   &:nth-child(2n) > .note-project__picture {
 
     @media (min-width: $lg) {
-      position: absolute;
-      top: 0;
-      right: 0;
-      margin-left: 0;
+      order: 1;
       margin-right: -110px;
     }
 
@@ -62,14 +31,12 @@
   &:nth-child(2n) > .note-project__article {
 
     @media (min-width: $lg) {
-      right: auto;
-      left: 0;
-      width: 585px;
+      margin-right: 0;
       padding-right: 40px;
     }
 
     @media (min-width: $xl) {
-      width: 760px;
+      margin-right: 0;
       padding-right: 85px;
     }
   }
@@ -81,48 +48,34 @@
 
     @media (min-width: $md) {
       height: 500px;
+      margin: 0 -40px;
     }
     
     @media (min-width: $lg) {
-      width: 750px;
-      height: 550px;
+      width: calc(50% + 110px);
+      height: 400px;
+      margin-right: -110px;
       margin-left: -110px;
     }
     
     @media (min-width: $xl) {
-      width: 1200px;
-      height: 800px;
+      width: calc(50% + 220px);
+      height: 600px;
+      margin-right: -220px;
       margin-left: -220px;
     }
   }
 
   &__image {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-
-    @media (min-width: $md) {
-      height: 500px;
-    }
-    
-    @media (min-width: $lg) {
-      width: 750px;
-      height: 550px;
-    }
-    
-    @media (min-width: $xl) {
-      width: 1200px;
-      height: 800px;
-    }
   }
 
   &__article {
     position: relative;
-    top: -40px;
-    z-index: 1;
+    margin-top: -40px;
     box-sizing: border-box;
-    min-height: 575px;
-    max-height: 575px;
     padding-top: 40px;
     padding-left: 20px;
     padding-right: 20px;
@@ -131,31 +84,24 @@
     overflow: hidden;
 
     @media (min-width: $md) {
-      top: -185px;
+      margin-top: -185px;
       padding: 50px 65px;
-      min-height: 450px;
       max-height: 450px;
     }
     
     @media (min-width: $lg) {
-      position: absolute;
-      top: 121px;
-      right: 0;
-      width: 690px;
-      min-height: 515px;
-      max-height: 515px;
-      margin-right: -110px;
+      outline: 3px solid greenyellow;
+      width: calc(50% + 110px);
+      max-height: 460px;
+      margin-top: 90px;
       padding: 40px;
     }
     
     @media (min-width: $xl) {
-      top: 240px;
-      width: 960px;
-      min-height: 670px;
-      max-height: 670px;
-      margin-right: -220px;
-      padding: 85px 65px;
-      padding-right: 200px;
+      width: calc(50% + 220px);
+      max-height: 600px;
+      margin-top: 100px;
+      padding: 55px 60px;
     }
 
     &::after {
@@ -187,20 +133,28 @@
   }
 
   &__article-excerpt {
-    max-height: 210px;
-    margin-bottom: 60px;
+    max-height: 172px;
+    margin-bottom: 40px;
     overflow: hidden;
     font-size: 16px;
     line-height: 19px;
     color: #000;
+    outline: 1px solid red;
 
     @media (min-width: $md) {
-      max-height: 200px;
+      min-height: 45px;
+      max-height: 113px;
       font-size: 18px;
       line-height: 22px;
     }
+
+    @media (min-width: $lg) {
+      min-height: 45px;
+      max-height: 132px;
+    }
     
     @media (min-width: $xl) {
+      min-height: 72px;
       max-height: 120px;
       font-size: 20px;
       line-height: 24px;
@@ -234,22 +188,6 @@
       &:active {
         color: $lightgold;
       }
-    }
-  }
-
-  &__article-text {
-    font-size: 16px;
-    line-height: 19px;
-    color: #000;
-
-    @media (min-width: $md) {
-      font-size: 18px;
-      line-height: 22px;
-    }
-    
-    @media (min-width: $xl) {
-      font-size: 20px;
-      line-height: 24px;
     }
   }
 
