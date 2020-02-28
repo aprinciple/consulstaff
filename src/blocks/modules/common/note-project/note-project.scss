@@ -120,8 +120,14 @@
     font-size: 28px;
     line-height: 34px;
     color: #000;
+
+    @media (min-width: $lg) {
+      max-height: 68px;
+      overflow: hidden;
+    }
     
     @media (min-width: $xl) {
+      max-height: 180px;
       font-size: 48px;
       line-height: 60px;
     }
