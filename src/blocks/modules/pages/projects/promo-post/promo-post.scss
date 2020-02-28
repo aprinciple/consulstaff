@@ -29,16 +29,6 @@
   &__promo-post-title {
     font-size: 40px;
     line-height: 48px;
-
-    @media (min-width: $md) {
-      font-size: 60px;
-      line-height: 72px;
-    }
-    
-    @media (min-width: $lg) {
-      font-size: 70px;
-      line-height: 95px;
-    }
     
     @media (min-width: $xl) {
       font-size: 60px;
