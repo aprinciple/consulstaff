@@ -117,14 +117,9 @@
 
   &__article-title {
     margin-bottom: 30px;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 28px;
+    line-height: 34px;
     color: #000;
-
-    @media (min-width: $md) {
-      font-size: 40px;
-      line-height: 48px;
-    }
     
     @media (min-width: $xl) {
       font-size: 48px;
