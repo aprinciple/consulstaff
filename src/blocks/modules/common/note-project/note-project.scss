@@ -44,7 +44,7 @@
     }
   }
 
-  &:nth-child(2n) > .note-project__item-picture {
+  &:nth-child(2n) > .note-project__picture {
 
     @media (min-width: $lg) {
       position: absolute;
@@ -59,7 +59,7 @@
     }
   }
 
-  &:nth-child(2n) > .note-project__item-article {
+  &:nth-child(2n) > .note-project__article {
 
     @media (min-width: $lg) {
       right: auto;
