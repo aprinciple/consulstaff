@@ -14,3 +14,4 @@ import '../blocks/modules/common/alert/alert';
 
 // Pages
 import '../blocks/modules/pages/index/index';
+import '../blocks/modules/pages/post-project/post-project';
