@@ -6,6 +6,10 @@
     padding-top: 90px;
   }
 
+  @media (min-width: $xl) {
+    padding-top: 120px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
