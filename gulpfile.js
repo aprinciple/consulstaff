@@ -120,6 +120,18 @@ function webP() {
   .pipe(dest('dist/img'));
 }
 
+function spriteSvg() {
+  return src('src/img/svg/*.svg')
+  .pipe(svgSprite({
+    mode: {
+      stack: {
+        sprite: "../sprite.svg"
+      }
+    },
+  }))
+  .pipe(dest('dist/img'));
+}
+
 function sprite() {
   return src('src/img/svg/*.svg')
   .pipe(imagemin([
@@ -175,6 +187,7 @@ function watch() {
   // gulp.watch(['src/blocks/**/*.php', 'src/views/**/*.php'], gulp.parallel(phpViews));
   gulp.watch(['src/img/**/*.{jpg,jpeg,png,gif,svg}', 'src/blocks/modules/common/*/*.{jpg,jpeg,png,gif,svg}', 'src/blocks/modules/pages/**/*.{jpg,jpeg,png,gif,svg}'], gulp.parallel(images));
   gulp.watch('src/img/**/*.{png,jpg,jpeg}', gulp.parallel(webP));
+  gulp.watch('src/img/svg/*.svg', gulp.parallel(spriteSvg));
   gulp.watch('src/fonts/**/*.{woff,woff2}', gulp.parallel(fonts));
 }
 
@@ -187,5 +200,5 @@ function clear() {
 }
 
 exports.build = gulp.series(clean, clear,
-    gulp.parallel([html, style, script, images, webP, sprite, fonts, favicon, gzip]),
+    gulp.parallel([html, style, script, images, webP, spriteSvg, fonts, favicon, gzip]),
     gulp.parallel(server, watch));
