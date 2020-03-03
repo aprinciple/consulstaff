@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-// npm install gulp gulp-plumber gulp-csso gulp-imagemin imagemin-mozjpeg gulp-svgstore gulp-cheerio gulp-replace gulp-webp node-sass gulp-sass gulp-postcss autoprefixer gulp-pretty-html gulp-babel @babel/core @babel/preset-env gulp-file-include gulp-rename del gulp-cache browser-sync webpack webpack-stream bem-tools-core bem-tools-create --save-dev
+// npm install gulp gulp-plumber gulp-csso gulp-imagemin gulp-webp node-sass gulp-sass gulp-postcss autoprefixer gulp-pretty-html gulp-babel @babel/core @babel/preset-env gulp-file-include gulp-rename del gulp-cache browser-sync webpack webpack-stream bem-tools-core bem-tools-create --save-dev
 
 const 
   gulp = require('gulp'),
@@ -8,11 +8,7 @@ const
   plumber = require('gulp-plumber'),
   csso = require('gulp-csso'),
   imagemin = require('gulp-imagemin'),
-  imageminMozjpeg = require('imagemin-mozjpeg'),
   webp = require('gulp-webp'),
-  svgstore = require('gulp-svgstore'),
-  cheerio = require('gulp-cheerio'),
-  replace = require('gulp-replace'),
   sass = require('gulp-sass'),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
