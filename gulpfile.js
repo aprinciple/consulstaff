@@ -119,6 +119,31 @@ function webP() {
   .pipe(dest('dist/img'));
 }
 
+function sprite() {
+  return src('src/img/svg/*.svg')
+  .pipe(imagemin([
+    imagemin.svgo({
+      plugins: [
+        {removeViewBox: true},
+        {cleanupIDs: false}
+      ]
+    })
+  ]))
+  .pipe(cheerio({
+    run: function ($) {
+      $('[fill]').removeAttr('fill');
+      $('[style]').removeAttr('style');
+    },
+    parserOptions: { xmlMode: true }
+  }))
+  .pipe(replace('&gt;', '>'))
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(rename('sprite.svg'))
+  .pipe(dest('dist/img'));
+}
+
 function fonts() {
   return src('src/fonts/**/*.{woff,woff2}')
   .pipe(dest('dist/fonts'));
@@ -161,5 +186,5 @@ function clear() {
 }
 
 exports.build = gulp.series(clean, clear,
-    gulp.parallel([html, style, script, images, webP, fonts, favicon, gzip]),
+    gulp.parallel([html, style, script, images, webP, sprite, fonts, favicon, gzip]),
     gulp.parallel(server, watch));
