@@ -89,9 +89,9 @@ function images() {
     ])
   .pipe(imagemin([
     imagemin.optipng(),
-    imagemin.jpegtran({progressive: true}),
-    imageminMozjpeg({
-      quality: 90
+    imagemin.mozjpeg({
+      quality: 85, 
+      progressive: true
     }),
     imagemin.gifsicle({interlaced: true}),
     imagemin.svgo({
