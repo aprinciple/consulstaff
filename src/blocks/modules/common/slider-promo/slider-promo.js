@@ -1,16 +1,20 @@
-import {Slider} from '../slider/slider';
+/* eslint-disable */
+import Carousel from '../slider-carousel/slider-carousel';
 
 document.addEventListener('DOMContentLoaded', () => {
-const slider = document.querySelector('.promo-slider');
-if (slider) {
-  (() => new Slider({
-    slider: document.querySelector('.promo-slider'),
-    itemsOfSlider: document.querySelectorAll('.promo-slider__item'),
-    leftButtonOfSlider: document.querySelector('.promo-slider__button--left'),
-    rightButtonOfSlider: document.querySelector('.promo-slider__button--right'),
-    numOfPointer: document.querySelector('.promo-slider__pointer-num'),
-    amountOfPointer: document.querySelector('.promo-slider__pointer-amount'),
-    mode: 'auto',
-  }))();
-}
+  const carousel = document.querySelector('.promo-slider');
+  if (carousel) {
+    (() => new Carousel({
+      slider: carousel,
+      wrap: document.querySelector('.promo-slider__items'),
+      items: document.querySelectorAll('.promo-slider__item'),
+      prev: document.querySelector('.promo-slider__button--left'),
+      next: document.querySelector('.promo-slider__button--right'),
+      currentPointer: document.querySelector('.promo-slider__pointer-num'),
+      amountPointer: document.querySelector('.promo-slider__pointer-amount'),
+      noTransition: 'no-transition',
+      autoplay: true,
+      autoplayDelay: 3500,
+    }))();
+  }
 });
