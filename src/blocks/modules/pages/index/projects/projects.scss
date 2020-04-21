@@ -17,4 +17,95 @@
   }
 }
 
-@import 'slider-projects/slider-projects';
+.best-projects {
+
+  &__container {
+
+    @media (min-width: $lg) {
+      display: grid;
+      grid-template-columns: 465px 1fr;
+      grid-template-rows: 3;
+      column-gap: 55px;
+    }
+
+    @media (min-width: $xl) {
+      grid-template-columns: 490px 1fr;
+      column-gap: 100px;
+    }
+  }
+
+  &__image {
+    width: 240px;
+    height: 200px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    object-fit: cover;
+
+    @media (min-width: $md) {
+      width: 465px;
+      height: 385px;
+    }
+
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+      grid-row: span 3;
+    }
+
+    @media (min-width: $xl) {
+      width: 490px;
+      height: 410px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 35px;
+    font-size: 24px;
+    line-height: 29px;
+
+    @media (min-width: $md) {
+      margin-bottom: 40px;
+      font-size: 40px;
+      line-height: 48px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 54px;
+      line-height: 65px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 65px;
+      height: 5px;
+      background-color: $darkgold;
+    }
+  }
+
+  &__text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 22px;
+
+    @media (min-width: $md) {
+      margin-bottom: 45px;
+      font-size: 22px;
+      line-height: 30px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 55px;
+    }
+  }
+
+  &__button {
+
+    @media (min-width: $md) {
+      justify-self: end;
+    }
+  }
+}
