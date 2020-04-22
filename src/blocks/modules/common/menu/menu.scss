@@ -71,22 +71,6 @@
     display: flex;
   }
 
-  &__logo {
-    position: absolute;
-    top: 5px;
-    left: 20px;
-    display: block;
-    width: 175px;
-    height: 40px;
-    background-image: url('../img/logo-menu.svg');
-    background-repeat: no-repeat;
-    text-decoration: none;
-
-    @media (min-width: $lg) {
-      display: none;
-    }
-  }
-
   &__list {
     display: flex;
     flex-direction: column;
