@@ -52,7 +52,7 @@
     height: 100vh;
     padding: 0 20px;
     padding-top: 85px;
-    background-color: #082E44;
+    background-color: #F7F7F7;
     animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
     @media (min-width: $lg) {
@@ -103,7 +103,7 @@
     margin-bottom: 35px;
     font-size: 18px;
     line-height: 22px;
-    color: #fff;
+    color: #000;
 
     @media (min-width: $lg) {
       margin-bottom: 0;
@@ -136,7 +136,7 @@
   }
 
   &__link {
-    color: #fff;
+    color: #000;
     text-decoration: none;
     transition: color 0.3s;
 
@@ -189,7 +189,7 @@
       padding: 0 25px;
       padding-top: 20px;
       padding-bottom: 10px;
-      background-color: #082e44;
+      background-color: #F7F7F7;
     }
     
     @media (min-width: $xl) {

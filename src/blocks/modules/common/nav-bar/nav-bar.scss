@@ -1,12 +1,11 @@
 .nav-bar {
   box-sizing: border-box;
-  background-color: #fff;
+  background-color: #F7F7F7;
   height: 55px;
   box-shadow: 0 1px 5px -1px #999;
 
   @media (min-width: $lg) {
     height: 80px;
-    background-color: #082E44;
     box-shadow: none;
   }
 
@@ -52,7 +51,7 @@
     @media (min-width: $xl) {
       display: block;
       font-size: 20px;
-      color: $darkgold;
+      color: #000;
     }
   }
 
