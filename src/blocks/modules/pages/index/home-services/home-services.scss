@@ -193,9 +193,11 @@
   }
 
   &__card-link {
+    position: relative;
     display: none;
     justify-self: end;
     align-self: end;
+    padding-right: 35px;
     font-weight: bold;
     font-size: 13px;
     line-height: 13px;
@@ -211,5 +213,21 @@
     &:active {
       color: #fff;
     }
+
+    &:hover &-icon,
+    &:active &-icon {
+      fill: #fff;
+    }
+  }
+
+  &__card-link-icon {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    max-width: 25px;
+    max-height: 15px;
+    transform: translateY(-50%);
+    fill: $orange;
+    transition: fill 0.3s;
   }
 }
