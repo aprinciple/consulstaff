@@ -32,7 +32,7 @@
     &.open::after {
       width: 20px;
       height: 20px;
-      background-image: url('../img/icon-close-white.svg');
+      background-image: url('../img/icon-close.svg');
 
       @media (min-width: $lg) {
         content: none;
