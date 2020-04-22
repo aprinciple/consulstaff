@@ -18,50 +18,26 @@
     z-index: 1;
   }
 
-  &__inner {
+  &__items {
+    position: relative;
     display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    box-sizing: border-box;
-    width: calc(100% - 40px);
+    width: 100%;
+    height: 100%;
+    background-color: #939290;
+  }
 
-    @media (min-width: $md) {
-      left: 40px;
-      width: 70%;
-      transform: translate(0, -50%);
-    }
+  &__item {
+    position: relative;
+    flex: 0 0 100%;
 
-    @media (min-width: $lg) {
-      top: 50%;
-      left: 20px;
-      width: 600px;
-    }
-    
-    @media (min-width: $xl) {
-      width: 900px;
-      height: 320px;
-    }
-
-    &-wrapper {
-      position: relative;
-      z-index: 11;
-      padding: 0 20px;
-      padding-top: 30px;
-      padding-right: 70px;
-      padding-bottom: 35px;
-      background-color: #fff;
-
-      @media (min-width: $md) {
-        
-      }
-
-      @media (min-width: $xl) {
-        padding: 50px;
-      }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
     }
 
     &-title {
@@ -69,16 +45,19 @@
       font-weight: bold;
       font-size: 24px;
       line-height: 30px;
-      color: #034E6F;
+      color: #fff;
+      animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
       @media (min-width: $lg) {
         margin-bottom: 35px;
+        padding-right: 50px;
         font-size: 40px;
         line-height: 50px;
       }
 
       @media (min-width: $xl) {
         margin-bottom: 50px;
+        padding-right: 100px;
         font-size: 60px;
         line-height: 72px;
       }
@@ -88,7 +67,8 @@
       margin: 0;
       font-size: 16px;
       line-height: 20px;
-      color: #000;
+      color: #fff;
+      animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
 
       @media (min-width: $lg) {
         font-size: 20px;
@@ -104,66 +84,170 @@
     &-years {
       position: absolute;
       right: -20px;
-      bottom: -30px;
+      bottom: -65px;
       z-index: 12;
       box-sizing: border-box;
       display: flex;
       justify-content: center;
       align-items: center;
       width: 90px;
-      height: 60px;
+      height: 50px;
       padding: 20px 10px;
-      background-color: #EFB01B;
+      background-color: $darkgold;
       text-align: center;
       font-weight: bold;
       font-size: 10px;
       line-height: 12px;
       color: #fff;
       text-transform: uppercase;
+      animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
+
+      @media (min-width: $md) {
+        right: -40px;
+        bottom: -80px;
+        width: 120px;
+        height: 70px;
+        font-size: 14px;
+        line-height: 18px;
+      }
 
       @media (min-width: $lg) {
-        right: -180px;
-        bottom: -35px;
+        right: -140px;
+        bottom: 0;
         z-index: 10;
-        width: 210px;
-        height: 120px;
-        padding-right: 0;
-        font-size: 25px;
-        line-height: 30px;
+        width: 140px;
+        height: 80px;
+        font-size: 18px;
+        line-height: 22px;
       }
       
       @media (min-width: $xl) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        right: -245px;
-        bottom: -60px;
-        width: 285px;
-        height: 160px;
-        padding: 0 40px;
-        font-size: 30px;
-        line-height: 35px;
+        right: -180px;
+        width: 180px;
+        height: 105px;
+        padding: 30px;
+        font-size: 21px;
+        line-height: 25px;
       }
+    }
+
+    &-image {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      animation: kenburns-top 4s ease-out both;
     }
   }
 
-  &__items {
-    position: relative;
+  &__inner {
     display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    box-sizing: border-box;
+    width: calc(100% - 40px);
+
+    @media (min-width: $md) {
+      left: 40px;
+      width: 70%;
+      transform: translate(0, -50%);
+    }
+
+    @media (min-width: $lg) {
+      top: 51%;
+      left: 20px;
+      width: 500px;
+      max-height: 240px;
+    }
+    
+    @media (min-width: $xl) {
+      top: 55%;
+      width: 750px;
+      max-height: 400px;
+    }
+  }
+
+  &__nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 15;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
-    background-color: #939290;
-    will-change: transform;
-    transition: 1.5s;
+    margin-left: -20px;
+    padding-left: 40px;
+    padding-bottom: 40px;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    @media (min-width: $lg) {
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    @media (min-width: $xl) {
+      padding-bottom: 55px;
+    }
+
+    &::-webkit-scrollbar { 
+      display: none;
+    }
   }
 
-  &__items.no-transition {
-    transition: 0s;
-  }
-
-  &__item {
+  &__nav-item {
     position: relative;
-    flex: 0 0 100%;
+    min-width: 155px;
+    padding-top: 25px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.3s;
+    user-select: none;
+    cursor: pointer;
+
+    @media (min-width: $md) {
+      min-width: 185px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 18px;
+      line-height: 22px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 50px;
+
+      @media (min-width: $md) {
+        margin-right: 70px;
+      }
+
+      @media (min-width: $lg) {
+        margin-right: 90px;
+      }
+
+      @media (min-width: $xl) {
+        margin-right: 130px;
+      }
+    }
+
+    & > a {
+      
+    }
+
+    &:hover,
+    &:active {
+      color: rgba(255, 255, 255, 1);
+    }
 
     &::after {
       content: '';
@@ -171,102 +255,13 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.4);
-    }
-  }
-
-  &__image {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__nav {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    z-index: 15;
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 190px;
-    height: 50px;
-    padding: 0 20px;
-    background-color: #053043;
-    transform: translate(-50%, 0);
-
-    @media (min-width: $lg) {
-      left: auto;
-      transform: none;
-      right: 20px;
-      width: 250px;
-      height: 80px;
-      padding: 0 40px;
+      height: 5px;
+      background-color: $darkgold;
+      transition: background-color 0.3s;
     }
 
-    @media (min-width: $xl) {
-      width: 350px;
-      height: 130px;
-      padding: 0 60px;
-    }
-  }
-
-  &__button {
-    position: relative;
-    width: 26px;
-    height: 11px;
-    line-height: 0;
-
-    &--left {
-    }
-
-    &--right {
-    }
-
-    &-icon {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      fill: #fff;
-      transition: fill 0.3s;
-    }
-
-    &:hover > &-icon {
-      fill: #F1AF40;
-    }
-
-    &:active > &-icon {
-      fill: #F1AF40;
-    }
-  }
-
-  &__pointer {
-    width: 53px;
-
-    &-item {
-      font-family: Manrope;
-
-      &--amount {
-        vertical-align: top;
-        color: #9D9D9D;
-      }
-    }
-
-    &-num {
-      font-weight: 500;
-      font-size: 23px;
-      color: #fff;
-      font-style: normal;
-    }
-
-    &-amount {
-      font-size: 13px;
-      color: #9D9D9D;
-      font-style: normal;
+    &:active::after {
+      background-color: $orange;
     }
   }
 }
