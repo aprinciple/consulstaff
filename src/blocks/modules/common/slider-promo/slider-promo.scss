@@ -4,10 +4,6 @@
   height: 100%;
   overflow: hidden;
 
-  @media (min-width: $lg) {
-    height: 100vh;
-  }
-
   &__container {
     position: absolute;
     top: 0;
@@ -177,20 +173,21 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+    height: 100px;
     margin-left: -20px;
     padding-left: 40px;
-    padding-bottom: 40px;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
     @media (min-width: $lg) {
+      height: 110px;
       margin-left: 0;
       padding-left: 0;
     }
 
     @media (min-width: $xl) {
-      padding-bottom: 55px;
+      height: 120px;
     }
 
     &::-webkit-scrollbar { 
