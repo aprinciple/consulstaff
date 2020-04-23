@@ -50,14 +50,12 @@
 
       @media (min-width: $lg) {
         margin-bottom: 35px;
-        padding-right: 50px;
         font-size: 40px;
         line-height: 50px;
       }
 
       @media (min-width: $xl) {
         margin-bottom: 50px;
-        padding-right: 100px;
         font-size: 60px;
         line-height: 72px;
       }
@@ -203,7 +201,7 @@
 
   &__nav-item {
     position: relative;
-    min-width: 155px;
+    min-width: 180px;
     padding-top: 25px;
     font-weight: bold;
     font-size: 14px;
@@ -214,7 +212,7 @@
     cursor: pointer;
 
     @media (min-width: $md) {
-      min-width: 185px;
+      min-width: 200px;
       font-size: 16px;
       line-height: 19px;
     }
@@ -239,8 +237,6 @@
         margin-right: 130px;
       }
     }
-
-    & > a {}
 
     &:hover,
     &:active,
