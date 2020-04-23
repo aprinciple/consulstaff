@@ -165,20 +165,19 @@
 
     @media (min-width: $lg) {
       position: absolute;
-      top: 50px;
+      top: 40px;
       left: -25px;
       box-sizing: border-box;
       width: 455px;
       margin: 0;
-      padding: 0 25px;
-      padding-top: 20px;
-      padding-bottom: 10px;
+      padding: 20px 25px;
       background-color: #F7F7F7;
     }
     
     @media (min-width: $xl) {
+      top: 65px;
       width: 580px;
-      padding: 45px 35px;
+      padding: 40px 35px;
     }
   }
 
@@ -199,6 +198,10 @@
       margin-bottom: 35px;
       font-size: 22px;
       line-height: 26px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 
