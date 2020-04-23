@@ -17,7 +17,7 @@ class Slider {
     });
     this.slider.addEventListener('touchend', (e) => {
       this.touchEndX = e.changedTouches[0].clientX;
-      this.handleGesture();
+      this.handleGesture(e);
     });
 
     this.nav && this.showNav(this.nav);
@@ -44,12 +44,13 @@ class Slider {
     this.itemsSlider[n].style.display = 'block';
   }
 
-  handleGesture() {
-    if (this.touchEndX - this.touchStartX >= 30) {
+  handleGesture(e) {
+    let target = e.target;
+    if (this.touchEndX - this.touchStartX >= 30 && !target.closest('ul')) {
       this.init(--this.indexOfSlide);
     }
 
-    if (this.touchStartX - this.touchEndX >= 30) {
+    if (this.touchStartX - this.touchEndX >= 30 && !target.closest('ul')) {
       this.init(++this.indexOfSlide);
     }
   }
