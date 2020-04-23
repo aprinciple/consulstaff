@@ -4,10 +4,11 @@ class Slider {
   constructor(options) {
     this.slider = options.slider;
     this.itemsSlider = options.itemsSlider;
-    this.mode = options.mode;
+    this.mode = options.mode || false;
     this.delay = options.delay || 500;
     this.nav = options.nav;
     this.navOptions = options.navOptions;
+    this.createdItemsNav = false;
     this.indexOfSlide = 0;
     this.touchStartX = 0;
     this.touchEndX = 0;
@@ -19,8 +20,9 @@ class Slider {
       this.handleGesture();
     });
 
-    this.init(this.indexOfSlide, this.mode);
     this.nav && this.showNav(this.nav);
+    this.mode && this.handleMode(this.mode);
+    this.init(this.indexOfSlide, this.mode);
   }
 
   hideSlides() {
@@ -52,11 +54,15 @@ class Slider {
     }
   }
 
-  async init(i, mode) {
+  async init(i) {
     const n = await this.checkIndex(i);
     this.hideSlides();
     this.showSlide(n);
-    this.handleMode(mode);
+
+    if (this.createdItemsNav) {
+      this.removeActiveNavItems(this.createdItemsNav);
+      this.addActiveNavItem(this.createdItemsNav[n]);
+    }
   }
 
   handleMode(mode) {
@@ -65,12 +71,13 @@ class Slider {
         this.init(++this.indexOfSlide);
       }, this.delay);
     }
+
   }
 
   showNav(isNav) {
     if (isNav) {
-      let ul = document.createElement('ul');
       let container = this.slider.querySelector('.promo-slider__nav-container');
+      let ul = document.createElement('ul');
       ul.classList.add(this.navOptions.container);
 
       this.itemsSlider.forEach((item) => {
@@ -85,15 +92,25 @@ class Slider {
     }
   }
 
-  handlerNav(nav) {
-    if (nav) {
-      let items = nav.querySelectorAll('li');
+  handlerNav(ul) {
+    if (ul) {
+      let items = ul.querySelectorAll('li');
       items.forEach((item, i) => {
         item.addEventListener('click', () => {
           this.init(this.indexOfSlide = i);
         });
       });
+
+      this.createdItemsNav = items;
     }
+  }
+
+  addActiveNavItem(item) {
+    item.classList.add('active');
+  }
+
+  removeActiveNavItems(items) {
+    items.forEach(item => item.classList.remove('active'));
   }
 }
 
