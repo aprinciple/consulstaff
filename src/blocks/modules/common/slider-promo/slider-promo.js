@@ -5,9 +5,10 @@ class Slider {
     this.slider = options.slider;
     this.itemsSlider = options.itemsSlider;
     this.mode = options.mode || false;
-    this.delay = options.delay || 500;
-    this.nav = options.nav;
+    this.delay = options.delay || 3000;
+    this.isNav = options.isNav;
     this.navOptions = options.navOptions;
+    this.createdNav = false;
     this.createdItemsNav = false;
     this.indexOfSlide = 0;
     this.touchStartX = 0;
@@ -20,7 +21,7 @@ class Slider {
       this.handleGesture(e);
     });
 
-    this.nav && this.showNav(this.nav);
+    this.isNav && this.createdList(this.isNav);
     this.mode && this.handleMode(this.mode);
     this.init(this.indexOfSlide, this.mode);
   }
@@ -75,11 +76,11 @@ class Slider {
 
   }
 
-  showNav(isNav) {
+  createdList(isNav) {
     if (isNav) {
-      let container = this.slider.querySelector('.promo-slider__nav-container');
+      let nav = this.navOptions.nav;
       let ul = document.createElement('ul');
-      ul.classList.add(this.navOptions.container);
+      ul.classList.add(this.navOptions.list);
 
       this.itemsSlider.forEach((item) => {
         let title = item.querySelector('h1').textContent;
@@ -88,7 +89,7 @@ class Slider {
         li.textContent = title || 'Item';
         ul.append(li);
       });
-      container.append(ul);
+      nav.append(ul);
       this.handlerNav(ul);
     }
   }
@@ -116,18 +117,19 @@ class Slider {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const slider = document.querySelector('.promo-slider');
+  const slider = document.querySelector('.nav-slider');
   if (slider) {
     (() => new Slider({
-      mode: 'auto',
+      slider: document.querySelector('.nav-slider'),
+      itemsSlider: document.querySelectorAll('.nav-slider__item'),
+      // mode: 'auto',
       delay: 4000,
-      nav: true,
+      isNav: true,
       navOptions: {
-        container: 'promo-slider__nav',
-        item: 'promo-slider__nav-item',
-      },
-      slider: document.querySelector('.promo-slider'),
-      itemsSlider: document.querySelectorAll('.promo-slider__item'),
+        nav: document.querySelector('.nav-slider__nav'),
+        list: 'nav-slider__list',
+        item: 'nav-slider__list-item',
+      }
     }))();
   }
 });

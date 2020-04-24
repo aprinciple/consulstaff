@@ -1,4 +1,4 @@
-.promo-slider {
+.nav-slider {
   position: relative;
   width: 100%;
   height: 100%;
@@ -8,13 +8,15 @@
     position: absolute;
     top: 0;
     left: 50%;
-    height: 100%;
-    transform: translate(-50%, 0);
     z-index: 1;
+    height: 100%;
+    transform: translateX(-50%);
   }
 
   &__items {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     display: flex;
     width: 100%;
     height: 100%;
@@ -23,7 +25,7 @@
 
   &__item {
     position: relative;
-    flex: 0 0 100%;
+    flex: 0 1 100%;
 
     &::after {
       content: '';
@@ -32,7 +34,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.7);
     }
 
     &-title {
@@ -43,7 +45,7 @@
       color: #fff;
       animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
-      @media (min-width: $lg) {
+      @media (min-width: $md) {
         margin-bottom: 35px;
         font-size: 40px;
         line-height: 50px;
@@ -63,7 +65,7 @@
       color: #fff;
       animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
 
-      @media (min-width: $lg) {
+      @media (min-width: $md) {
         font-size: 20px;
         line-height: 25px;
       }
@@ -78,7 +80,7 @@
       position: absolute;
       right: -20px;
       bottom: -65px;
-      z-index: 12;
+      z-index: 2;
       box-sizing: border-box;
       display: flex;
       justify-content: center;
@@ -96,22 +98,17 @@
       animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
 
       @media (min-width: $md) {
-        right: -40px;
-        bottom: -80px;
-        width: 120px;
-        height: 70px;
-        font-size: 14px;
-        line-height: 18px;
+        right: -70px;
+        bottom: -90px;
+        width: 140px;
+        height: 80px;
+        font-size: 18px;
+        line-height: 22px;
       }
 
       @media (min-width: $lg) {
         right: -140px;
         bottom: 0;
-        z-index: 10;
-        width: 140px;
-        height: 80px;
-        font-size: 18px;
-        line-height: 22px;
       }
       
       @media (min-width: $xl) {
@@ -134,68 +131,73 @@
   }
 
   &__inner {
-    display: flex;
-    flex-direction: column;
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 2;
+    transform: translate(-50%, -45%);
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     width: calc(100% - 40px);
 
     @media (min-width: $md) {
-      left: 40px;
-      width: 70%;
-      transform: translate(0, -50%);
+      width: 500px;
     }
 
     @media (min-width: $lg) {
       top: 51%;
-      left: 20px;
+      left: 0;
       width: 500px;
       max-height: 240px;
+      transform: translate(0, -51%);
     }
     
     @media (min-width: $xl) {
       top: 55%;
       width: 750px;
       max-height: 400px;
+      transform: translate(0, -55%);
     }
   }
 
   &__nav {
+    outline: 1px solid tomato;
     position: absolute;
     bottom: 0;
-    left: 0;
-    z-index: 15;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 100px;
-    margin-left: -20px;
-    padding-left: 40px;
     overflow-x: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
 
+    &::-webkit-scrollbar { 
+      display: none;
+    }
+    
+    @media (min-width: $lg) {
+      padding: 0;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+
     @media (min-width: $lg) {
       height: 110px;
-      margin-left: 0;
-      padding-left: 0;
     }
 
     @media (min-width: $xl) {
       height: 120px;
     }
-
-    &::-webkit-scrollbar { 
-      display: none;
-    }
   }
 
-  &__nav-item {
+  &__list-item {
     position: relative;
     min-width: 180px;
     padding-top: 25px;
