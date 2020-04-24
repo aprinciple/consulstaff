@@ -4,6 +4,7 @@
   box-sizing: border-box;
   width: 100%;
   min-height: 375px;
+  height: 100%;
   padding-bottom: 20px;
   background-color: #fff;
   border-radius: 10px;
@@ -47,6 +48,10 @@
   &__picture {
     height: 200px;
     background-color: #eee;
+
+    @media (min-width: $xl) {
+      height: 275px;
+    }
   }
 
   &__image {
