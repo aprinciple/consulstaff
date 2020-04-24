@@ -20,7 +20,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 150px;
+    max-width: 170px;
     height: 27px;
     padding: 0 15px;
     border-radius: 23px;
@@ -36,6 +36,8 @@
     }
 
     @media (min-width: $xl) {
+      height: 30px;
+      font-size: 14px;
       left: 25px;
     }
   }
