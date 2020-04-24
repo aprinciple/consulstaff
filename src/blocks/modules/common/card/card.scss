@@ -1,4 +1,5 @@
 .card {
+  position: relative;
   contain: strict;
   box-sizing: border-box;
   width: 100%;
@@ -9,6 +10,39 @@
   box-shadow: 0 0 15px rgba(147,147,147, 0.2);
   user-select: none;
   overflow: hidden;
+
+  &__date {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 150px;
+    height: 27px;
+    padding: 0 15px;
+    border-radius: 23px;
+    background-color: #fff;
+    box-shadow: 0 0 3px #ccc;
+    font-weight: 500;
+    font-size: 13px;
+    color: $darkgold;
+    overflow: hidden;
+
+    @media (min-width: $md) {
+      left: 20px;
+    }
+
+    @media (min-width: $xl) {
+      left: 25px;
+    }
+  }
+
+  &__date-years {
+    color: #767474;
+    margin-left: 3px;
+  }
 
   &__picture {
     height: 200px;
