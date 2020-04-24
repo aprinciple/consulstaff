@@ -158,12 +158,11 @@
     }
   
     @media (min-width: $md) {
-      min-width: 300px;
+      min-width: 320px;
+      max-width: 320px;
     }
   
     @media (min-width: $lg) {
-      width: auto;
-      min-width: 320px;
       height: 400px;
       margin-right: 0;
       transition: transform 0.3s, margin-right 0.3s;
@@ -180,6 +179,7 @@
   
     @media (min-width: $xl) {
       min-width: 380px;
+      max-width: 380px;
       height: 500px;
     }
   }
