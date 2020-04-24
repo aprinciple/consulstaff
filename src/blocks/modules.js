@@ -2,7 +2,7 @@
 
 // Common
 import '../blocks/modules/common/menu/menu';
-import '../blocks/modules/common/slider-promo/slider-promo';
+import '../blocks/modules/common/slider-nav/slider-nav';
 import '../blocks/modules/common/slider-post/slider-post';
 import '../blocks/modules/common/form/form';
 import '../blocks/modules/common/alert/alert';
