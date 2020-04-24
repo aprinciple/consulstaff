@@ -14,14 +14,20 @@
   &__cards {
 
     @media (min-width: $md) {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 25px;
       justify-content: space-between;
     }
 
     @media (min-width: $lg) {
-      justify-content: flex-start;
+      grid-template-columns: repeat(3, 1fr);
     }
+
+    @media (min-width: $xl) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
   }
 
   &__card {
@@ -32,13 +38,19 @@
     }
 
     @media (min-width: $md) {
-      width: 47.5%;
-      height: 430px;
-      margin-bottom: 50px;
+      height: 445px;
+
+      &:not(:last-child) {
+        margin-bottom: 0;
+      }
 
       &:nth-child(3n + 1) {
-        width: 100%;
-        height: 475px;
+        grid-column: span 2;
+        height: 500px;
+
+        & .page-news__card-content {
+          height: 195px;
+        }
 
         & .page-news__card-picture {
           height: 275px;
@@ -47,35 +59,19 @@
         & .page-news__card-image {
           height: 275px;
         }
-
-        & .page-news__card-content {
-          padding: 35px 40px;
-        }
-
-        & .page-news__card-title {
-          font-size: 20px;
-          line-height: 24px;
-        }
       }
     }
     
     @media (min-width: $lg) {
-      margin-bottom: 55px;
-    }
-    
-    @media (min-width: $lg) {
-      width: 32%;
-      height: 435px;
-      margin-right: 2%;
-      margin-bottom: 65px;
-
-      &:nth-child(3n) {
-        margin-right: 0;
-      }
 
       &:nth-child(3n + 1) {
-        width: 32%;
-        height: 435px;
+        grid-column: span 1;
+        height: 445px;
+
+        & .page-news__card-content {
+          height: 180px;
+          outline: 1px solid tomato;
+        }
 
         & .page-news__card-picture {
           height: 240px;
@@ -83,28 +79,19 @@
 
         & .page-news__card-image {
           height: 240px;
-        }
-
-        & .page-news__card-content {
-          padding: 25px 30px;
-        }
-
-        & .page-news__card-title {
-          font-size: 18px;
-          line-height: 22px;
         }
       }
     }
 
     @media (min-width: $xl) {
-      width: 23%;
-      height: 475px;
-      margin-right: 2.6%;
-      margin-bottom: 85px;
+      height: 510px;
 
       &:nth-child(3n + 1) {
-        width: 23%;
-        height: 475px;
+        height: 510px;
+
+        & .page-news__card-content {
+          height: 202px;
+        }
 
         & .page-news__card-picture {
           height: 275px;
@@ -113,28 +100,24 @@
         & .page-news__card-image {
           height: 275px;
         }
+      }
+      
+      & .page-news__card-content {
+        padding: 30px 35px;
+      }
 
-        & .page-news__card-content {
-          padding: 40px 35px;
-        }
-
-        & .page-news__card-title {
-          font-size: 20px;
-          line-height: 24px;
-        }
+      & .page-news__card-title {
+        font-size: 20px;
+        line-height: 24px;
       }
 
       &:nth-child(6n+1),
       &:nth-child(6n) {
-        width: 48.7%;
+        // grid-column: span 2;
       }
 
-      &:nth-child(6n+3) {
-        margin-right: 0;
-      }
-
-      &:nth-child(6n) {
-        margin-right: 0;
+      &:nth-child(5n + 1) {
+        grid-column: span 2;
       }
     }
   }
@@ -142,12 +125,13 @@
   &__card-content {
 
     @media (min-width: $md) {
-      height: 160px;
+      height: 180px;
       padding: 25px 30px;
     }
 
     @media (min-width: $xl) {
-      padding: 40px 35px;
+      height: 202px;
+      padding: 30px 35px;
     }
   }
 
