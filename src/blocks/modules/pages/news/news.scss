@@ -26,7 +26,10 @@
 
   &__card {
     display: block;
-    margin-bottom: 40px;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
 
     @media (min-width: $md) {
       width: 47.5%;
@@ -133,10 +136,6 @@
       &:nth-child(6n) {
         margin-right: 0;
       }
-    }
-
-    &:last-child {
-      margin-bottom: 0;
     }
   }
 
