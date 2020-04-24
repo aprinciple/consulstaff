@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
     (() => new Slider({
       slider: document.querySelector('.nav-slider'),
       itemsSlider: document.querySelectorAll('.nav-slider__item'),
-      // mode: 'auto',
+      mode: 'auto',
       delay: 4000,
       isNav: true,
       navOptions: {
