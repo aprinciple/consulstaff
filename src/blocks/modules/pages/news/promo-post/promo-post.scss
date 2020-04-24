@@ -1,18 +1,15 @@
 .page-news {
 
   &__promo-post {
-    margin-bottom: 70px;
+    margin-bottom: 20px;
 
     @media (min-width: $md) {
-      margin-bottom: 90px;
+      margin-bottom: 50px;
       padding-top: 90px;
     }
 
-    @media (min-width: $lg) {
-      margin-bottom: 90px;
-    }
-
     @media (min-width: $xl) {
+      margin-bottom: 75px;
       padding-top: 130px;
     }
   }
