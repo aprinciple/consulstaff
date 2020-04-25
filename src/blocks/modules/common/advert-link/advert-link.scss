@@ -11,7 +11,7 @@
   padding-left: 40px;
   background-color: $darkgold;
   clip-path: polygon(5% 0, 100% 0%, 100% 100%, 0% 100%);
-  animation: fade-in-right 0.7s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+  animation: fade-in 0.7s both;
 
   @media (min-width: $md) {
     width: 470px;
