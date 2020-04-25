@@ -59,11 +59,7 @@ class Slider {
     const n = await this.checkIndex(i);
     this.hideSlides();
     this.showSlide(n);
-
-    if (this.createdItemsNav) {
-      this.removeActiveNavItems(this.createdItemsNav);
-      this.addActiveNavItem(this.createdItemsNav[n]);
-    }
+    this.createdItemsNav && this.showActiveItemNav(n);
   }
 
   handleMode(mode) {
@@ -113,6 +109,19 @@ class Slider {
   removeActiveNavItems(items) {
     items.forEach(item => item.classList.remove('active'));
   }
+
+  showActiveItemNav(n) {
+    this.removeActiveNavItems(this.createdItemsNav);
+    this.addActiveNavItem(this.createdItemsNav[n]);
+
+    let isScroll = this.navOptions.nav.scrollWidth > this.navOptions.nav.clientWidth;
+
+    if (isScroll && n > 0) {
+      this.navOptions.nav.scrollLeft += this.createdItemsNav[n].getBoundingClientRect().x - 20;
+    } else {
+      this.navOptions.nav.scrollLeft = 0;
+    }
+  }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -121,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
     (() => new Slider({
       slider: document.querySelector('.nav-slider'),
       itemsSlider: document.querySelectorAll('.nav-slider__item'),
-      // mode: 'auto',
+      mode: 'auto',
       delay: 4000,
       isNav: true,
       navOptions: {
