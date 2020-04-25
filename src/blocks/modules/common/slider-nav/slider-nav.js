@@ -8,7 +8,6 @@ class Slider {
     this.delay = options.delay || 3000;
     this.isNav = options.isNav;
     this.navOptions = options.navOptions;
-    this.createdNav = false;
     this.createdItemsNav = false;
     this.indexOfSlide = 0;
     this.touchStartX = 0;
@@ -122,7 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
     (() => new Slider({
       slider: document.querySelector('.nav-slider'),
       itemsSlider: document.querySelectorAll('.nav-slider__item'),
-      mode: 'auto',
+      // mode: 'auto',
       delay: 4000,
       isNav: true,
       navOptions: {
