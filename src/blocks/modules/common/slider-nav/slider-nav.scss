@@ -26,6 +26,7 @@
   &__item {
     position: relative;
     flex: 0 1 100%;
+    display: none;
 
     &::after {
       content: '';
