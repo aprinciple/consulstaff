@@ -64,7 +64,7 @@
       font-size: 16px;
       line-height: 20px;
       color: #fff;
-      animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+      animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
 
       @media (min-width: $md) {
         font-size: 20px;
@@ -74,6 +74,52 @@
       @media (min-width: $xl) {
         font-size: 30px;
         line-height: 36px;
+      }
+    }
+
+    &-link {
+      outline: 1px solid red;
+      display: inline-flex;
+      align-self: flex-start;
+      position: relative;
+      margin-top: 30px;
+      padding-right: 50px;
+      color: #fff;
+      animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
+
+      @media (min-width: $md) {
+        margin-top: 35px;
+        font-size: 18px;
+      }
+
+      @media (min-width: $xl) {
+        margin-top: 40px;
+        padding-right: 60px;
+        font-size: 27px;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        transform: translateY(-50%);
+        background-image: url('../img/sprite.svg#arrow-long');
+        background-repeat: no-repeat;
+        transition: right 0.3s ease-in-out;
+        filter: brightness(0) invert(1);
+
+        @media (min-width: $xl) {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &:hover::after,
+      &:active::after {
+        right: -15px;
       }
     }
 
