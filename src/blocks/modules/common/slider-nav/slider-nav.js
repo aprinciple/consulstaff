@@ -10,7 +10,7 @@ class Slider {
     this.navOptions = options.navOptions;
     this.createdItemsNav = false;
     this.indexOfSlide = 0;
-    this.timerId;
+    this.timerId = null;
     this.touchStartX = 0;
     this.touchEndX = 0;
     this.slider.addEventListener('touchstart', (e) => {
@@ -48,10 +48,12 @@ class Slider {
   handleGesture(e) {
     let target = e.target;
     if (this.touchEndX - this.touchStartX >= 30 && !target.closest('ul')) {
+      this.handleMode(false);
       this.init(--this.indexOfSlide);
     }
 
     if (this.touchStartX - this.touchEndX >= 30 && !target.closest('ul')) {
+      this.handleMode(false);
       this.init(++this.indexOfSlide);
     }
   }
@@ -63,8 +65,12 @@ class Slider {
     this.createdItemsNav && this.showActiveItemNav(n);
   }
 
-  handleMode(isAuto) {
-    isAuto ? this.timerId = setInterval(() => this.init(++this.indexOfSlide), this.delay) : clearInterval(this.timerId);
+  handleMode(mode) {
+    if (mode === 'auto') {
+      this.timerId = setInterval(() => this.init(++this.indexOfSlide), this.delay);
+    } else {
+      this.timerId && clearInterval(this.timerId);
+    }
   }
 
   createdList(isNav) {
