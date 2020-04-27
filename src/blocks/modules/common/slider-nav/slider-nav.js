@@ -10,6 +10,7 @@ class Slider {
     this.navOptions = options.navOptions;
     this.createdItemsNav = false;
     this.indexOfSlide = 0;
+    this.timerId;
     this.touchStartX = 0;
     this.touchEndX = 0;
     this.slider.addEventListener('touchstart', (e) => {
@@ -21,12 +22,16 @@ class Slider {
     });
 
     this.isNav && this.createdList(this.isNav);
-    this.mode && this.handleMode(this.mode);
-    this.init(this.indexOfSlide, this.mode);
+    this.handleMode(this.mode);
+    this.init(this.indexOfSlide);
   }
 
   hideSlides() {
     this.itemsSlider.forEach(item => item.classList.remove('active'));
+  }
+
+  showSlide(n) {
+    this.itemsSlider[n].classList.add('active');
   }
 
   async checkIndex(n) {
@@ -38,10 +43,6 @@ class Slider {
     }
 
     return this.indexOfSlide;
-  }
-
-  showSlide(n) {
-    this.itemsSlider[n].classList.add('active');
   }
 
   handleGesture(e) {
@@ -62,13 +63,8 @@ class Slider {
     this.createdItemsNav && this.showActiveItemNav(n);
   }
 
-  handleMode(mode) {
-    if (mode === 'auto') {
-      setInterval(() => {
-        this.init(++this.indexOfSlide);
-      }, this.delay);
-    }
-
+  handleMode(isAuto) {
+    isAuto ? this.timerId = setInterval(() => this.init(++this.indexOfSlide), this.delay) : clearInterval(this.timerId);
   }
 
   createdList(isNav) {
@@ -94,6 +90,7 @@ class Slider {
       let items = ul.querySelectorAll('li');
       items.forEach((item, i) => {
         item.addEventListener('click', () => {
+          this.handleMode(false);
           this.init(this.indexOfSlide = i);
         });
       });
@@ -131,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
       slider: document.querySelector('.nav-slider'),
       itemsSlider: document.querySelectorAll('.nav-slider__item'),
       mode: 'auto',
-      delay: 4000,
+      delay: 5000,
       isNav: true,
       navOptions: {
         nav: document.querySelector('.nav-slider__nav'),
