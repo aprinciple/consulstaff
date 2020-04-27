@@ -26,7 +26,7 @@ class Slider {
   }
 
   hideSlides() {
-    this.itemsSlider.forEach(item => item.style.display = 'none');
+    this.itemsSlider.forEach(item => item.classList.remove('active'));
   }
 
   async checkIndex(n) {
@@ -41,7 +41,7 @@ class Slider {
   }
 
   showSlide(n) {
-    this.itemsSlider[n].style.display = 'block';
+    this.itemsSlider[n].classList.add('active');
   }
 
   handleGesture(e) {

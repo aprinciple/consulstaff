@@ -38,6 +38,11 @@
       background-color: rgba(0, 0, 0, 0.7);
     }
 
+    &.active {
+      display: block;
+      animation: fade-in 1s;
+    }
+
     &-title {
       margin-bottom: 20px;
       font-weight: bold;
