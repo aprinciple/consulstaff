@@ -20,7 +20,7 @@
     display: flex;
     width: 100%;
     height: 100%;
-    background-color: #939290;
+    background-color: #000;
   }
 
   &__item {
@@ -49,7 +49,7 @@
       font-size: 24px;
       line-height: 30px;
       color: #fff;
-      animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      animation: slide-in-bottom 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 
       @media (min-width: $md) {
         margin-bottom: 35px;
@@ -69,7 +69,7 @@
       font-size: 16px;
       line-height: 20px;
       color: #fff;
-      animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.2s both;
+      animation: slide-in-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
 
       @media (min-width: $md) {
         font-size: 20px;
@@ -89,7 +89,7 @@
       margin-top: 30px;
       padding-right: 50px;
       color: #fff;
-      animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.3s both;
+      animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.4s both;
 
       @media (min-width: $md) {
         margin-top: 35px;
