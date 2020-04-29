@@ -129,44 +129,36 @@
 
     &-years {
       position: absolute;
-      right: -20px;
-      bottom: -65px;
+      top: -42px;
+      left: 0;
       z-index: 2;
       box-sizing: border-box;
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 90px;
-      height: 50px;
-      padding: 20px 10px;
+      height: 32px;
+      padding: 0 10px;
       background-color: $darkgold;
       text-align: center;
       font-weight: bold;
-      font-size: 10px;
-      line-height: 12px;
+      font-size: 14px;
       color: #fff;
       text-transform: uppercase;
       animation: scale-in-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s both;
 
       @media (min-width: $md) {
-        right: -70px;
-        bottom: -90px;
-        width: 140px;
-        height: 80px;
+        padding: 0 15px;
         font-size: 18px;
         line-height: 22px;
       }
 
       @media (min-width: $lg) {
-        right: -140px;
-        bottom: 0;
+        top: -45px;
       }
       
       @media (min-width: $xl) {
-        right: -180px;
-        width: 180px;
-        height: 105px;
-        padding: 30px;
+        top: -60px;
+        height: 40px;
         font-size: 21px;
         line-height: 25px;
       }
@@ -183,10 +175,10 @@
 
   &__inner {
     position: absolute;
-    top: 45%;
+    top: 55%;
     left: 50%;
     z-index: 2;
-    transform: translate(-50%, -45%);
+    transform: translate(-50%, -55%);
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -194,22 +186,22 @@
     width: calc(100% - 40px);
 
     @media (min-width: $md) {
+      top: 60%;
+      transform: translate(-50%, -60%);
       width: 500px;
     }
 
     @media (min-width: $lg) {
-      top: 51%;
+      top: 60%;
       left: 0;
       width: 500px;
       max-height: 240px;
-      transform: translate(0, -51%);
+      transform: translate(0, -60%);
     }
     
     @media (min-width: $xl) {
-      top: 55%;
       width: 750px;
       max-height: 400px;
-      transform: translate(0, -55%);
     }
   }
 
