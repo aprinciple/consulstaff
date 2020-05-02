@@ -89,23 +89,6 @@
     }
   }
 
-  &__content--columnar {
-    margin-bottom: 50px;
-    line-height: 20px;
-
-    @media (min-width: $lg) {
-      column-count: 2;
-      column-gap: 70px;
-      margin-bottom: 75px;
-      line-height: 25px;
-    }
-
-    @media (min-width: $xl) {
-      column-gap: 90px;
-      margin-bottom: 100px;
-    }
-  }
-
   &__content-picture,
   &__content img,
   &__content picture,
