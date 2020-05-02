@@ -87,6 +87,18 @@
         line-height: 28px;
       }
     }
+
+    & li {
+      margin-bottom: 5px;
+
+      @media (min-width: $lg) {
+        margin-bottom: 9px;
+      }
+      
+      @media (min-width: $xl) {
+        margin-bottom: 12px;
+      }
+    }
   }
 
   &__content-picture,
