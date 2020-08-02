@@ -84,8 +84,8 @@ function images() {
     [
     'src/img/*.{jpg,jpeg,png,gif,svg}',
     '!src/img/favicon/*',
-    'src/blocks/modules/common/*/img/*.{jpg,jpeg,png,gif,svg}',
-    'src/blocks/modules/pages/*/*/img/*.{jpg,jpeg,png,gif,svg}'
+    'src/blocks/modules/common/**/img/*.{jpg,jpeg,png,gif,svg}',
+    'src/blocks/modules/pages/**/img/*.{jpg,jpeg,png,gif,svg}',
     ])
   .pipe(imagemin([
     imagemin.optipng(),
