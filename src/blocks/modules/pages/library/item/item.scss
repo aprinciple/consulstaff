@@ -1,0 +1,379 @@
+.page-library {
+  counter-reset: index;
+
+  &__item {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 25px 20px;
+    box-shadow: 5px 3px 15px rgba(147, 147, 147, 0.20);
+
+    @media (min-width: $md) {
+      padding: 0 20px;
+      padding-bottom: 20px;
+    }
+
+    @media (min-width: $lg) {
+      position: relative;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+
+      @media (min-width: $md) {
+        margin-bottom: 30px;
+      }
+    
+      @media (min-width: $xl) {
+        margin-bottom: 35px;
+        padding-left: 40px;
+        padding-bottom: 40px;
+      }
+    }
+
+    &::after {
+
+      @media (min-width: $lg) {
+        counter-increment: index;
+        content: '0' counter(index);
+        position: absolute;
+        top: 50%;
+        right: -185px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        transform: translateY(-50%);
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        font-weight: bold;
+        font-size: 60px;
+        color: #393939;
+      }
+
+      @media (min-width: $xl) {
+        right: -285px;
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+
+  &__item.open::after {
+    animation: scale-in-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    background-image: url('../img/library-item-circle.svg');
+  }
+
+  &__item.open &__item-inner {
+
+    @media (min-width: $md) {
+      display: grid;
+      grid-template-columns: auto 290px;
+      column-gap: 30px;
+    }
+
+    @media (min-width: $lg) {
+      grid-template-columns: auto 360px;
+      column-gap: 40px;
+    }
+
+    @media (min-width: $xl) {
+      grid-template-columns: auto 550px;
+      column-gap: 75px;
+    }
+  }
+
+  &__item.open &__item-footer {
+    display: grid;
+  }
+
+  &__item.open &__item-image {
+
+    @media (min-width: $md) {
+      display: block;
+      animation: fade-in 0.5s;
+    }
+  }
+
+  &__item-inner {}
+
+  &__item-content {
+    
+    @media (min-width: $md) {
+      padding-top: 40px;
+    }
+
+    @media (min-width: $lg) {
+      padding-top: 45px;
+    }
+
+    @media (min-width: $xl) {
+      padding-top: 55px;
+    }
+  }
+
+  &__item-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    line-height: 24px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 25px;
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+
+  &__item-text {
+    position: relative;
+    max-height: 225px;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 17px;
+    overflow: hidden;
+
+    @media (min-width: $lg) {
+      max-height: 274px;
+    }
+
+    @media (min-width: $xl) {
+      max-height: 269px;
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 4px;
+      height: 100%;
+      background-color: $red;
+    }
+  }
+
+  &__item-text p {
+    font-size: 14px;
+    line-height: 17px;
+
+    @media (min-width: $xl) {
+      font-size: 16px;
+      line-height: 19px;
+    }
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-image {
+    display: none;
+
+    @media (min-width: $md) {
+      grid-row: span 2;
+      margin-right: -20px;
+      height: 300px;
+    }
+
+    @media (min-width: $lg) {
+      height: 380px;
+    }
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__item-footer {
+    animation: slide-top 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    display: none;
+
+    @media (min-width: $md) {
+      grid-template-columns: auto 290px;
+      column-gap: 30px;
+      align-items: center;
+      padding-top: 25px;
+    }
+
+    @media (min-width: $lg) {
+      grid-template-columns: auto 360px;
+      column-gap: 40px;
+    }
+
+    @media (min-width: $xl) {
+      grid-template-columns: auto 550px;
+      column-gap: 75px;
+      align-items: start;
+      padding-top: 35px;
+    }
+  }
+
+  &__item-info {
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    align-items: start;
+    margin-bottom: 30px;
+    padding-top: 15px;
+    justify-content: space-between;
+  }
+
+  &__item-info-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 4px;
+    align-items: center;
+
+    @media (min-width: $md) {
+      column-gap: 7px;
+    }
+
+    @media (min-width: $lg) {
+      column-gap: 10px;
+    }
+  }
+
+  &__item-info-icon {
+    grid-row: span 2;
+    width: 27px;
+    height: 27px;
+
+    @media (min-width: $md) {
+      width: 35px;
+      height: 35px;
+    }
+
+    @media (min-width: $lg) {
+      width: 40px;
+      height: 40px;
+    }
+
+    @media (min-width: $xl) {
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &__item-info-num {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    margin-bottom: 2px;
+
+    @media (min-width: $lg) {
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 22px;
+      line-height: 22px;
+    }
+  }
+
+  &__item-info-text {
+    font-size: 10px;
+    line-height: 10px;
+
+    @media (min-width: $lg) {
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  &__item-form {
+    padding: 0;
+    background-color: #fff;
+
+    @media (min-width: $xl) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__item-form-inputs {}
+
+  &__item-form-input {
+    height: 30px;
+    padding: 0;
+    padding-right: 10px;
+    border: 0;
+    border-bottom: 1px solid #EBEBEB;
+    font-size: 14px;
+    line-height: 14px;
+
+    &::placeholder {
+      color: $darkgold;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__item-form-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+
+    @media (min-width: $xl) {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: start;
+      order: -1;
+    }
+  }
+
+  &__item-form-download {
+    font-size: 14px;
+    line-height: 14px;
+    transition: color 0.3s;
+
+    @media (min-width: $xl) {
+      font-size: 15px;
+      line-height: 18px;
+    }
+
+    &:hover,
+    &:active {
+      color: $red;
+    }
+  }
+
+  &__item-form-button {
+    width: auto;
+    height: 35px;
+    margin: 0;
+    padding: 0 15px;
+    border-radius: 30px;
+    background-color: #fff;
+    border: 1px solid $darkgold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.10);
+    font-size: 14px;
+    line-height: 14px;
+    color: $darkgold;
+    transition: background-color 0.3s, color 0.3s;
+
+    @media (min-width: $xl) {
+      height: 40px;
+      padding: 0 30px;
+      font-size: 15px;
+      line-height: 15px;
+    }
+
+    &:hover,
+    &:active {
+      background-color: $darkgold;
+      color: #fff;
+    }
+  }
+}

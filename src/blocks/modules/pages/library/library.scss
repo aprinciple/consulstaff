@@ -1,0 +1,47 @@
+@import 'promo/promo';
+@import 'item/item';
+
+.page-library {
+
+  &__main {
+    padding: 40px 0;
+
+    @media (min-width: $lg) {
+      padding: 50px 0;
+    }
+
+    @media (min-width: $xl) {
+      padding: 125px 0;
+    }
+  }
+
+  &__items {
+    
+    @media (min-width: $lg) {
+      position: relative;
+      padding-right: 200px;
+    }
+
+    @media (min-width: $xl) {
+      padding-right: 300px;
+    }
+
+    &::after {
+  
+      @media (min-width: $lg) {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 90px;
+        z-index: -1;
+        width: 1px;
+        height: 100%;
+        background-color: #707070;
+      }
+  
+      @media (min-width: $xl) {
+        right: 140px;
+      }
+    }
+  }
+}

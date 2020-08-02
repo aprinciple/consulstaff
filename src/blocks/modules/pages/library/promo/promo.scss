@@ -1,0 +1,152 @@
+.page-library {
+
+  &__promo {
+    width: 100%;
+    height: calc(100vh - 55px);
+    background-image: url('../img/bg-library-header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+  }
+
+  &__promo-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 30%;
+      width: 100vh;
+      height: 100%;
+      background-color: #fff;
+      border-radius: 100%;
+
+      @media (min-width: $lg) {
+        width: 56%;
+        right: auto;
+        left: 0;
+        border-radius: 0;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      width: 250px;
+      height: 250px;
+      transform: translateY(-50%);
+      background-image: url('../img/icon-library-header.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      animation: icon-scale-in-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+      @media (min-width: $md) {
+        right: 40%;
+        width: 280px;
+        height: 280px;
+      }
+
+      @media (min-width: $lg) {
+        right: auto;
+        left: 150px;
+        width: 500px;
+        height: 500px;
+      }
+
+      @media (min-width: $xl) {
+        left: 400px;
+        width: 560px;
+        height: 560px;
+      }
+    }
+  }
+
+  &__promo-content {
+    position: relative;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    width: 300px;
+    margin: 0;
+
+    @media (min-width: $md) {
+      width: 420px;
+      padding-left: 100px;
+    }
+
+    @media (min-width: $lg) {
+      width: 590px;
+      padding-left: 65px;
+    }
+
+    @media (min-width: $xl) {
+      width: 840px;
+      padding-left: 280px;
+    }
+  }
+
+  &__promo-title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    line-height: 30px;
+    animation: slide-in-bottom 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+
+    @media (min-width: $md) {
+      font-size: 27px;
+      line-height: 32px;
+    }
+
+    @media (min-width: $lg) {
+      margin-bottom: 30px;
+      font-size: 50px;
+      line-height: 60px;
+    }
+
+    @media (min-width: $xl) {
+      margin-bottom: 40px;
+      font-size: 57px;
+      line-height: 68px;
+    }
+  }
+
+  &__promo-text {
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 22px;
+    color: $lightgold;
+    animation: slide-in-right 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
+
+    @media (min-width: $md) {
+      font-size: 17px;
+      line-height: 23px;
+    }
+
+    @media (min-width: $lg) {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 35px;
+      line-height: 45px;
+    }
+  }
+}
+
+@keyframes icon-scale-in-center {
+  0% {
+    transform: translateY(-50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+}
