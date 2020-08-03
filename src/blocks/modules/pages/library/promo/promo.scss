@@ -7,6 +7,19 @@
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
+
+    @media (min-width: $md) {
+      background-image: url('../img/bg-library-header@768px.jpg');
+    }
+
+    @media (min-width: $lg) {
+      background-image: url('../img/bg-library-header@1200px.jpg');
+    }
+
+    @media (min-width: $xl) {
+      height: 730px;
+      background-image: url('../img/bg-library-header@1920px.jpg');
+    }
   }
 
   &__promo-inner {
