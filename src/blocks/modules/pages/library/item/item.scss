@@ -61,8 +61,8 @@
   }
 
   &__item.open::after {
-    animation: scale-in-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     background-image: url('../img/library-item-circle.svg');
+    animation: item-scale-in-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
 
   &__item.open &__item-inner {
@@ -375,5 +375,16 @@
       background-color: $darkgold;
       color: #fff;
     }
+  }
+}
+
+@keyframes item-scale-in-center {
+  0% {
+    transform: translateY(-50%) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
   }
 }
