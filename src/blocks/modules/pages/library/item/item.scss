@@ -127,14 +127,11 @@
 
   &__item-text {
     position: relative;
+    max-height: 224px;
     padding-left: 20px;
     font-size: 14px;
     line-height: 17px;
     overflow: hidden;
-
-    @media (min-width: $md) {
-      max-height: 225px;
-    }
 
     @media (min-width: $lg) {
       max-height: 274px;
