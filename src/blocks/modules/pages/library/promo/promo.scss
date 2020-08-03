@@ -17,7 +17,7 @@
     }
 
     @media (min-width: $xl) {
-      height: 730px;
+      height: 800px;
       background-image: url('../img/bg-library-header@1920px.jpg');
     }
   }
@@ -44,6 +44,10 @@
         border-radius: 0;
         border-top-right-radius: 50%;
         border-bottom-right-radius: 50%;
+      }
+
+      @media (min-width: $xl) {
+        width: 50%;
       }
     }
 
@@ -74,7 +78,7 @@
       }
 
       @media (min-width: $xl) {
-        left: 400px;
+        left: 330px;
         width: 560px;
         height: 560px;
       }
@@ -101,7 +105,7 @@
 
     @media (min-width: $xl) {
       width: 840px;
-      padding-left: 280px;
+      padding-left: 200px;
     }
   }
 
