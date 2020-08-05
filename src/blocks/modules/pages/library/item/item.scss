@@ -85,7 +85,7 @@
     }
 
     @media (min-width: $xl) {
-      grid-template-columns: auto 550px;
+      grid-template-columns: auto 500px;
       column-gap: 75px;
     }
   }
@@ -215,7 +215,7 @@
     }
 
     @media (min-width: $xl) {
-      grid-template-columns: auto 550px;
+      grid-template-columns: auto 500px;
       column-gap: 75px;
       align-items: start;
       padding-top: 35px;
