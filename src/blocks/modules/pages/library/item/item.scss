@@ -16,6 +16,11 @@
       position: relative;
     }
 
+    @media (min-width: $xl) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+
     &:not(:last-child) {
       margin-bottom: 20px;
 
@@ -292,11 +297,6 @@
   &__item-form {
     padding: 0;
     background-color: #fff;
-
-    @media (min-width: $xl) {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    }
   }
 
   &__item-form-inputs {}
@@ -324,13 +324,6 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
-
-    @media (min-width: $xl) {
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: start;
-      order: -1;
-    }
   }
 
   &__item-form-download {
