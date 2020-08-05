@@ -17,8 +17,9 @@
     }
 
     @media (min-width: $xl) {
-      padding-left: 40px;
       padding-right: 40px;
+      padding-bottom: 40px;
+      padding-left: 40px;
     }
 
     &:not(:last-child) {
@@ -184,6 +185,10 @@
 
     @media (min-width: $lg) {
       height: 380px;
+    }
+
+    @media (min-width: $xl) {
+      margin-right: -40px;
     }
 
     & img {
