@@ -1,3 +1,9 @@
+/* Fixed horizontal scrolling when working animation with transform: translate */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 /* normalize.css v8.0.1 */
 
 /* Document
