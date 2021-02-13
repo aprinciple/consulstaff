@@ -3787,7 +3787,11 @@ a {
         grid-row-gap: 20px; } }
     @media (min-width: 1200px) {
       .home-services__cards {
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px; } }
+    @media (min-width: 1800px) {
+      .home-services__cards {
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 20px; } }
   .home-services__card {
     box-sizing: border-box;
@@ -3804,7 +3808,7 @@ a {
     @media (min-width: 1200px) {
       .home-services__card {
         min-height: 255px;
-        padding: 35px;
+        padding: 15px 15px;
         padding-bottom: 25px; } }
     @media (min-width: 1800px) {
       .home-services__card {
@@ -3824,9 +3828,14 @@ a {
     .home-services__card:hover .home-services__card-title,
     .home-services__card:active .home-services__card-title {
       margin-bottom: 35px;
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 18px;
+      line-height: 22px;
       color: #fff; }
+      @media (min-width: 1800px) {
+        .home-services__card:hover .home-services__card-title,
+        .home-services__card:active .home-services__card-title {
+          font-size: 20px;
+          line-height: 24px; } }
     .home-services__card:hover .home-services__card-text,
     .home-services__card:active .home-services__card-text {
       display: none; }
@@ -3845,7 +3854,7 @@ a {
     margin-bottom: 20px;
     font-size: 16px;
     line-height: 20px; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1800px) {
       .home-services__card-title {
         font-size: 20px;
         line-height: 24px; } }
