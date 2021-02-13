@@ -1936,8 +1936,7 @@ a {
       width: 70%; } }
   .footer__nav-list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
+    flex-wrap: wrap; }
   .footer__nav-item {
     width: 30%;
     margin-bottom: 55px;
