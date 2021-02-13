@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
       let parentSubList = subList.closest('li');
       let toggleSubList = subList.previousElementSibling;
       toggleSubList.classList.add('menu__toggle-sub-list');
-      console.log(parentSubList);
 
       if (window.matchMedia("(max-width: 992px)").matches) {
         toggleSubList.addEventListener('click', (e) => {
