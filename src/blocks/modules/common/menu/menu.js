@@ -14,17 +14,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     if (subList) {
+      let parentSubList = subList.closest('li');
       let toggleSubList = subList.previousElementSibling;
       toggleSubList.classList.add('menu__toggle-sub-list');
+      console.log(parentSubList);
 
-      toggleSubList.addEventListener('click', (e) => {
-        e.preventDefault();
-        let target = e.target;
-  
-        if (target.closest('.menu__toggle-sub-list')) {
-          toggleSubList.classList.toggle('open');
-        }
-      });
+      if (window.matchMedia("(max-width: 992px)").matches) {
+        toggleSubList.addEventListener('click', (e) => {
+          e.preventDefault();
+          let target = e.target;
+    
+          if (target.closest('.menu__toggle-sub-list')) {
+            toggleSubList.classList.toggle('open');
+          }
+        });
+      } else {
+        parentSubList.addEventListener('mouseover', (e) => {
+          toggleSubList.classList.add('open');
+        });
+        parentSubList.addEventListener('mouseout', (e) => {
+          toggleSubList.classList.remove('open');
+        });
+      }
+
     }
   }
 });

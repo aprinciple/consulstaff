@@ -844,7 +844,8 @@ a {
       border-bottom: 2px solid #F1AF40;
       color: #F1AF40; }
   .menu__toggle-sub-list {
-    position: relative; }
+    position: relative;
+    z-index: 1; }
     .menu__toggle-sub-list::after {
       content: '>';
       position: absolute;
@@ -863,18 +864,24 @@ a {
     @media (min-width: 1200px) {
       .menu__sub-list {
         position: absolute;
-        top: 40px;
+        top: 25px;
         left: -25px;
         box-sizing: border-box;
         width: 455px;
         margin: 0;
-        padding: 20px 25px;
+        padding-top: 35px;
+        padding-right: 25px;
+        padding-left: 25px;
+        padding-bottom: 20px;
         background-color: #F7F7F7; } }
     @media (min-width: 1800px) {
       .menu__sub-list {
-        top: 65px;
+        top: 27px;
         width: 580px;
-        padding: 40px 35px; } }
+        padding-top: 75px;
+        padding-right: 35px;
+        padding-left: 35px;
+        padding-bottom: 40px; } }
   .menu__sub-list-item,
   .menu__sub-list .menu__item {
     margin-bottom: 15px;
