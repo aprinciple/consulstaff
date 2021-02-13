@@ -113,7 +113,6 @@
         background-image: url('../img/sprite.svg#arrow-long');
         background-repeat: no-repeat;
         transition: right 0.3s ease-in-out;
-        filter: brightness(0) invert(1);
 
         @media (min-width: $xl) {
           width: 40px;
