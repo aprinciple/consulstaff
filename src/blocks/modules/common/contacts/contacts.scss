@@ -65,18 +65,19 @@
 
   &__item-messenger {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-top: 15px;
   }
 
   &__item-messenger-text {
+    margin-right: 20px;
     font-weight: 500;
     font-size: 20px;
     line-height: 24px;
     color: #000;
 
     @media (min-width: $xl) {
+      margin-right: 30px;
       font-size: 24px;
       line-height: 29px;
     }

@@ -3,20 +3,29 @@
   &__form {
     margin-top: 100px;
     padding: 0;
-    background-color: #fff;
-    
-    @media (min-width: $lg) {
-      width: 590px;
-      margin-top: 0;
-    }
+    background-color: #013142;
 
+    @media (min-width: $lg) {
+      width: 650px;
+      margin-top: 0;
+      margin-right: -110px;
+      background-color: #D8DCE0;
+      background-image: url('../img/bg-form-contacts@1280w.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-size: 650px 650px;
+    }
+  
     @media (min-width: $xl) {
-      width: 670px;
+      width: 520px;
+      margin-right: -220px;
+      background-image: url('../img/bg-form-contacts.jpg');
+      background-size: 800px 800px;
+      background-repeat: no-repeat;
     }
   }
   
   &__form-title {
-    color: #000;
 
     @media (min-width: $md) {
       margin-bottom: 30px;
@@ -32,7 +41,6 @@
   }
 
   &__form-slogan {
-    color: #000;
 
     @media (min-width: $md) {
       font-size: 18px;
@@ -50,5 +58,8 @@
 
   &__form-textarea {
     border-color: #EFEFEF;
+  }
+  &__form-button {
+    margin-top: 30px;
   }
 }

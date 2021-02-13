@@ -3,39 +3,121 @@
 .page-contacts {
 
   &__main {
-    padding-top: 80px;
+    padding-top: 40px;
     padding-bottom: 100px;
 
     @media (min-width: $md) {
-      padding-top: 140px;
+      padding-top: 55px;
     }
     
-    @media (min-width: $lg) {
-      display: flex;
+    @media (min-width: 992px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 50px;
       justify-content: space-between;
       align-items: center;
-      padding-top: 100px;
       padding-bottom: 100px;
     }
     
     @media (min-width: $xl) {
-      justify-content: space-around;
-      padding-top: 150px;
-      padding-bottom: 150px;
+      padding-top: 100px;
+      padding-bottom: 100px;
     }
   }
 
-  &__contacts {
-
-    @media (min-width: $lg) {
-      width: 33%;
-    }
-    
-    @media (min-width: $xl) {
-      width: 30%;
-    }
-  }
+  &__contacts {}
 
   &__form {
+    margin: 0 -20px;
+    margin-top: 50px;
+    padding-top: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+
+    @media (min-width: $md) {
+      width: 600px;
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+
+    @media (min-width: 992px) {
+      width: 500px;
+    }
+
+    @media (min-width: $lg) {
+      display: grid;
+      place-items: center;
+      width: 750px;
+      height: 650px;
+      margin: 0;
+      margin-top: 0;
+      margin-right: -110px;
+      background-color: #D8DCE0;
+      background-image: url('../img/bg-form-contacts@1280w.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  
+    @media (min-width: $xl) {
+      width: 1050px;
+      height: 750px;
+      margin-right: -220px;
+      background-image: url('../img/bg-form-contacts.jpg');
+    }
+  }
+
+  &__form-wrapper {
+    background-color: #013142;
+    padding-bottom: 10px;
+
+    @media (min-width: $lg) {
+      width: 500px;
+      padding-top: 20px;
+      padding-right: 30px;
+      padding-left: 30px;
+      padding-bottom: 25px;
+    }
+
+    @media (min-width: $xl) {
+      width: 600px;
+      padding-top: 35px;
+      padding-right: 40px;
+      padding-left: 40px;
+      padding-bottom: 40px;
+    }
+  }
+  
+  &__form-title {
+
+    @media (min-width: $md) {
+      margin-bottom: 15px;
+      font-size: 32px;
+      line-height: 38px;
+    }
+  }
+
+  &__form-slogan {
+    @media (min-width: $md) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    @media (min-width: $lg) {
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $xl) {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  &__form-input {
+    border-color: #EFEFEF;
+  }
+
+  &__form-textarea {
+    border-color: #EFEFEF;
   }
 }
