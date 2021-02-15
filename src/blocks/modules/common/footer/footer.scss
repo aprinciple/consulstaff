@@ -101,28 +101,29 @@
   &__nav-list {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: 55px;
+
+    @media (min-width: $lg) {
+      margin-bottom: 0;
+    }
   }
 
   &__nav-item {
-    width: 30%;
-    margin-bottom: 55px;
     font-size: 18px;
     line-height: 22px;
     color: #333;
 
-    @media (min-width: $lg) {
-      width: auto;
-      margin-bottom: 30px;
-      margin-right: 40px;
+    &:not(:last-child) {
+      margin-right: 35px;
+      margin-bottom: 20px;
 
-      &:last-child {
-        margin-right: 0;
+      @media (min-width: $lg) {
+        margin-right: 40px;
       }
-    }
-    
-    @media (min-width: $xl) {
-      margin-right: 90px;
-      margin-bottom: 0;
+
+      @media (min-width: $xl) {
+        margin-right: 90px;
+      }
     }
   }
 

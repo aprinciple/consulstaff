@@ -1931,24 +1931,24 @@ a {
       width: 70%; } }
   .footer__nav-list {
     display: flex;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    margin-bottom: 55px; }
+    @media (min-width: 1200px) {
+      .footer__nav-list {
+        margin-bottom: 0; } }
   .footer__nav-item {
-    width: 30%;
-    margin-bottom: 55px;
     font-size: 18px;
     line-height: 22px;
     color: #333; }
-    @media (min-width: 1200px) {
-      .footer__nav-item {
-        width: auto;
-        margin-bottom: 30px;
-        margin-right: 40px; }
-        .footer__nav-item:last-child {
-          margin-right: 0; } }
-    @media (min-width: 1800px) {
-      .footer__nav-item {
-        margin-right: 90px;
-        margin-bottom: 0; } }
+    .footer__nav-item:not(:last-child) {
+      margin-right: 35px;
+      margin-bottom: 20px; }
+      @media (min-width: 1200px) {
+        .footer__nav-item:not(:last-child) {
+          margin-right: 40px; } }
+      @media (min-width: 1800px) {
+        .footer__nav-item:not(:last-child) {
+          margin-right: 90px; } }
   .footer__nav-link {
     color: #333;
     text-decoration: none;
