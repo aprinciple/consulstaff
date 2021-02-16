@@ -4342,13 +4342,20 @@ a {
       padding-top: 150px; } }
 
 .about-us-clients {
-  padding-top: 70px; }
+  margin-bottom: 30px;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #013142; }
   @media (min-width: 1200px) {
     .about-us-clients {
-      padding-top: 100px; } }
+      margin-bottom: 40px;
+      padding-top: 100px;
+      padding-bottom: 100px; } }
   @media (min-width: 1800px) {
     .about-us-clients {
-      padding-top: 130px; } }
+      margin-bottom: 50px;
+      padding-top: 130px;
+      padding-bottom: 130px; } }
 
 .about-us-reviews {
   padding-top: 75px; }
@@ -4361,7 +4368,8 @@ a {
 
 .about-us-partners {
   padding-top: 70px;
-  padding-bottom: 70px; }
+  padding-bottom: 70px;
+  background-color: #014042; }
   @media (min-width: 1200px) {
     .about-us-partners {
       padding-top: 100px;

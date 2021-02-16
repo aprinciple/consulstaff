@@ -1,11 +1,18 @@
 .about-us-clients {
+  margin-bottom: 30px;
   padding-top: 70px;
+  padding-bottom: 70px;
+  background-color: #013142;
   
   @media (min-width: $lg) {
+    margin-bottom: 40px;
     padding-top: 100px;
+    padding-bottom: 100px;
   }
   
   @media (min-width: $xl) {
+    margin-bottom: 50px;
     padding-top: 130px;
+    padding-bottom: 130px;
   }
 }
