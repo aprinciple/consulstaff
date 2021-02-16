@@ -2771,7 +2771,7 @@ a {
   font-weight: bold;
   font-size: 40px;
   line-height: 48px;
-  color: #000; }
+  color: #fff; }
   @media (min-width: 768px) {
     .clients__title {
       margin-bottom: 30px; } }
@@ -2796,7 +2796,7 @@ a {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
-  color: #000; }
+  color: #fff; }
   @media (min-width: 768px) {
     .clients__description-text, .clients > p {
       font-size: 17px;
