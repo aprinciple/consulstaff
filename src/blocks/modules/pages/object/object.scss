@@ -1,0 +1,445 @@
+.p-object {
+
+  &__main {
+    padding-top: 50px;
+    padding-bottom: 30px;
+
+    @media (min-width: $md) {
+      padding-bottom: 50px;
+    }
+
+    @media (min-width: $lg) {
+      padding-bottom: 100px;
+    }
+
+    @media (min-width: $xl) {
+      padding-bottom: 130px;
+    }
+  }
+
+  &__all-objects {
+    position: relative;
+    padding: 9px 30px;
+    border: 1px solid $darkgold;
+    border-radius: 21px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 16px;
+    color: $darkgold;
+    transition: border-color 0.3s, color 0.3s;
+
+    &:hover {
+      border-color: darken($darkgold, 10%);
+      color: darken($darkgold, 10%);
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 13px;
+      transform: translateY(-50%) rotate(180deg);
+      width: 9px;
+      height: 16px;
+      background-image: url('../img/objects-link-arrow.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  &__article {
+    margin-top: 50px;
+
+    @media (min-width: $lg) {
+      display: grid;
+      grid-template-columns: 470px 570px;
+      align-items: start;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $xl) {
+      grid-template-columns: 610px 830px;
+      margin-top: 80px;
+    }
+  }
+
+  &__header {
+    display: grid;
+    row-gap: 25px;
+    margin-bottom: 25px;
+
+    @media (min-width: $md) {
+      row-gap: 30px;
+    }
+
+    @media (min-width: $lg) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      grid-column: span 2;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 60px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+
+    @media (min-width: $md) {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      box-shadow: 12px 8px 15px rgba(143, 164, 200, 0.23);
+      background-color: #EFF1F6;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__title--wine {
+    &::before {
+      background-image: url('../img/wine.svg');
+      background-size: 25px 25px;
+    }
+  }
+
+  &__title--hotel {
+    &::before {
+      background-image: url('../img/hotel.svg');
+      background-size: 30px 22px;
+    }
+  }
+
+  &__title--other {
+    &::before {
+      background-image: url('../img/map.svg');
+      background-size: 27px 25px;
+    }
+  }
+
+  &__region {
+    display: flex;
+    align-items: center;
+    height: 28px;
+    padding-left: 30px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+    background-image: url('../img/map-marker.svg');
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: 21px 28px;
+    color: #000;
+  }
+
+  &__content {
+
+    @media (min-width: $md) {
+      padding: 30px 25px;
+      border-radius: 8px;
+      background-color: #fff;
+      box-shadow: 0 10px 20px rgba(196, 200, 208, 0.4);
+    }
+  }
+
+  &__content-text {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+
+    @media (min-width: $md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__content-features {
+    margin-bottom: 20px;
+
+    @media (min-width: $md) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__content-title {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    color: $darkblue;
+
+    @media (min-width: $md) {
+      margin-bottom: 15px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  &__content-title--wine {
+  }
+
+  &__content-title--hotel {
+  }
+
+  &__content-title--other {
+  }
+
+  &__content ul {
+    display: grid;
+    row-gap: 5px;
+
+    @media (min-width: $md) {
+      row-gap: 10px;
+    }
+  }
+
+  &__content ul li {
+    position: relative;
+    padding-left: 15px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000;
+
+    @media (min-width: $md) {
+      padding-left: 20px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: calc(50% - 1px);
+      left: 0;
+      transform: translateY(-50%);
+      width: 10px;
+      height: 10px;
+      background-color: $darkgold;
+      clip-path: polygon(50% 0%, 90% 20%, 100% 60%, 75% 100%, 25% 100%, 0% 60%, 10% 20%);
+    }
+  }
+
+  &__content-features ul {}
+
+  &__content-features ul li {
+    &::before {
+      background-color: $darkgold;
+    }
+  }
+
+  &__content-more {}
+
+  &__content-more ul {}
+
+  &__content-more ul li {
+    &::before {
+      background-color: $darkblue;
+    }
+  }
+
+  &__slider {
+    position: relative;
+    display: grid;
+    row-gap: 10px;
+    margin-top: 70px;
+
+    @media (min-width: $md) {
+      row-gap: 15px;
+      margin-top: 30px;
+    }
+
+    @media (min-width: $lg) {
+      margin-top: 0;
+    }
+
+    @media (min-width: $xl) {
+      row-gap: 20px;
+    }
+  }
+
+  &__slider-items {
+  }
+
+  &__slider-item {
+    height: 240px;
+    border-radius: 5px;
+    overflow: hidden;
+
+    @media (min-width: $md) {
+      height: 400px;
+    }
+
+    @media (min-width: $xl) {
+      height: 485px;
+      border-radius: 10px;
+    }
+  }
+
+  &__slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__slider-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    column-gap: 5px;
+
+    @media (min-width: $md) {
+      column-gap: 10px;
+    }
+  }
+
+  &__slider-thumbnails-item {
+    height: 55px;
+    border-radius: 5px;
+    overflow: hidden;
+    outline: none;
+    cursor: pointer;
+
+    @media (min-width: $md) {
+      height: 115px;
+    }
+
+    @media (min-width: $lg) {
+      height: 80px;
+    }
+
+    @media (min-width: $xl) {
+      height: 130px;
+      border-radius: 10px;
+    }
+  }
+
+  &__slider-thumbnails-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__price {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 225px;
+    padding: 9px 15px;
+    background-color: #EFF1F6;
+    border-radius: 33px;
+    box-shadow: 12px 8px 15px rgba(143px, 164px, 200px, 0.23);
+    font-size: 12px;
+    line-height: 12px;
+    color: #000;
+
+    @media (min-width: $md) {
+      top: auto;
+      left: 25px;
+      bottom: 155px;
+      transform: none;
+      padding: 14px 25px;
+      font-size: 18px;
+      line-height: 18px;
+    }
+
+    @media (min-width: $lg) {
+      bottom: 120px;
+    }
+
+    @media (min-width: $xl) {
+      bottom: 175px;
+    }
+  }
+
+  &__price-highlighter {
+    font-weight: bold;
+    color: $darkgold;
+  }
+
+  &__nav {
+    display: grid;
+    row-gap: 40px;
+    margin-top: 40px;
+
+    @media (min-width: $md) {
+      row-gap: 0;
+      margin-top: 50px;
+      grid-template-columns: auto auto;
+      justify-content: space-between;
+    }
+
+    @media (min-width: $xl) {
+      margin-top: 75px;
+    }
+  }
+
+  &__nav-link {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000;
+    transition: color 0.3s;
+
+    &:hover {
+      color: $darkgold;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 9px;
+      height: 16px;
+      background-image: url('../img/objects-link-arrow.svg');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+    }
+  }
+
+  &__nav-link--prev {
+    justify-self: start;
+    padding-left: 25px;
+
+    &::before {
+      left: 0;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  &__nav-link--next {
+    justify-self: end;
+    order: -1;
+    padding-right: 25px;
+
+    @media (min-width: $md) {
+      order: 0;
+    }
+
+    &::before {
+      right: 0;
+    }
+  }
+}

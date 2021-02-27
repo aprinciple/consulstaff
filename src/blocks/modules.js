@@ -16,3 +16,4 @@ import '../blocks/modules/pages/index/index';
 import '../blocks/modules/pages/post-project/post-project';
 import '../blocks/modules/pages/library/library';
 import '../blocks/modules/pages/objects/objects';
+import '../blocks/modules/pages/object/object';

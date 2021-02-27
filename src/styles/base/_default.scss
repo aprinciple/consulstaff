@@ -1,3 +1,35 @@
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 h1, h2, h3, h4, h5, h6, ul {
   margin: 0;
   padding: 0;
@@ -63,38 +95,6 @@ img {
   height: auto;
 }
 
-@font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope-Medium.woff2') format('woff2');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manrope';
-  src: url('../fonts/Manrope-Bold.woff2') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
 body {
   font-family: 'Manrope', 'Tahoma', 'Arial', sans-serif;
   font-display: swap;
@@ -113,6 +113,10 @@ a {
 
   @media (min-width: $md) {
     padding: 0 40px;
+  }
+
+  @media (min-width: 992px) {
+    padding: 0 95px;
   }
 
   @media (min-width: $lg) {
@@ -202,5 +206,4 @@ a {
       background-repeat: no-repeat;
     }
   }
-
 }
