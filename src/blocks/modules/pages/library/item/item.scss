@@ -146,8 +146,12 @@
       line-height: 19px;
     }
 
-    &:last-child {
+    &:not(:last-child) {
       margin-bottom: 10px;
+
+      @media (min-width: $xl) {
+        margin-bottom: 15px;
+      }
     }
   }
 
