@@ -304,7 +304,7 @@
 
   &__slider-thumbnails {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     column-gap: 5px;
 
     @media (min-width: $md) {
@@ -383,10 +383,9 @@
     margin-top: 40px;
 
     @media (min-width: $md) {
+      grid-auto-flow: column;
       row-gap: 0;
       margin-top: 50px;
-      grid-template-columns: auto auto;
-      justify-content: space-between;
     }
 
     @media (min-width: $xl) {
