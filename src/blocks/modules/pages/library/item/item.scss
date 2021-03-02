@@ -1,5 +1,4 @@
 .page-library {
-  counter-reset: index;
 
   &__item {
     box-sizing: border-box;
@@ -28,38 +27,9 @@
         padding-bottom: 40px;
       }
     }
-
-    &::after {
-
-      @media (min-width: $lg) {
-        counter-increment: index;
-        content: '0' counter(index);
-        position: absolute;
-        top: 50%;
-        right: -165px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 150px;
-        height: 150px;
-        transform: translateY(-50%);
-        background-color: #fff;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        font-weight: bold;
-        font-size: 60px;
-        color: #393939;
-      }
-
-      @media (min-width: $xl) {
-        right: -285px;
-        width: 250px;
-        height: 250px;
-      }
-    }
   }
 
-  &__item.open::after {
+  &__item.open > &__item-number {
     background-image: url('../img/library-item-circle.svg');
     animation: item-scale-in-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
   }
@@ -400,5 +370,32 @@
   &__item-more-text {
     font-size: 14px;
     line-height: 17px;
+  }
+
+  &__item-number {
+    
+    @media (min-width: $lg) {
+      position: absolute;
+      top: 50%;
+      right: -165px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 150px;
+      height: 150px;
+      transform: translateY(-50%);
+      background-color: #fff;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      font-weight: bold;
+      font-size: 60px;
+      color: #393939;
+    }
+
+    @media (min-width: $xl) {
+      right: -285px;
+      width: 250px;
+      height: 250px;
+    }
   }
 }
