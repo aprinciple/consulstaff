@@ -10,7 +10,7 @@ const
   imagemin = require('gulp-imagemin'),
   webp = require('gulp-webp'),
   svgSprite = require('gulp-svg-sprite'),
-  sass = require('gulp-sass'),
+  {sass} = require('@mr-hope/gulp-sass'),
   postcss = require('gulp-postcss'),
   autoprefixer = require('autoprefixer'),
   prettyHtml = require('gulp-pretty-html'),
